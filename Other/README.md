@@ -4,7 +4,7 @@ Everything that is not a captured HTTP exchange lives here.
 
 | Path | What it is |
 | --- | --- |
-| `apk/` | The shipped client: `base.apk` (v10.5.1) and its sha256. Pulled from the emulator on 2026-11-25, after the game left the app stores. |
+| `apk/` | The shipped clients, all pulled from the emulator on 2026-11-25 after the game left the app stores: the Unity build 13.4.0 (`base.apk` + `split_UnityDataAssetPack.apk` + `split_config.arm64_v8a.apk` + `split_config.mdpi.apk`, arm64-v8a only, hashes in `apk-set.sha256`) and the pre-2025 Amazon build 10.5.1 (`legacy-10.5.1-amazon-base.apk`). |
 | `device/` | Device and package fingerprint: `getprop`, `dumpsys package`, `pm dump`, display, connectivity, storage, package list. |
 | `logs/` | `logcat` dumps. Includes the game's own network and startup logging. |
 | `appdata/` | App data snapshot and external/OBB listings. Internal `/data/data` needs a rooted device; `appdata-listing` files are recorded either way. |
@@ -21,7 +21,9 @@ Everything that is not a captured HTTP exchange lives here.
 - **Traffic from apps other than the game** - capture only the game session, since the proxy
   records whatever is routed to it.
 
-## Why the APK matters
+## Why the APKs matter
 
-The game was delisted on 2026-10-30 and cannot be downloaded again. `apk/base.apk` is the
-only copy of the final client; keep its sha256 so a corrupted file is noticed.
+The game was delisted on 2026-10-30 and cannot be downloaded again. These files are the only
+copies of the final Unity client and of the legacy build; keep the sha256 files so corruption is
+noticed. Note that the Unity client ships **arm64-v8a only** - there is no x86 split, so running
+it on an emulator needs an ARM translation layer.

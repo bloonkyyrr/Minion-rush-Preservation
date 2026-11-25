@@ -10,7 +10,7 @@ after the sunset real request/response shapes instead of guesses.
 | Date | Event |
 | --- | --- |
 | 2026-10-30 | Delisted from app stores, in-app purchases disabled. The APK can no longer be downloaded. |
-| 2026-11-25 | This archive started; APK 10.5.1 pulled from the installed Google Play Games on PC emulator. |
+| 2026-11-25 | This archive started; the Unity client 13.4.0 (base + asset/lib/density splits) and the pre-2025 build 10.5.1 were pulled from the Google Play Games on PC emulator. |
 | 2027-01-29 | Online services end: live events, leaderboards, cloud saves, accounts, social features. |
 
 The APK in `Other/apk/` is therefore the only remaining copy of the last shipped client.
@@ -19,7 +19,7 @@ The APK in `Other/apk/` is therefore the only remaining copy of the last shipped
 
 | Folder | Contents |
 | --- | --- |
-| `Other/apk/` | `base.apk` (v10.5.1, 118 MB) plus sha256 - the last shipped client |
+| `Other/apk/` | The Unity client 13.4.0 (`base.apk` + `split_UnityDataAssetPack` + `split_config.arm64_v8a` + `split_config.mdpi`, 610 MB) and the legacy 10.5.1 APK, with sha256 |
 | `Other/device/` | Device fingerprint: `getprop`, package dump, display, connectivity, storage, package list |
 | `Other/logs/` | Logcat dumps, including the game's own startup/network logging |
 | `Other/appdata/` | App data snapshot (needs a rooted device), external/OBB listings, `snapshot.json` |

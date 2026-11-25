@@ -18,7 +18,7 @@ DEFAULTS: dict = {
     "listen_host": "127.0.0.1",
     "listen_port": 8080,
     "max_inline_body": 64 * 1024,
-    "package": "com.gameloft.android.AMAZ.GloftDMAS",
+    "package": "com.gameloft.android.ANMP.GloftDMHM",
     "adb": None,
     "session_name": None,
 }

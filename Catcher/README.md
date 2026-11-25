@@ -55,7 +55,7 @@ Recommended: an AVD from `google_apis` (a `userdebug` image), launched with
 ```bat
 emulator -avd minioncap -writable-system -http-proxy 127.0.0.1:8080
 python -m catcher.cli install-ca --device emulator-5554 --reboot
-adb install -r "Other\apk\base.apk"
+adb install-multiple -r "Other\apk\base.apk" "Other\apk\split_UnityDataAssetPack.apk" "Other\apk\split_config.arm64_v8a.apk" "Other\apk\split_config.mdpi.apk"
 ```
 
 `-http-proxy` redirects the emulator's whole TCP stack, so Unity traffic is captured too.

@@ -1,49 +1,64 @@
 {
-  "created": "2026-11-25T17:30:51+0100",
+  "created": "2026-11-25T17:56:34+0100",
   "device": "localhost:6520",
-  "package": "com.gameloft.android.AMAZ.GloftDMAS",
+  "package": "com.gameloft.android.ANMP.GloftDMHM",
   "steps": [],
   "model": "HPE device",
   "android": "14",
   "sdk": "34",
   "build_type": "user",
   "root": false,
-  "app_version": "10.5.1",
+  "app_version": "13.4.0",
   "apks": [
     {
-      "remote": "/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/base.apk",
+      "remote": "/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/base.apk",
       "local": "Other\\apk\\base.apk",
+      "skipped": true
+    },
+    {
+      "remote": "/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/split_UnityDataAssetPack.apk",
+      "local": "Other\\apk\\split_UnityDataAssetPack.apk",
+      "skipped": true
+    },
+    {
+      "remote": "/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/split_config.arm64_v8a.apk",
+      "local": "Other\\apk\\split_config.arm64_v8a.apk",
+      "skipped": true
+    },
+    {
+      "remote": "/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/split_config.mdpi.apk",
+      "local": "Other\\apk\\split_config.mdpi.apk",
       "skipped": true
     }
   ],
   "device_dumps": [
     {
       "file": "Other\\device\\getprop.txt",
-      "bytes": 22423
+      "bytes": 22377
     },
     {
       "file": "Other\\device\\dumpsys-package.txt",
-      "bytes": 16300
+      "bytes": 22620
     },
     {
       "file": "Other\\device\\pm-dump.txt",
-      "bytes": 126029
+      "bytes": 118485
     },
     {
       "file": "Other\\device\\dumpsys-display.txt",
-      "bytes": 20489
+      "bytes": 20602
     },
     {
       "file": "Other\\device\\dumpsys-connectivity.txt",
-      "bytes": 33672
+      "bytes": 33806
     },
     {
       "file": "Other\\device\\dumpsys-wifi.txt",
-      "bytes": 85775
+      "bytes": 85001
     },
     {
       "file": "Other\\device\\dumpsys-activity.txt",
-      "bytes": 16503
+      "bytes": 21499
     },
     {
       "file": "Other\\device\\df.txt",
@@ -63,21 +78,21 @@
     },
     {
       "file": "Other\\device\\netstat.txt",
-      "bytes": 18528
+      "bytes": 19726
     }
   ],
   "logcat": {
-    "file": "Other\\logs\\logcat-20261125-173052.txt",
-    "bytes": 2412865
+    "file": "Other\\logs\\logcat-20261125-175635.txt",
+    "bytes": 3145350
   },
   "external_data": [
     {
-      "path": "/sdcard/Android/data/com.gameloft.android.AMAZ.GloftDMAS",
-      "listing": "total 6\ndrwxrws--- 2 u0_a53   ext_data_rw 3452 2026-11-25 16:59 .\ndrwxrws--x 3 media_rw ext_data_rw 3452 2026-10-05 16:21 .."
+      "path": "/sdcard/Android/data/com.gameloft.android.ANMP.GloftDMHM",
+      "listing": "ls: /sdcard/Android/data/com.gameloft.android.ANMP.GloftDMHM: No such file or directory"
     },
     {
-      "path": "/sdcard/Android/obb/com.gameloft.android.AMAZ.GloftDMAS",
-      "listing": "ls: /sdcard/Android/obb/com.gameloft.android.AMAZ.GloftDMAS: No such file or directory"
+      "path": "/sdcard/Android/obb/com.gameloft.android.ANMP.GloftDMHM",
+      "listing": "ls: /sdcard/Android/obb/com.gameloft.android.ANMP.GloftDMHM: No such file or directory"
     }
   ],
   "appdata": {

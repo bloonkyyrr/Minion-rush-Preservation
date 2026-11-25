@@ -2,290 +2,352 @@ DUMP OF SERVICE package:
 Activity Resolver Table:
   Schemes:
       https:
-        7673326 com.gameloft.android.AMAZ.GloftDMAS/.AppLinksActivity filter dea8b67
+        66033e0 com.gameloft.android.ANMP.GloftDMHM/.MinionRushUnity filter 4461d5e
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           Category: "android.intent.category.BROWSABLE"
           Scheme: "https"
-          Authority: "despicable-me-minion-rush.extads.gameloft.com": -1
+          Authority: "mru.sng.link": -1
+          Path: "PatternMatcher{PREFIX: /A}"
+          Path: "PatternMatcher{PREFIX: /B}"
+          Path: "PatternMatcher{PREFIX: /E}"
+          Path: "PatternMatcher{PREFIX: /F}"
           AutoVerify=true
-        7673326 com.gameloft.android.AMAZ.GloftDMAS/.AppLinksActivity filter c00ed14
-          Action: "android.intent.action.MAIN"
-          Action: "android.intent.action.VIEW"
-          Category: "android.intent.category.LAUNCHER"
-          Category: "android.intent.category.DEFAULT"
-          Category: "android.intent.category.BROWSABLE"
-          Scheme: "https"
-          Authority: "minionrush.page.link": -1
-          AutoVerify=true
-      fbconnect:
-        48a7703 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.CustomTabActivity filter e89c680
+      gmlft-co:
+        66033e0 com.gameloft.android.ANMP.GloftDMHM/.MinionRushUnity filter 381553f
           Action: "android.intent.action.VIEW"
           Category: "android.intent.category.DEFAULT"
           Category: "android.intent.category.BROWSABLE"
-          Scheme: "fbconnect"
-          Authority: "cct.com.gameloft.android.AMAZ.GloftDMAS": -1
+          Scheme: "gmlft-co"
 
   Non-Data Actions:
       android.intent.action.MAIN:
-        f791268 com.gameloft.android.AMAZ.GloftDMAS/.MainActivity filter e98b681
+        66033e0 com.gameloft.android.ANMP.GloftDMHM/.MinionRushUnity filter 6048699
           Action: "android.intent.action.MAIN"
           Category: "android.intent.category.LAUNCHER"
-        61939bd com.gameloft.android.AMAZ.GloftDMAS/.MyVideoView filter d835bb2
-          Action: "android.intent.action.MAIN"
 
 Receiver Resolver Table:
   Non-Data Actions:
       android.intent.action.BATTERY_OKAY:
-        c171c57 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2c3c344
+        5149ef8 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter e076fd1
           Action: "android.intent.action.BATTERY_OKAY"
           Action: "android.intent.action.BATTERY_LOW"
       android.intent.action.ACTION_POWER_DISCONNECTED:
-        7fb41f1 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 578b1d6
+        bd2b16a com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter cc0065b
           Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
           Action: "android.intent.action.ACTION_POWER_CONNECTED"
+      androidx.profileinstaller.action.SAVE_PROFILE:
+        869b628 com.gameloft.android.ANMP.GloftDMHM/androidx.profileinstaller.ProfileInstallReceiver filter d0f5227
+          Action: "androidx.profileinstaller.action.SAVE_PROFILE"
       android.intent.action.DEVICE_STORAGE_LOW:
-        d710c2d com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 2a61562
+        9e27a36 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 26ead37
           Action: "android.intent.action.DEVICE_STORAGE_LOW"
           Action: "android.intent.action.DEVICE_STORAGE_OK"
       android.net.conn.CONNECTIVITY_CHANGE:
-        70726f3 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter edbcfb0
+        170b2a4 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter 242380d
           Action: "android.net.conn.CONNECTIVITY_CHANGE"
-      com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED:
-        b39c37b com.gameloft.android.AMAZ.GloftDMAS/com.facebook.CurrentAccessTokenExpirationBroadcastReceiver filter d49e598
-          Action: "com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"
-      com.amazon.device.messaging.intent.REGISTRATION:
-        8b3805f com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.ADMMessageReceiverHandler filter e04caac
-          Action: "com.amazon.device.messaging.intent.REGISTRATION"
-          Action: "com.amazon.device.messaging.intent.RECEIVE"
-          Category: "com.gameloft.android.AMAZ.GloftDMAS"
+        bd5b23c com.gameloft.android.ANMP.GloftDMHM/com.mbridge.msdk.foundation.same.broadcast.NetWorkChangeReceiver filter cb35bc5
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
       android.intent.action.DEVICE_STORAGE_OK:
-        d710c2d com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 2a61562
+        9e27a36 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 26ead37
           Action: "android.intent.action.DEVICE_STORAGE_LOW"
           Action: "android.intent.action.DEVICE_STORAGE_OK"
-      com.amazon.inapp.purchasing.NOTIFY:
-        224b4b9 com.gameloft.android.AMAZ.GloftDMAS/com.amazon.device.iap.ResponseReceiver filter 8c780fe
-          Action: "com.amazon.inapp.purchasing.NOTIFY"
+      androidx.profileinstaller.action.INSTALL_PROFILE:
+        869b628 com.gameloft.android.ANMP.GloftDMHM/androidx.profileinstaller.ProfileInstallReceiver filter 572ef41
+          Action: "androidx.profileinstaller.action.INSTALL_PROFILE"
+      com.google.android.c2dm.intent.RECEIVE:
+        3c4ae0c com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.iid.FirebaseInstanceIdReceiver filter 10df355
+          Action: "com.google.android.c2dm.intent.RECEIVE"
       android.intent.action.BATTERY_LOW:
-        c171c57 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2c3c344
+        5149ef8 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter e076fd1
           Action: "android.intent.action.BATTERY_OKAY"
           Action: "android.intent.action.BATTERY_LOW"
       android.intent.action.TIMEZONE_CHANGED:
-        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+        a5403c2 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 8f6e5d3
           Action: "android.intent.action.TIMEZONE_CHANGED"
           Action: "android.intent.action.TIME_SET"
           Action: "android.intent.action.BOOT_COMPLETED"
       android.intent.action.TIME_SET:
-        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+        a5403c2 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 8f6e5d3
           Action: "android.intent.action.TIMEZONE_CHANGED"
           Action: "android.intent.action.TIME_SET"
           Action: "android.intent.action.BOOT_COMPLETED"
+      androidx.profileinstaller.action.SKIP_FILE:
+        869b628 com.gameloft.android.ANMP.GloftDMHM/androidx.profileinstaller.ProfileInstallReceiver filter 41bdce6
+          Action: "androidx.profileinstaller.action.SKIP_FILE"
+      androidx.profileinstaller.action.BENCHMARK_OPERATION:
+        869b628 com.gameloft.android.ANMP.GloftDMHM/androidx.profileinstaller.ProfileInstallReceiver filter bb80cd4
+          Action: "androidx.profileinstaller.action.BENCHMARK_OPERATION"
       android.intent.action.BOOT_COMPLETED:
-        ad2e375 com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.LocalPushReceiver filter e96af0a
-          Action: "android.intent.action.BOOT_COMPLETED"
-        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+        a5403c2 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 8f6e5d3
           Action: "android.intent.action.TIMEZONE_CHANGED"
           Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+        db2491a com.gameloft.android.ANMP.GloftDMHM/com.unity.androidnotifications.UnityNotificationRestartReceiver filter b4b3c4b
           Action: "android.intent.action.BOOT_COMPLETED"
       android.intent.action.ACTION_POWER_CONNECTED:
-        7fb41f1 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 578b1d6
+        bd2b16a com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter cc0065b
           Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
           Action: "android.intent.action.ACTION_POWER_CONNECTED"
-      com.amazon.device.messaging.intent.RECEIVE:
-        8b3805f com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.ADMMessageReceiverHandler filter e04caac
-          Action: "com.amazon.device.messaging.intent.REGISTRATION"
-          Action: "com.amazon.device.messaging.intent.RECEIVE"
-          Category: "com.gameloft.android.AMAZ.GloftDMAS"
       androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
-        82493e5 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 4c0eeba
+        6629a0e com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 7c00c2f
           Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
       androidx.work.impl.background.systemalarm.UpdateProxies:
-        de33f4f com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter d2636dc
+        f585510 com.gameloft.android.ANMP.GloftDMHM/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter ce74809
           Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
 
+Service Resolver Table:
+  Non-Data Actions:
+      com.google.firebase.MESSAGING_EVENT:
+        13e3e7d com.gameloft.android.ANMP.GloftDMHM/.FcmPushService filter 38e172
+          Action: "com.google.firebase.MESSAGING_EVENT"
+        d14e9c3 com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.messaging.FirebaseMessagingService filter f32240
+          Action: "com.google.firebase.MESSAGING_EVENT"
+          mPriority=-500, mOrder=0, mHasStaticPartialTypes=false, mHasDynamicPartialTypes=false
+        9754579 com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.messaging.cpp.ListenerService filter 6afa2be
+          Action: "com.google.firebase.MESSAGING_EVENT"
+
 Domain verification status:
-  com.gameloft.android.AMAZ.GloftDMAS:
-    ID: fbef0db0-ad4a-4393-a087-251af20c266a
+  com.gameloft.android.ANMP.GloftDMHM:
+    ID: 6a8de758-3a46-415e-ad71-ffa5e85aa0ca
     Signatures: [21:73:A2:48:E2:B1:1F:97:60:B9:16:7F:39:8B:18:3C:92:81:6C:F8:FC:74:AF:D3:C6:4B:22:ED:DF:50:48:1C]
     Domain verification state:
-      minionrush.page.link: none
-      despicable-me-minion-rush.extads.gameloft.com: none
+      mru.sng.link: none
     User all:
       Verification link handling allowed: true
       Selection state:
         Disabled:
-          minionrush.page.link
-          despicable-me-minion-rush.extads.gameloft.com
+          mru.sng.link
 
 Permissions:
-  Permission [com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE] (4a56a35):
-    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
-    uid=10053 gids=[] type=0 prot=signature
-    perm=PermissionInfo{47e8ea2 com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE}
+  Permission [com.gameloft.android.ANMP.GloftDMHM.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (89e44a4):
+    sourcePackage=com.gameloft.android.ANMP.GloftDMHM
+    uid=10055 gids=[] type=0 prot=signature
+    perm=PermissionInfo{ff3c95e com.gameloft.android.ANMP.GloftDMHM.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
     flags=0x0
 
 Permissions:
-  Permission [com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (ac88eca):
-    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
-    uid=10053 gids=[] type=0 prot=signature
-    perm=PermissionInfo{4160af0 com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+  Permission [com.gameloft.android.ANMP.GloftDMHM.permission.C2D_MESSAGE] (f25620d):
+    sourcePackage=com.gameloft.android.ANMP.GloftDMHM
+    uid=10055 gids=[] type=0 prot=signature
+    perm=PermissionInfo{f783a0c com.gameloft.android.ANMP.GloftDMHM.permission.C2D_MESSAGE}
     flags=0x0
 
 Permissions:
-  Permission [glshare.permission.ACCESS_SHARED_DATA] (d22883b):
-    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
-    uid=10053 gids=[] type=0 prot=signature
-    perm=PermissionInfo{f5af2ee glshare.permission.ACCESS_SHARED_DATA}
+  Permission [glshare.permission.ACCESS_SHARED_DATA] (9d8e5c2):
+    sourcePackage=com.gameloft.android.ANMP.GloftDMHM
+    uid=10055 gids=[] type=0 prot=signature
+    perm=PermissionInfo{2af1d6a glshare.permission.ACCESS_SHARED_DATA}
     flags=0x0
 
 Registered ContentProviders:
-  com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider:
-    Provider{1d2238f com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider}
-  com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider:
-    Provider{ce8e61c com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider}
-  com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider:
-    Provider{aeeb225 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider}
-  com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider:
-    Provider{f874ffa com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.provider.FirebaseInitProvider:
+    Provider{982025b com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.provider.FirebaseInitProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.facebook.ads.AudienceNetworkContentProvider:
+    Provider{674eaf8 com.gameloft.android.ANMP.GloftDMHM/com.facebook.ads.AudienceNetworkContentProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.games.provider.PlayGamesInitProvider:
+    Provider{32fcbd1 com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.games.provider.PlayGamesInitProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.applovin.sdk.AppLovinInitProvider:
+    Provider{19a636 com.gameloft.android.ANMP.GloftDMHM/com.applovin.sdk.AppLovinInitProvider}
+  com.gameloft.android.ANMP.GloftDMHM/androidx.startup.InitializationProvider:
+    Provider{f546937 com.gameloft.android.ANMP.GloftDMHM/androidx.startup.InitializationProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.IronsourceLifecycleProvider:
+    Provider{689bea4 com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.IronsourceLifecycleProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.vungle.ads.VungleProvider:
+    Provider{794540d com.gameloft.android.ANMP.GloftDMHM/com.vungle.ads.VungleProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.onevcat.uniwebview.UniWebViewFileProvider:
+    Provider{ad1efc2 com.gameloft.android.ANMP.GloftDMHM/com.onevcat.uniwebview.UniWebViewFileProvider}
+  com.gameloft.android.ANMP.GloftDMHM/.KeyProvider:
+    Provider{47c61d3 com.gameloft.android.ANMP.GloftDMHM/.KeyProvider}
+  com.gameloft.android.ANMP.GloftDMHM/io.bidmachine.BidMachineInitProvider:
+    Provider{af62110 com.gameloft.android.ANMP.GloftDMHM/io.bidmachine.BidMachineInitProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.LevelPlayActivityLifecycleProvider:
+    Provider{b3f2409 com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.LevelPlayActivityLifecycleProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.ads.MobileAdsInitProvider:
+    Provider{ed3460e com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.ads.MobileAdsInitProvider}
+  com.gameloft.android.ANMP.GloftDMHM/androidx.core.content.FileProvider:
+    Provider{c21482f com.gameloft.android.ANMP.GloftDMHM/androidx.core.content.FileProvider}
+  com.gameloft.android.ANMP.GloftDMHM/com.mbridge.msdk.config.component.status.MBComponentLifecycleProvider:
+    Provider{1843e3c com.gameloft.android.ANMP.GloftDMHM/com.mbridge.msdk.config.component.status.MBComponentLifecycleProvider}
 
 ContentProvider Authorities:
-  [com.gameloft.android.AMAZ.GloftDMAS.KeyProvider]:
-    Provider{1d2238f com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider}
-      applicationInfo=ApplicationInfo{5d82b58 com.gameloft.android.AMAZ.GloftDMAS}
-  [com.gameloft.android.AMAZ.GloftDMAS.firebaseinitprovider]:
-    Provider{ce8e61c com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider}
-      applicationInfo=ApplicationInfo{84f74b1 com.gameloft.android.AMAZ.GloftDMAS}
-  [com.gameloft.android.AMAZ.GloftDMAS.FacebookInitProvider]:
-    Provider{aeeb225 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider}
-      applicationInfo=ApplicationInfo{148cd96 com.gameloft.android.AMAZ.GloftDMAS}
-  [com.gameloft.android.AMAZ.GloftDMAS.androidx-startup]:
-    Provider{f874ffa com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider}
-      applicationInfo=ApplicationInfo{2a76d17 com.gameloft.android.AMAZ.GloftDMAS}
+  [com.gameloft.android.ANMP.GloftDMHM.IronsourceLifecycleProvider]:
+    Provider{689bea4 com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.IronsourceLifecycleProvider}
+      applicationInfo=ApplicationInfo{d671fd3 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.LevelPlayActivityLifecycleProvider]:
+    Provider{b3f2409 com.gameloft.android.ANMP.GloftDMHM/com.ironsource.lifecycle.LevelPlayActivityLifecycleProvider}
+      applicationInfo=ApplicationInfo{cd0710 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.firebaseinitprovider]:
+    Provider{982025b com.gameloft.android.ANMP.GloftDMHM/com.google.firebase.provider.FirebaseInitProvider}
+      applicationInfo=ApplicationInfo{5d31209 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.mbcomponentlifcycleprovider]:
+    Provider{1843e3c com.gameloft.android.ANMP.GloftDMHM/com.mbridge.msdk.config.component.status.MBComponentLifecycleProvider}
+      applicationInfo=ApplicationInfo{6539c0e com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.applovininitprovider]:
+    Provider{19a636 com.gameloft.android.ANMP.GloftDMHM/com.applovin.sdk.AppLovinInitProvider}
+      applicationInfo=ApplicationInfo{bf9e62f com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.uniwebview_fileprovider]:
+    Provider{ad1efc2 com.gameloft.android.ANMP.GloftDMHM/com.onevcat.uniwebview.UniWebViewFileProvider}
+      applicationInfo=ApplicationInfo{4e3843c com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.KeyProvider]:
+    Provider{47c61d3 com.gameloft.android.ANMP.GloftDMHM/.KeyProvider}
+      applicationInfo=ApplicationInfo{991c5c5 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.androidx-startup]:
+    Provider{f546937 com.gameloft.android.ANMP.GloftDMHM/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{8b16b1a com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.AudienceNetworkContentProvider]:
+    Provider{674eaf8 com.gameloft.android.ANMP.GloftDMHM/com.facebook.ads.AudienceNetworkContentProvider}
+      applicationInfo=ApplicationInfo{248b64b com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.bidmachineinitprovider]:
+    Provider{af62110 com.gameloft.android.ANMP.GloftDMHM/io.bidmachine.BidMachineInitProvider}
+      applicationInfo=ApplicationInfo{982a828 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.vungle-provider]:
+    Provider{794540d com.gameloft.android.ANMP.GloftDMHM/com.vungle.ads.VungleProvider}
+      applicationInfo=ApplicationInfo{2cdf941 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.playgamesinitprovider]:
+    Provider{32fcbd1 com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.games.provider.PlayGamesInitProvider}
+      applicationInfo=ApplicationInfo{ceb1ee6 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.nativeshare.fileprovider]:
+    Provider{c21482f com.gameloft.android.ANMP.GloftDMHM/androidx.core.content.FileProvider}
+      applicationInfo=ApplicationInfo{f6a6c27 com.gameloft.android.ANMP.GloftDMHM}
+  [com.gameloft.android.ANMP.GloftDMHM.mobileadsinitprovider]:
+    Provider{ed3460e com.gameloft.android.ANMP.GloftDMHM/com.google.android.gms.ads.MobileAdsInitProvider}
+      applicationInfo=ApplicationInfo{a6e1ed4 com.gameloft.android.ANMP.GloftDMHM}
 
 Key Set Manager:
-  [com.gameloft.android.AMAZ.GloftDMAS]
-      Signing KeySets: 27
+  [com.gameloft.android.ANMP.GloftDMHM]
+      Signing KeySets: 28
 
 Packages:
-  Package [com.gameloft.android.AMAZ.GloftDMAS] (9a0f587):
-    appId=10053
-    pkg=Package{1c1dcb4 com.gameloft.android.AMAZ.GloftDMAS}
-    codePath=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==
-    resourcePath=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==
-    legacyNativeLibraryDir=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/lib
+  Package [com.gameloft.android.ANMP.GloftDMHM] (67a9b1f):
+    appId=10055
+    pkg=Package{671ae6c com.gameloft.android.ANMP.GloftDMHM}
+    codePath=/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==
+    resourcePath=/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==
+    legacyNativeLibraryDir=/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/lib
     extractNativeLibs=true
-    primaryCpuAbi=x86_64
+    primaryCpuAbi=arm64-v8a
     secondaryCpuAbi=null
     cpuAbiOverride=null
-    versionCode=105110 minSdk=21 targetSdk=33
+    versionCode=2037529 minSdk=24 targetSdk=36
     minExtensionVersions=[]
-    versionName=10.5.1
+    versionName=13.4.0
     usesNonSdkApi=false
-    splits=[base]
+    splits=[base, UnityDataAssetPack, config.arm64_v8a, config.mdpi]
     apkSigningVersion=3
     flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
-    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
     forceQueryable=false
-    queriesIntents=[Intent { act=android.intent.action.MAIN }]
-    dataDir=/data/user/0/com.gameloft.android.AMAZ.GloftDMAS
-    supportsScreens=[medium, large, xlarge, resizeable, anyDensity]
+    queriesPackages=[com.sec.android.app.samsungapps, com.android.vending, com.google.market, com.amazon.venezia, com.xiaomi.market, com.huawei.appmarket, com.oppo.market, com.bbk.appstore, com.facebook.katana, com.instagram.android, com.google.android.gms, com.android.chrome, com.google.android.webview, com.android.webview]
+    queriesIntents=[Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=https:/... }, Intent { act=android.support.customtabs.action.CustomTabsService }, Intent { act=android.intent.action.INSERT dat=content://*/... typ=vnd.android.cursor.dir/event }, Intent { act=android.intent.action.VIEW dat=sms:xx }, Intent { act=android.intent.action.DIAL }, Intent { act=com.android.vending.billing.InAppBillingService.BIND }, Intent { act=com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND }, Intent { act=com.attribution.REFERRAL_PROVIDER }, Intent { act=com.singular.preinstall.READ_PERMISSION_SINGULAR }, Intent { act=android.intent.action.VIEW cat=[android.intent.category.BROWSABLE] dat=http:/... }, Intent { act=com.digitalturbine.ignite.cl.IgniteRemoteService }, Intent { act=android.intent.action.MAIN }, Intent { act=android.intent.action.VIEW }]
+    dataDir=/data/user/0/com.gameloft.android.ANMP.GloftDMHM
+    supportsScreens=[small, medium, large, xlarge, resizeable, anyDensity]
     usesOptionalLibraries:
-      org.apache.http.legacy
       androidx.window.extensions
       androidx.window.sidecar
-    usesLibraryFiles:
-      /system/framework/org.apache.http.legacy.jar
-    timeStamp=2026-10-05 16:21:29
-    lastUpdateTime=2026-10-05 16:21:39
-    installerPackageName=null
-    installerPackageUid=-1
-    initiatingPackageName=com.android.shell
+      com.amazon.privacypass
+    timeStamp=2026-11-25 17:50:19
+    lastUpdateTime=2026-11-25 17:50:24
+    installerPackageName=com.android.vending
+    installerPackageUid=10024
+    initiatingPackageName=com.android.vending
     originatingPackageName=null
-    packageSource=1
-    appMetadataFilePath=null
-    signatures=PackageSignatures{80200dd version:3, signatures:[18185fad], past signatures:[]}
+    packageSource=0
+    appMetadataFilePath=/data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/app.metadata
+    signatures=PackageSignatures{5145c35 version:3, signatures:[18185fad], past signatures:[]}
     installPermissionsFixed=true
     pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
-    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION ALLOW_AUDIO_PLAYBACK_CAPTURE HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
     apexModuleName=null
     declared permissions:
-      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE: prot=signature
       glshare.permission.ACCESS_SHARED_DATA: prot=signature
-      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+      com.gameloft.android.ANMP.GloftDMHM.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+      com.gameloft.android.ANMP.GloftDMHM.permission.C2D_MESSAGE: prot=signature
     requested permissions:
-      android.permission.FOREGROUND_SERVICE
       android.permission.POST_NOTIFICATIONS
-      android.permission.SCHEDULE_EXACT_ALARM
-      android.permission.READ_EXTERNAL_STORAGE
-      android.permission.WRITE_EXTERNAL_STORAGE
-      android.permission.INTERNET
-      android.permission.ACCESS_WIFI_STATE
-      android.permission.WAKE_LOCK
-      android.permission.ACCESS_NETWORK_STATE
-      android.permission.VIBRATE
-      android.permission.RECEIVE_BOOT_COMPLETED
-      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE
-      com.amazon.device.messaging.permission.RECEIVE
-      com.amazon.permission.SET_FLAG_NOSOFTKEYS
       glshare.permission.ACCESS_SHARED_DATA
+      com.google.android.gms.permission.AD_ID
+      android.permission.INTERNET
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.CAMERA
+      BIND_GET_INSTALL_REFERRER_SERVICE
+      com.android.vending.CHECK_LICENSE
+      com.sec.android.app.samsungapps.accesspermission.ASAA_PROVIDER.READ
+      android.permission.ACCESS_ADSERVICES_AD_ID
+      android.permission.ACCESS_ADSERVICES_ATTRIBUTION
+      android.permission.ACCESS_ADSERVICES_TOPICS
+      com.android.vending.BILLING
+      android.permission.WAKE_LOCK
+      com.google.android.c2dm.permission.RECEIVE
+      android.permission.VIBRATE
+      android.permission.ACCESS_WIFI_STATE
       com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      android.permission.FOREGROUND_SERVICE
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC
+      com.amazon.privacypass.ATTEST
+      com.gameloft.android.ANMP.GloftDMHM.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+      com.gameloft.android.ANMP.GloftDMHM.permission.C2D_MESSAGE
     install permissions:
       com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
-      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE: granted=true
-      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.ACCESS_ADSERVICES_TOPICS: granted=true
+      com.google.android.c2dm.permission.RECEIVE: granted=true
+      com.gameloft.android.ANMP.GloftDMHM.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
       android.permission.FOREGROUND_SERVICE: granted=true
-      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.ACCESS_ADSERVICES_AD_ID: granted=true
       android.permission.INTERNET: granted=true
+      com.android.vending.CHECK_LICENSE: granted=true
+      com.android.vending.BILLING: granted=true
+      android.permission.FOREGROUND_SERVICE_DATA_SYNC: granted=true
       android.permission.ACCESS_NETWORK_STATE: granted=true
-      android.permission.SCHEDULE_EXACT_ALARM: granted=false
+      android.permission.ACCESS_ADSERVICES_ATTRIBUTION: granted=true
+      com.gameloft.android.ANMP.GloftDMHM.permission.C2D_MESSAGE: granted=true
       glshare.permission.ACCESS_SHARED_DATA: granted=true
       android.permission.VIBRATE: granted=true
       android.permission.ACCESS_WIFI_STATE: granted=true
+      com.google.android.gms.permission.AD_ID: granted=true
       android.permission.WAKE_LOCK: granted=true
-    User 0: ceDataInode=2442 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=false enabled=0 instant=false virtual=false
-      installReason=0
-      firstInstallTime=2026-10-05 16:21:39
+    User 0: ceDataInode=9346 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=true enabled=0 instant=false virtual=false
+      installReason=4
+      firstInstallTime=2026-11-25 17:50:24
       uninstallReason=0
+      lastDisabledCaller: com.android.vending
       gids=[3003]
       runtime permissions:
         android.permission.POST_NOTIFICATIONS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
-        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
-        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
-      enabledComponents:
-        androidx.work.impl.background.systemjob.SystemJobService
+        android.permission.CAMERA: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
 
 Queries:
   system apps queryable: false
   queries via forceQueryable:
   queries via package name:
+    com.gameloft.android.ANMP.GloftDMHM:
+      com.google.android.webview
+      com.android.chrome
   queries via component:
     com.google.android.play.games:
-      com.gameloft.android.AMAZ.GloftDMAS
+      com.gameloft.android.ANMP.GloftDMHM
     com.android.settings.intelligence:
-      com.gameloft.android.AMAZ.GloftDMAS
-    com.gameloft.android.AMAZ.GloftDMAS:
+      com.gameloft.android.ANMP.GloftDMHM
+    com.gameloft.android.ANMP.GloftDMHM:
+      com.android.cts.priv.ctsshim
+      com.android.cts.ctsshim
       com.google.android.play.games
       com.android.chrome
       com.android.launcher3
       com.android.healthconnect.controller
   queryable via interaction:
     User 0:
-      [com.android.inputdevices,com.android.settings,com.android.localtransport,com.android.location.fused,com.android.wallpaperbackup,com.android.dynsystem,com.android.providers.settings,android,com.android.keychain]:
-        com.gameloft.android.AMAZ.GloftDMAS
-      [com.google.android.gms,com.google.android.gsf]:
-        com.gameloft.android.AMAZ.GloftDMAS
   queryable via uses-library:
 
 Dexopt state:
-  [com.gameloft.android.AMAZ.GloftDMAS]
-    path: /data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/base.apk
-      x86_64: [status=verify] [reason=vdex] [primary-abi]
-        [location is /data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/oat/x86_64/base.vdex]
+  [com.gameloft.android.ANMP.GloftDMHM]
+    path: /data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/base.apk
+      x86_64: [status=speed-profile] [reason=install-dm] [primary-abi]
+        [location is /data/app/~~yNwuwGjdVRHD8OHkDKAhiw==/com.gameloft.android.ANMP.GloftDMHM-5qWnbDYKwqQaye87RuAl0A==/oat/x86_64/base.odex]
 
 Compiler stats:
-  [com.gameloft.android.AMAZ.GloftDMAS]
-    (No recorded stats)
+  [com.gameloft.android.ANMP.GloftDMHM]
+     base.apk - 10268
 
 DUMP OF SERVICE activity:
 ACTIVITY MANAGER SETTINGS (dumpsys activity settings) activity_manager_constants:
@@ -400,37 +462,37 @@ CachedAppOptimizer settings
 -----com.android.externalstorage-----
     Performed / Requested:
       Some: (0/0)
-      Full: (1/1)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2084
-    Total Physical ZRAM Consumed (KB): 1116
-    Total Anon Memory Freed (KB): 968
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.019555555555555555
-    Max Compaction Efficiency: 0.019555555555555555
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.46449136276391556
-    Avg Anon Mem Freed/Compaction (KB) : 968
-    Compaction Cost (ms/MB): 12.694214876033058
-
------com.android.documentsui-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (2/3)
+      Full: (1/2)
     Throttled:
        Some: 0 Full: 1
     Throttled by Type:
        NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 33.33333333333333
+    Throttle Percentage: 50.0
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 6996
-    Total Physical ZRAM Consumed (KB): 1288
-    Total Anon Memory Freed (KB): 5708
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.056900195382591015
-    Max Compaction Efficiency: 0.05781791790984598
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8158947970268725
-    Avg Anon Mem Freed/Compaction (KB) : 2854
-    Compaction Cost (ms/MB): 4.6643307638402245
+    Total Delta Anon RSS (KB) : 1924
+    Total Physical ZRAM Consumed (KB): 1056
+    Total Anon Memory Freed (KB): 868
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.017545278137128074
+    Max Compaction Efficiency: 0.017545278137128074
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.4511434511434511
+    Avg Anon Mem Freed/Compaction (KB) : 868
+    Compaction Cost (ms/MB): 5.8986175115207375
 
------android.ext.services-----
+-----com.google.android.apps.play.battlestar.filepicker-----
+    Performed / Requested:
+      Some: (0/0)
+      Full: (1/1)
+    -----Memory Stats----
+    Total Delta Anon RSS (KB) : 1876
+    Total Physical ZRAM Consumed (KB): 664
+    Total Anon Memory Freed (KB): 1212
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.024522499190676596
+    Max Compaction Efficiency: 0.024522499190676596
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6460554371002132
+    Avg Anon Mem Freed/Compaction (KB) : 1212
+    Compaction Cost (ms/MB): 6.759075907590759
+
+-----com.android.localtransport-----
     Performed / Requested:
       Some: (0/0)
       Full: (1/3)
@@ -440,47 +502,14 @@ CachedAppOptimizer settings
        NoPid: 0 OomAdj: 0 Time: 0 RSS: 2 Misc: 0 Unaccounted: 0
     Throttle Percentage: 66.66666666666666
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2192
-    Total Physical ZRAM Consumed (KB): 704
-    Total Anon Memory Freed (KB): 1488
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.030143424357831617
-    Max Compaction Efficiency: 0.030143424357831617
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6788321167883211
-    Avg Anon Mem Freed/Compaction (KB) : 1488
-    Compaction Cost (ms/MB): 8.258064516129032
-
------com.android.providers.calendar-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (1/2)
-    Throttled:
-       Some: 0 Full: 1
-    Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 50.0
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2756
-    Total Physical ZRAM Consumed (KB): 836
-    Total Anon Memory Freed (KB): 1920
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.03857280617164899
-    Max Compaction Efficiency: 0.03857280617164899
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6966618287373004
-    Avg Anon Mem Freed/Compaction (KB) : 1920
-    Compaction Cost (ms/MB): 8.0
-
------com.google.android.apps.play.battlestar.filepicker-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (1/1)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2016
-    Total Physical ZRAM Consumed (KB): 688
-    Total Anon Memory Freed (KB): 1328
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.026863014807023224
-    Max Compaction Efficiency: 0.026863014807023224
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6587301587301587
-    Avg Anon Mem Freed/Compaction (KB) : 1328
-    Compaction Cost (ms/MB): 8.481927710843374
+    Total Delta Anon RSS (KB) : 2104
+    Total Physical ZRAM Consumed (KB): 644
+    Total Anon Memory Freed (KB): 1460
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.029585798816568046
+    Max Compaction Efficiency: 0.029585798816568046
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6939163498098859
+    Avg Anon Mem Freed/Compaction (KB) : 1460
+    Compaction Cost (ms/MB): 5.610958904109589
 
 -----com.android.dynsystem:dynsystem-----
     Performed / Requested:
@@ -492,14 +521,14 @@ CachedAppOptimizer settings
        NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
     Throttle Percentage: 50.0
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2148
-    Total Physical ZRAM Consumed (KB): 692
-    Total Anon Memory Freed (KB): 1456
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.02947845804988662
-    Max Compaction Efficiency: 0.02947845804988662
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6778398510242085
-    Avg Anon Mem Freed/Compaction (KB) : 1456
-    Compaction Cost (ms/MB): 4.923076923076923
+    Total Delta Anon RSS (KB) : 2076
+    Total Physical ZRAM Consumed (KB): 696
+    Total Anon Memory Freed (KB): 1380
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.027971461002107994
+    Max Compaction Efficiency: 0.027971461002107994
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6647398843930636
+    Avg Anon Mem Freed/Compaction (KB) : 1380
+    Compaction Cost (ms/MB): 6.678260869565217
 
 -----com.android.dynsystem-----
     Performed / Requested:
@@ -511,295 +540,283 @@ CachedAppOptimizer settings
        NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
     Throttle Percentage: 50.0
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 1980
-    Total Physical ZRAM Consumed (KB): 604
-    Total Anon Memory Freed (KB): 1376
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.027872305947172257
-    Max Compaction Efficiency: 0.027872305947172257
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.694949494949495
-    Avg Anon Mem Freed/Compaction (KB) : 1376
-    Compaction Cost (ms/MB): 7.441860465116279
+    Total Delta Anon RSS (KB) : 1956
+    Total Physical ZRAM Consumed (KB): 652
+    Total Anon Memory Freed (KB): 1304
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.02641601166842233
+    Max Compaction Efficiency: 0.02641601166842233
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6666666666666667
+    Avg Anon Mem Freed/Compaction (KB) : 1304
+    Compaction Cost (ms/MB): 5.4969325153374236
 
------com.android.localtransport-----
+-----com.android.settings-----
     Performed / Requested:
       Some: (0/0)
-      Full: (1/1)
+      Full: (3/3)
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2148
-    Total Physical ZRAM Consumed (KB): 672
-    Total Anon Memory Freed (KB): 1476
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.02988822290620444
-    Max Compaction Efficiency: 0.02988822290620444
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6871508379888268
-    Avg Anon Mem Freed/Compaction (KB) : 1476
-    Compaction Cost (ms/MB): 6.937669376693767
+    Total Delta Anon RSS (KB) : 25128
+    Total Physical ZRAM Consumed (KB): 7632
+    Total Anon Memory Freed (KB): 17496
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.10540013012361743
+    Max Compaction Efficiency: 0.16891126494650724
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6962750716332378
+    Avg Anon Mem Freed/Compaction (KB) : 5832
+    Compaction Cost (ms/MB): 4.799268404206676
 
 -----com.android.keychain-----
     Performed / Requested:
       Some: (0/0)
+      Full: (1/3)
+    Throttled:
+       Some: 0 Full: 2
+    Throttled by Type:
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 2 Misc: 0 Unaccounted: 0
+    Throttle Percentage: 66.66666666666666
+    -----Memory Stats----
+    Total Delta Anon RSS (KB) : 2088
+    Total Physical ZRAM Consumed (KB): 680
+    Total Anon Memory Freed (KB): 1408
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.028460543337645538
+    Max Compaction Efficiency: 0.028460543337645538
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6743295019157088
+    Avg Anon Mem Freed/Compaction (KB) : 1408
+    Compaction Cost (ms/MB): 5.090909090909091
+
+-----com.google.android.gms.unstable-----
+    Performed / Requested:
+      Some: (0/0)
+      Full: (3/3)
+    -----Memory Stats----
+    Total Delta Anon RSS (KB) : 22188
+    Total Physical ZRAM Consumed (KB): 6044
+    Total Anon Memory Freed (KB): 16144
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.09624648256784471
+    Max Compaction Efficiency: 0.1087866108786611
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.727600504777357
+    Avg Anon Mem Freed/Compaction (KB) : 5381
+    Compaction Cost (ms/MB): 4.249752229930625
+
+-----com.android.providers.calendar-----
+    Performed / Requested:
+      Some: (0/0)
       Full: (1/1)
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2112
-    Total Physical ZRAM Consumed (KB): 644
-    Total Anon Memory Freed (KB): 1468
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.029687752790810547
-    Max Compaction Efficiency: 0.029687752790810547
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6950757575757576
-    Avg Anon Mem Freed/Compaction (KB) : 1468
-    Compaction Cost (ms/MB): 5.580381471389646
+    Total Delta Anon RSS (KB) : 2716
+    Total Physical ZRAM Consumed (KB): 828
+    Total Anon Memory Freed (KB): 1888
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.03797875764402961
+    Max Compaction Efficiency: 0.03797875764402961
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.695139911634757
+    Avg Anon Mem Freed/Compaction (KB) : 1888
+    Compaction Cost (ms/MB): 4.338983050847458
 
 -----com.android.rkpdapp-----
     Performed / Requested:
       Some: (0/0)
-      Full: (1/2)
-    Throttled:
-       Some: 0 Full: 1
-    Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 50.0
+      Full: (1/1)
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 3356
-    Total Physical ZRAM Consumed (KB): 1048
-    Total Anon Memory Freed (KB): 2308
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.04604948124501197
-    Max Compaction Efficiency: 0.04604948124501197
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6877234803337307
-    Avg Anon Mem Freed/Compaction (KB) : 2308
-    Compaction Cost (ms/MB): 7.986135181975737
+    Total Delta Anon RSS (KB) : 3476
+    Total Physical ZRAM Consumed (KB): 1128
+    Total Anon Memory Freed (KB): 2348
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.046735668789808914
+    Max Compaction Efficiency: 0.046735668789808914
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6754890678941312
+    Avg Anon Mem Freed/Compaction (KB) : 2348
+    Compaction Cost (ms/MB): 4.797274275979557
 
 -----com.gameloft.android.AMAZ.GloftDMAS-----
     Performed / Requested:
       Some: (0/0)
       Full: (1/1)
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 7212
-    Total Physical ZRAM Consumed (KB): 2044
-    Total Anon Memory Freed (KB): 5168
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.09746529873264936
-    Max Compaction Efficiency: 0.09746529873264936
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7165834719911259
-    Avg Anon Mem Freed/Compaction (KB) : 5168
-    Compaction Cost (ms/MB): 4.953560371517028
-
------android.process.media-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (1/1)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2668
-    Total Physical ZRAM Consumed (KB): 828
-    Total Anon Memory Freed (KB): 1840
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.037016174458839625
-    Max Compaction Efficiency: 0.037016174458839625
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6896551724137931
-    Avg Anon Mem Freed/Compaction (KB) : 1840
-    Compaction Cost (ms/MB): 5.008695652173913
-
------com.android.permissioncontroller-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (6/6)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 34580
-    Total Physical ZRAM Consumed (KB): 9856
-    Total Anon Memory Freed (KB): 24724
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.08073406478578893
-    Max Compaction Efficiency: 0.09390003935458481
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7149797570850203
-    Avg Anon Mem Freed/Compaction (KB) : 4120
-    Compaction Cost (ms/MB): 4.390228118427439
-
------com.google.android.gms.unstable-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (9/10)
-    Throttled:
-       Some: 0 Full: 1
-    Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 10.0
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 60600
-    Total Physical ZRAM Consumed (KB): 11192
-    Total Anon Memory Freed (KB): 49408
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.10193942394982257
-    Max Compaction Efficiency: 0.11851154709331789
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8153135313531353
-    Avg Anon Mem Freed/Compaction (KB) : 5489
-    Compaction Cost (ms/MB): 4.248704663212435
+    Total Delta Anon RSS (KB) : 7336
+    Total Physical ZRAM Consumed (KB): 2552
+    Total Anon Memory Freed (KB): 4784
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.08888228299643282
+    Max Compaction Efficiency: 0.08888228299643282
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6521264994547438
+    Avg Anon Mem Freed/Compaction (KB) : 4784
+    Compaction Cost (ms/MB): 5.137123745819398
 
 -----com.google.process.gservices-----
     Performed / Requested:
       Some: (0/0)
-      Full: (2/2)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 6404
-    Total Physical ZRAM Consumed (KB): 2304
-    Total Anon Memory Freed (KB): 4100
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.04074898624473245
-    Max Compaction Efficiency: 0.04391945457428254
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6402248594628357
-    Avg Anon Mem Freed/Compaction (KB) : 2050
-    Compaction Cost (ms/MB): 6.493658536585366
-
------com.google.process.gapps-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (1/2)
+      Full: (1/3)
     Throttled:
-       Some: 0 Full: 1
+       Some: 0 Full: 2
     Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 50.0
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 2 Misc: 0 Unaccounted: 0
+    Throttle Percentage: 66.66666666666666
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 3132
-    Total Physical ZRAM Consumed (KB): 620
-    Total Anon Memory Freed (KB): 2512
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.05012771392081737
-    Max Compaction Efficiency: 0.05012771392081737
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8020434227330779
-    Avg Anon Mem Freed/Compaction (KB) : 2512
-    Compaction Cost (ms/MB): 2.445859872611465
+    Total Delta Anon RSS (KB) : 3084
+    Total Physical ZRAM Consumed (KB): 324
+    Total Anon Memory Freed (KB): 2760
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.0549406799904451
+    Max Compaction Efficiency: 0.0549406799904451
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8949416342412452
+    Avg Anon Mem Freed/Compaction (KB) : 2760
+    Compaction Cost (ms/MB): 5.936231884057971
 
 -----android.process.acore-----
     Performed / Requested:
       Some: (0/0)
+      Full: (1/1)
+    -----Memory Stats----
+    Total Delta Anon RSS (KB) : 5092
+    Total Physical ZRAM Consumed (KB): 1384
+    Total Anon Memory Freed (KB): 3708
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.07247849882720876
+    Max Compaction Efficiency: 0.07247849882720876
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7282010997643362
+    Avg Anon Mem Freed/Compaction (KB) : 3708
+    Compaction Cost (ms/MB): 7.732470334412082
+
+-----com.google.process.gapps-----
+    Performed / Requested:
+      Some: (0/0)
+      Full: (1/3)
+    Throttled:
+       Some: 0 Full: 2
+    Throttled by Type:
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 2 Misc: 0 Unaccounted: 0
+    Throttle Percentage: 66.66666666666666
+    -----Memory Stats----
+    Total Delta Anon RSS (KB) : 2540
+    Total Physical ZRAM Consumed (KB): 728
+    Total Anon Memory Freed (KB): 1812
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.036455818445195555
+    Max Compaction Efficiency: 0.036455818445195555
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7133858267716535
+    Avg Anon Mem Freed/Compaction (KB) : 1812
+    Compaction Cost (ms/MB): 7.911699779249449
+
+-----android.process.media-----
+    Performed / Requested:
+      Some: (0/0)
       Full: (1/2)
     Throttled:
        Some: 0 Full: 1
     Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 0 Misc: 0 Unaccounted: 1
     Throttle Percentage: 50.0
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 4728
-    Total Physical ZRAM Consumed (KB): 1628
-    Total Anon Memory Freed (KB): 3100
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.060133457479826194
-    Max Compaction Efficiency: 0.060133457479826194
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6556683587140439
-    Avg Anon Mem Freed/Compaction (KB) : 3100
-    Compaction Cost (ms/MB): 3.9638709677419355
+    Total Delta Anon RSS (KB) : 2752
+    Total Physical ZRAM Consumed (KB): 816
+    Total Anon Memory Freed (KB): 1936
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.03896312993076799
+    Max Compaction Efficiency: 0.03896312993076799
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7034883720930232
+    Avg Anon Mem Freed/Compaction (KB) : 1936
+    Compaction Cost (ms/MB): 4.760330578512397
 
------com.android.settings.intelligence-----
+-----com.android.documentsui-----
     Performed / Requested:
       Some: (0/0)
       Full: (1/1)
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 16136
-    Total Physical ZRAM Consumed (KB): 2736
-    Total Anon Memory Freed (KB): 13400
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.21387984421885972
-    Max Compaction Efficiency: 0.21387984421885972
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8304412493802678
-    Avg Anon Mem Freed/Compaction (KB) : 13400
-    Compaction Cost (ms/MB): 4.8907462686567165
+    Total Delta Anon RSS (KB) : 3604
+    Total Physical ZRAM Consumed (KB): 616
+    Total Anon Memory Freed (KB): 2988
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.05910277711844292
+    Max Compaction Efficiency: 0.05910277711844292
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.8290788013318535
+    Avg Anon Mem Freed/Compaction (KB) : 2988
+    Compaction Cost (ms/MB): 4.455153949129853
 
------com.google.android.gms.ui-----
+-----com.android.permissioncontroller-----
     Performed / Requested:
       Some: (0/0)
-      Full: (1/1)
+      Full: (2/3)
+    Throttled:
+       Some: 0 Full: 1
+    Throttled by Type:
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 1 Misc: 0 Unaccounted: 0
+    Throttle Percentage: 33.33333333333333
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 8220
-    Total Physical ZRAM Consumed (KB): 2288
-    Total Anon Memory Freed (KB): 5932
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.10545402830121596
-    Max Compaction Efficiency: 0.10545402830121596
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.721654501216545
-    Avg Anon Mem Freed/Compaction (KB) : 5932
-    Compaction Cost (ms/MB): 6.73229939312205
-
------com.android.healthconnect.controller-----
-    Performed / Requested:
-      Some: (0/0)
-      Full: (1/1)
-    -----Memory Stats----
-    Total Delta Anon RSS (KB) : 2248
-    Total Physical ZRAM Consumed (KB): 728
-    Total Anon Memory Freed (KB): 1520
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.030605670103092782
-    Max Compaction Efficiency: 0.030605670103092782
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.6761565836298933
-    Avg Anon Mem Freed/Compaction (KB) : 1520
-    Compaction Cost (ms/MB): 7.410526315789474
+    Total Delta Anon RSS (KB) : 12852
+    Total Physical ZRAM Consumed (KB): 3820
+    Total Anon Memory Freed (KB): 9032
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.08617333893065679
+    Max Compaction Efficiency: 0.08950665622552859
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.702769996887644
+    Avg Anon Mem Freed/Compaction (KB) : 4516
+    Compaction Cost (ms/MB): 3.741364038972542
 
 
  Per-Source Compaction Stats
 -----APP-----
     Performed / Requested:
       Some: (0/0)
-      Full: (35/45)
+      Full: (22/35)
     Throttled:
-       Some: 0 Full: 10
+       Some: 0 Full: 13
     Throttled by Type:
-       NoPid: 0 OomAdj: 0 Time: 0 RSS: 10 Misc: 0 Unaccounted: 0
-    Throttle Percentage: 22.22222222222222
+       NoPid: 0 OomAdj: 0 Time: 0 RSS: 12 Misc: 0 Unaccounted: 1
+    Throttle Percentage: 37.142857142857146
     -----Memory Stats----
-    Total Delta Anon RSS (KB) : 173716
-    Total Physical ZRAM Consumed (KB): 42516
-    Total Anon Memory Freed (KB): 131200
-    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.072462007153414
-    Max Compaction Efficiency: 0.21387984421885972
-    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7552557047134403
-    Avg Anon Mem Freed/Compaction (KB) : 3748
-    Compaction Cost (ms/MB): 4.932682926829268
+    Total Delta Anon RSS (KB) : 102792
+    Total Physical ZRAM Consumed (KB): 30264
+    Total Anon Memory Freed (KB): 72528
+    Avg Compaction Efficiency (Anon Freed/Anon RSS): 0.06361658830959231
+    Max Compaction Efficiency: 0.16891126494650724
+    Avg Compression Ratio (1 - ZRAM Consumed/DeltaAnonRSS): 0.7055802007938361
+    Avg Anon Mem Freed/Compaction (KB) : 3296
+    Compaction Cost (ms/MB): 4.927421133906905
 
 
-Total Compactions Performed by profile: 0 some, 35 full
+Total Compactions Performed by profile: 0 some, 22 full
 Total compactions downgraded: 0
 Total compactions cancelled by reason: 
+    OOM_IMPROVEMENT: 1
 
  System Compaction Memory Stats
     Compactions Performed: 0
     Total Memory Freed (KB): 0
     Avg Mem Freed per Compact (KB): 0.0
 
-  Tracking last compaction stats for 21 processes.
+  Tracking last compaction stats for 17 processes.
 Last Compaction per process stats:
     (ProcessName,Source,DeltaAnonRssKBs,ZramConsumedKBs,AnonMemFreedKBs,CompactEfficiency,CompactCost(ms/MB),procState,oomAdj,oomAdjReason)
-    (com.android.externalstorage,APP,2084,1116,968,0.019555555555555555,12.694214876033058,19,955,updateOomAdj_removeProvider)
-    (android.ext.services,APP,2192,704,1488,0.030143424357831617,8.258064516129032,19,905,updateOomAdj_allowlistChange)
-    (com.android.providers.calendar,APP,2756,836,1920,0.03857280617164899,8.0,19,915,updateOomAdj_allowlistChange)
-    (com.google.android.apps.play.battlestar.filepicker,APP,2016,688,1328,0.026863014807023224,8.481927710843374,19,945,updateOomAdj_allowlistChange)
-    (com.android.dynsystem:dynsystem,APP,2148,692,1456,0.02947845804988662,4.923076923076923,19,935,updateOomAdj_allowlistChange)
-    (com.android.dynsystem,APP,1980,604,1376,0.027872305947172257,7.441860465116279,19,935,updateOomAdj_allowlistChange)
-    (com.android.localtransport,APP,2148,672,1476,0.02988822290620444,6.937669376693767,19,965,updateOomAdj_allowlistChange)
-    (com.android.keychain,APP,2112,644,1468,0.029687752790810547,5.580381471389646,19,965,updateOomAdj_allowlistChange)
-    (com.android.rkpdapp,APP,3356,1048,2308,0.04604948124501197,7.986135181975737,19,925,updateOomAdj_allowlistChange)
-    (com.gameloft.android.AMAZ.GloftDMAS,APP,7212,2044,5168,0.09746529873264936,4.953560371517028,19,905,updateOomAdj_allowlistChange)
-    (android.process.media,APP,2668,828,1840,0.037016174458839625,5.008695652173913,19,945,updateOomAdj_allowlistChange)
-    (com.google.process.gservices,APP,3520,1304,2216,0.04391945457428254,5.5451263537906135,19,925,updateOomAdj_removeProvider)
-    (com.google.process.gapps,APP,3132,620,2512,0.05012771392081737,2.445859872611465,19,925,updateOomAdj_processEnd)
-    (android.process.acore,APP,4728,1628,3100,0.060133457479826194,3.9638709677419355,19,935,updateOomAdj_processEnd)
-    (com.android.documentsui,APP,2968,100,2868,0.05781791790984598,2.8563458856345885,19,905,updateOomAdj_activityChange)
-    (com.android.settings.intelligence,APP,16136,2736,13400,0.21387984421885972,4.8907462686567165,19,905,updateOomAdj_activityChange)
-    (com.google.android.gms.ui,APP,8220,2288,5932,0.10545402830121596,6.73229939312205,19,915,updateOomAdj_activityChange)
-    (com.google.process.gservices,APP,2884,1000,1884,0.03755980861244019,7.6093418259023355,19,935,updateOomAdj_activityChange)
-    (com.android.healthconnect.controller,APP,2248,728,1520,0.030605670103092782,7.410526315789474,19,935,updateOomAdj_activityChange)
-    (com.android.permissioncontroller,APP,6448,2532,3916,0.0763471886454028,4.9683350357507665,19,905,updateOomAdj_activityChange)
-    (com.google.android.gms.unstable,APP,5732,552,5180,0.09875695874323191,2.7675675675675677,19,1001,updateOomAdj_executingService)
+    (com.android.externalstorage,APP,1924,1056,868,0.017545278137128074,5.8986175115207375,19,905,updateOomAdj_finishReceiver)
+    (com.google.android.apps.play.battlestar.filepicker,APP,1876,664,1212,0.024522499190676596,6.759075907590759,19,965,updateOomAdj_allowlistChange)
+    (com.android.localtransport,APP,2104,644,1460,0.029585798816568046,5.610958904109589,19,945,updateOomAdj_allowlistChange)
+    (com.android.dynsystem:dynsystem,APP,2076,696,1380,0.027971461002107994,6.678260869565217,19,955,updateOomAdj_allowlistChange)
+    (com.android.dynsystem,APP,1956,652,1304,0.02641601166842233,5.4969325153374236,19,965,updateOomAdj_allowlistChange)
+    (com.android.keychain,APP,2088,680,1408,0.028460543337645538,5.090909090909091,19,975,updateOomAdj_allowlistChange)
+    (com.android.providers.calendar,APP,2716,828,1888,0.03797875764402961,4.338983050847458,19,915,updateOomAdj_allowlistChange)
+    (com.android.rkpdapp,APP,3476,1128,2348,0.046735668789808914,4.797274275979557,19,935,updateOomAdj_allowlistChange)
+    (com.gameloft.android.AMAZ.GloftDMAS,APP,7336,2552,4784,0.08888228299643282,5.137123745819398,19,925,updateOomAdj_allowlistChange)
+    (com.google.process.gservices,APP,3084,324,2760,0.0549406799904451,5.936231884057971,19,905,updateOomAdj_activityChange)
+    (android.process.acore,APP,5092,1384,3708,0.07247849882720876,7.732470334412082,19,915,updateOomAdj_activityChange)
+    (com.google.process.gapps,APP,2540,728,1812,0.036455818445195555,7.911699779249449,19,925,updateOomAdj_activityChange)
+    (com.android.documentsui,APP,3604,616,2988,0.05910277711844292,4.455153949129853,19,905,updateOomAdj_activityChange)
+    (android.process.media,APP,2752,816,1936,0.03896312993076799,4.760330578512397,19,915,updateOomAdj_removeProvider)
+    (com.android.permissioncontroller,APP,5216,644,4572,0.08950665622552859,3.3595800524934383,19,905,updateOomAdj_allowlistChange)
+    (com.google.android.gms.unstable,APP,5440,1252,4188,0.07828622700762673,3.667621776504298,19,905,updateOomAdj_allowlistChange)
+    (com.android.settings,APP,1988,128,1860,0.038152280932064325,5.505376344086022,18,900,updateOomAdj_allowlistChange)
 
 Last 20 Compactions Stats:
     (ProcessName,Source,DeltaAnonRssKBs,ZramConsumedKBs,AnonMemFreedKBs,CompactEfficiency,CompactCost(ms/MB),procState,oomAdj,oomAdjReason)
-    (com.google.process.gservices,APP,3520,1304,2216,0.04391945457428254,5.5451263537906135,19,925,updateOomAdj_removeProvider)
-    (com.google.android.gms.unstable,APP,6704,1544,5160,0.09416058394160584,3.373643410852713,19,905,updateOomAdj_executingService)
-    (com.google.android.gms.unstable,APP,6484,1328,5156,0.09567992874109264,4.965089216446858,19,905,updateOomAdj_executingService)
-    (com.google.process.gapps,APP,3132,620,2512,0.05012771392081737,2.445859872611465,19,925,updateOomAdj_processEnd)
-    (android.process.acore,APP,4728,1628,3100,0.060133457479826194,3.9638709677419355,19,935,updateOomAdj_processEnd)
-    (com.google.android.gms.unstable,APP,6312,828,5484,0.10252766975770267,4.854850474106492,19,905,updateOomAdj_executingService)
-    (com.google.android.gms.unstable,APP,7816,1268,6548,0.11851154709331789,5.473427000610873,19,905,updateOomAdj_executingService)
-    (com.google.android.gms.unstable,APP,5488,576,4912,0.0945342571208622,3.752442996742671,19,905,updateOomAdj_activityChange)
-    (com.android.documentsui,APP,2968,100,2868,0.05781791790984598,2.8563458856345885,19,905,updateOomAdj_activityChange)
-    (com.android.permissioncontroller,APP,5340,1108,4232,0.08280504030680129,2.90359168241966,19,905,updateOomAdj_executingService)
-    (com.android.permissioncontroller,APP,6028,1256,4772,0.09390003935458481,3.4333612740989103,19,905,updateOomAdj_executingService)
-    (com.google.android.gms.unstable,APP,5648,620,5028,0.09555302166476624,3.258552108194113,19,1001,updateOomAdj_executingService)
-    (com.android.permissioncontroller,APP,4924,840,4084,0.08238521746147018,4.011753183153771,19,905,updateOomAdj_executingService)
-    (com.google.android.gms.unstable,APP,5812,352,5460,0.10463779225756994,4.688644688644689,19,905,updateOomAdj_activityChange)
-    (com.android.settings.intelligence,APP,16136,2736,13400,0.21387984421885972,4.8907462686567165,19,905,updateOomAdj_activityChange)
-    (com.google.android.gms.ui,APP,8220,2288,5932,0.10545402830121596,6.73229939312205,19,915,updateOomAdj_activityChange)
-    (com.google.process.gservices,APP,2884,1000,1884,0.03755980861244019,7.6093418259023355,19,935,updateOomAdj_activityChange)
-    (com.android.healthconnect.controller,APP,2248,728,1520,0.030605670103092782,7.410526315789474,19,935,updateOomAdj_activityChange)
-    (com.android.permissioncontroller,APP,6448,2532,3916,0.0763471886454028,4.9683350357507665,19,905,updateOomAdj_activityChange)
-    (com.google.android.gms.unstable,APP,5732,552,5180,0.09875695874323191,2.7675675675675677,19,1001,updateOomAdj_executingService)
+    (com.android.localtransport,APP,2104,644,1460,0.029585798816568046,5.610958904109589,19,945,updateOomAdj_allowlistChange)
+    (com.android.dynsystem:dynsystem,APP,2076,696,1380,0.027971461002107994,6.678260869565217,19,955,updateOomAdj_allowlistChange)
+    (com.android.dynsystem,APP,1956,652,1304,0.02641601166842233,5.4969325153374236,19,965,updateOomAdj_allowlistChange)
+    (com.android.settings,APP,6800,1900,4900,0.0912748677445794,4.597551020408163,19,975,updateOomAdj_allowlistChange)
+    (com.android.keychain,APP,2088,680,1408,0.028460543337645538,5.090909090909091,19,975,updateOomAdj_allowlistChange)
+    (com.google.android.gms.unstable,APP,9940,4016,5924,0.10076200843652197,5.358541525995949,19,905,updateOomAdj_allowlistChange)
+    (com.android.providers.calendar,APP,2716,828,1888,0.03797875764402961,4.338983050847458,19,915,updateOomAdj_allowlistChange)
+    (com.android.rkpdapp,APP,3476,1128,2348,0.046735668789808914,4.797274275979557,19,935,updateOomAdj_allowlistChange)
+    (com.gameloft.android.AMAZ.GloftDMAS,APP,7336,2552,4784,0.08888228299643282,5.137123745819398,19,925,updateOomAdj_allowlistChange)
+    (com.google.process.gservices,APP,3084,324,2760,0.0549406799904451,5.936231884057971,19,905,updateOomAdj_activityChange)
+    (android.process.acore,APP,5092,1384,3708,0.07247849882720876,7.732470334412082,19,915,updateOomAdj_activityChange)
+    (com.google.process.gapps,APP,2540,728,1812,0.036455818445195555,7.911699779249449,19,925,updateOomAdj_activityChange)
+    (com.android.documentsui,APP,3604,616,2988,0.05910277711844292,4.455153949129853,19,905,updateOomAdj_activityChange)
+    (android.process.media,APP,2752,816,1936,0.03896312993076799,4.760330578512397,19,915,updateOomAdj_removeProvider)
+    (com.android.permissioncontroller,APP,7636,3176,4460,0.08300454105560932,4.132735426008969,19,905,updateOomAdj_allowlistChange)
+    (com.android.settings,APP,16340,5604,10736,0.16891126494650724,4.769001490312966,18,900,updateOomAdj_allowlistChange)
+    (com.google.android.gms.unstable,APP,6808,776,6032,0.1087866108786611,3.5649867374005306,19,905,updateOomAdj_executingService)
+    (com.android.permissioncontroller,APP,5216,644,4572,0.08950665622552859,3.3595800524934383,19,905,updateOomAdj_allowlistChange)
+    (com.google.android.gms.unstable,APP,5440,1252,4188,0.07828622700762673,3.667621776504298,19,905,updateOomAdj_allowlistChange)
+    (com.android.settings,APP,1988,128,1860,0.038152280932064325,5.505376344086022,18,900,updateOomAdj_allowlistChange)
 
   use_freezer=true
   freeze_statsd_sample_rate=0.1
@@ -812,19 +829,20 @@ Last 20 Compactions Stats:
   freeze_binder_callback_enabled=true
   freeze_binder_callback_throttle=10000
   freeze_binder_async_threshold=1024
-  Apps frozen: 12
-    2158886: 823 com.android.permissioncontroller
-    2093202: 1265 android.process.acore
-    2093202: 1515 com.google.process.gapps
-    2093203: 1559 com.android.documentsui
-    2093202: 1656 com.android.providers.calendar
-    2918219: 1711 com.google.android.gms.unstable
-    2093201: 1797 com.android.dynsystem:dynsystem
-    2093201: 1822 com.android.rkpdapp
-    2141049: 3390 com.android.settings.intelligence
-    2145703: 3411 com.android.healthconnect.controller
-    2145702: 3437 com.google.android.gms.ui
-    2145702: 3484 com.google.process.gservices
+  Apps frozen: 13
+    1081725: 858 com.android.settings
+    813779: 1042 com.android.permissioncontroller
+    71144: 1116 android.process.media
+    59614: 1172 android.process.acore
+    1081725: 1238 com.android.keychain
+    815004: 1350 com.google.process.gapps
+    815004: 1373 com.google.process.gservices
+    46560: 1482 com.android.providers.calendar
+    46767: 1522 com.android.rkpdapp
+    1081726: 1602 com.android.localtransport
+    815003: 1668 com.google.android.gms.unstable
+    71144: 1719 com.android.externalstorage
+    71144: 2083 com.android.documentsui
 CacheOomRanker settings
   use_oom_re_ranking=false
   oom_re_ranking_number_to_re_rank=8
@@ -840,10 +858,10 @@ ACTIVITY MANAGER ALLOWED ASSOCIATION STATE (dumpsys activity allowed-association
 
 -------------------------------------------------------------------------------
 ACTIVITY MANAGER PENDING INTENTS (dumpsys activity intents)
-  * UID: 1000 total: 18
+  * UID: 1000 total: 19
   * UID: 10004 total: 2
-  * UID: 10023 total: 23
-  * UID: 10024 total: 2
+  * UID: 10023 total: 14
+  * UID: 10024 total: 7
   * UID: 10030 total: 1
   * UID: 10032 total: 5
   * UID: 10042 total: 1
@@ -853,19 +871,23 @@ ACTIVITY MANAGER PENDING INTENTS (dumpsys activity intents)
 ACTIVITY MANAGER BROADCAST STATE (dumpsys activity broadcasts)
   
   📋 Per-process queues:
-    87ad347 1265:android.process.acore/u0a5 not runnable because INFINITE_DEFER
+    e5d1f9c 1172:android.process.acore/u0a5 not runnable because INFINITE_DEFER
       state:FRZ
-      e:1 d:1 f:0 fd:0 o:0 a:0 p:1 pd:1 int:0 rt:0 ins:0 m:0 csi:0 adcsi:0 ccu:0 ccn:9
-      -17m27s646ms 1209b8f android.intent.action.PACKAGE_CHANGED/u0
-          DEFERRED for registered a14677e
+      e:1 d:1 f:0 fd:0 o:0 a:0 p:1 pd:1 int:0 rt:0 ins:0 m:0 csi:0 adcsi:0 ccu:0 ccn:4
+      -10m34s547ms c2383d5 android.intent.action.PACKAGE_CHANGED/u0
+          DEFERRED for registered 1051784
           blocked until 48, currently at 56 of 56
     
-    2dec9b3 1559:com.android.documentsui/u0a9 not runnable because INFINITE_DEFER
+    73bd9b9 2083:com.android.documentsui/u0a9 not runnable because INFINITE_DEFER
       state:FRZ
-      e:1 d:1 f:0 fd:0 o:0 a:0 p:1 pd:1 int:0 rt:0 ins:0 m:0 csi:0 adcsi:0 ccu:0 ccn:13
-      -17m27s646ms 1209b8f android.intent.action.PACKAGE_CHANGED/u0
-          DEFERRED for registered b0ba5c9
+      runningOomAdjusted:true
+      e:2 d:2 f:0 fd:0 o:0 a:0 p:2 pd:2 int:0 rt:0 ins:0 m:0 csi:0 adcsi:0 ccu:0 ccn:1
+      -10m34s547ms c2383d5 android.intent.action.PACKAGE_CHANGED/u0
+          DEFERRED for registered cb5e561
           blocked until 48, currently at 56 of 56
+      -5m59s247ms 4a9b69a android.intent.action.PACKAGE_ADDED/u0
+          DEFERRED for registered cb5e561
+          blocked until 62, currently at 74 of 74
     
   
   🧍 Runnable:
@@ -882,7 +904,7 @@ ACTIVITY MANAGER BROADCAST STATE (dumpsys activity broadcasts)
     {}
   
   Foreground UIDs:
-    {10030=true}
+    {10024=true}
   
   Broadcast parameters (key=bcast_fg_constants, observing=true):
     bcast_timeout=+10s0ms 
@@ -912,140 +934,349 @@ ACTIVITY MANAGER BROADCAST STATE (dumpsys activity broadcasts)
     pending_cold_start_check_interval_millis=30000 
   
     Pending broadcasts:
+    Broadcast #1:
+      BroadcastRecord{4a9b69a android.intent.action.PACKAGE_ADDED/u0} to user 0
+      Intent { act=android.intent.action.PACKAGE_ADDED dat=package:com.gameloft.android.ANMP.GloftDMHM flg=0x4000010 (has extras) }
+        extras: Bundle[{android.intent.extra.UID=10055, android.content.pm.extra.DATA_LOADER_TYPE=0, android.intent.extra.user_handle=0}]
+      caller=null null pid=494 uid=1000
+      enqueueClockTime=2026-11-25 17:50:35.584 dispatchClockTime=1970-01-01 01:00:00.000
+      dispatchTime=-- (-13m8s47ms since enq) receiverTime=--
+      resultTo=null resultCode=0 resultData=null
+      terminalCount=73
+      DELIVERED scheduled +2ms terminal 0 (0) #0: BroadcastFilter{753481e 1000/u-1 ReceiverList{f6b30a0 494 system/1000/u-1 local:534a459}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #1: BroadcastFilter{e923cf6 1000/u-1 ReceiverList{be58591 494 system/1000/u-1 local:36a73b8}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #2: BroadcastFilter{9cc2a65 1000/u-1 ReceiverList{dec175c 494 system/1000/u-1 local:d8a51cf}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #3: BroadcastFilter{a5a07e1 1000/u-1 ReceiverList{6d14d48 494 system/1000/u-1 local:8043beb}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #4: BroadcastFilter{e68b6b4 1000/u-1 ReceiverList{b92f787 494 system/1000/u-1 local:93b3bc6}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #5: BroadcastFilter{4385149 1000/u-1 ReceiverList{50ebb50 494 system/1000/u-1 local:e09fd13}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #6: BroadcastFilter{58d9f14 1000/u-1 ReceiverList{bd2c567 494 system/1000/u-1 local:b441526}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #7: BroadcastFilter{f9a21b0 1000/u-1 ReceiverList{96380f3 494 system/1000/u-1 local:1b39762}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #8: BroadcastFilter{bb132af 1000/u-1 ReceiverList{55e4a8e 494 system/1000/u-1 local:db96a89}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #9: BroadcastFilter{d4dac16 1000/u-1 ReceiverList{8fabd31 494 system/1000/u-1 local:97945d8}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #10: BroadcastFilter{ce48e30 1000/u0 ReceiverList{1d9cf73 494 system/1000/u0 local:cf00fe2}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #11: BroadcastFilter{b64f2b7 1000/u-1 ReceiverList{e5865b6 494 system/1000/u-1 local:f3bd951}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #12: BroadcastFilter{bcd827c 1000/u-1 ReceiverList{eeff56f 494 system/1000/u-1 local:6a7604e}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #13: BroadcastFilter{48791bd 1000/u-1 ReceiverList{51a514 494 system/1000/u-1 local:2ab2367}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #14: BroadcastFilter{a5d0b0e 1000/u-1 ReceiverList{d70dd09 494 system/1000/u-1 local:e671e10}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #15: BroadcastFilter{f689f28 1000/u-1 ReceiverList{ec0294b 494 system/1000/u-1 local:562ca1a}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #16: BroadcastFilter{b588272 1000/u-1 ReceiverList{683c37d 494 system/1000/u-1 local:e3c85d4}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #17: BroadcastFilter{f82bb6c 1000/u-1 ReceiverList{623bc1f 494 system/1000/u-1 local:aa853be}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #18: BroadcastFilter{ac91c96 1000/u-1 ReceiverList{7739fb1 494 system/1000/u-1 local:5962258}}
+        reason: assuming delivered
+      DELIVERED scheduled +3ms terminal 0 (0) #19: BroadcastFilter{b5ae470 1000/u-1 ReceiverList{bf696b3 494 system/1000/u-1 local:2726c22}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #20: BroadcastFilter{374be66 1000/u-1 ReceiverList{466c1 494 system/1000/u-1 local:8005ba8}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #21: BroadcastFilter{565cfec 1000/u-1 ReceiverList{d0c529f 494 system/1000/u-1 local:913343e}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #22: BroadcastFilter{7d84f2a 1000/u-1 ReceiverList{6d47015 494 system/1000/u-1 local:65825cc}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #23: BroadcastFilter{9113d90 1000/u-1 ReceiverList{1c21e51 494 system/1000/u-1 local:66af778}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #24: BroadcastFilter{1c946cb 1000/u0 ReceiverList{78fed9a 494 system/1000/u0 local:7a6c245}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #25: BroadcastFilter{570c395 1000/u-1 ReceiverList{22b974c 494 system/1000/u-1 local:9791b7f}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #26: BroadcastFilter{e985586 1000/u-1 ReceiverList{6e96661 494 system/1000/u-1 local:1a115c8}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #27: BroadcastFilter{8f5df3f 1000/u-1 ReceiverList{fee8f5e 494 system/1000/u-1 local:21f8099}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #28: BroadcastFilter{5f1ca1e 1000/u-1 ReceiverList{d13ee59 494 system/1000/u-1 local:d7162a0}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #29: BroadcastFilter{e8bb1da 1000/u-1 ReceiverList{861ef85 494 system/1000/u-1 local:f173cfc}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #30: BroadcastFilter{3819054 1000/u-1 ReceiverList{2c6b3a7 494 system/1000/u-1 local:175d466}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #31: BroadcastFilter{2309f5a 1000/u0 ReceiverList{ff82305 494 system/1000/u0 local:6200e7c}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #32: BroadcastFilter{7f7ce9d 1000/u-1 ReceiverList{15b4974 494 system/1000/u-1 local:ebd1d47}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #33: BroadcastFilter{21e0d34 1000/u-1 ReceiverList{b059807 494 system/1000/u-1 local:74a0e46}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #34: BroadcastFilter{bd894f6 1000/u-1 ReceiverList{36e3d91 494 system/1000/u-1 local:5430bb8}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #35: BroadcastFilter{f251700 1000/u-1 ReceiverList{136b983 494 system/1000/u-1 local:d051832}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #36: BroadcastFilter{7635d40 1000/u-1 ReceiverList{8530c3 494 system/1000/u-1 local:bb1e472}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #37: BroadcastFilter{229ece2 1000/u-1 ReceiverList{ec791ad 494 system/1000/u-1 local:ff2eec4}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #38: BroadcastFilter{4fd3848 1000/u-1 ReceiverList{310f2eb 494 system/1000/u-1 local:6f8363a}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #39: BroadcastFilter{bd190f4 1000/u-1 ReceiverList{e89d2c7 494 system/1000/u-1 local:1237c06}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #40: BroadcastFilter{76fcb3e 1000/u-1 ReceiverList{ef2bff9 494 system/1000/u-1 local:167f6c0}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #41: BroadcastFilter{af93d57 1000/u-1 ReceiverList{1fab6d6 494 system/1000/u-1 local:ede3af1}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #42: BroadcastFilter{9ac9e09 1000/u-1 ReceiverList{5254310 494 system/1000/u-1 local:f4acbd3}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #43: BroadcastFilter{d51c8fc 1000/u-1 ReceiverList{75745ef 494 system/1000/u-1 local:acfa2ce}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #44: BroadcastFilter{d2071d 1000/u-1 ReceiverList{5d113f4 494 system/1000/u-1 local:89981c7}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #45: BroadcastFilter{8c907fa 1000/u0 ReceiverList{dc44a25 494 system/1000/u0 local:5b5de1c}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #46: BroadcastFilter{f4e67f 1000/u-1 ReceiverList{742b9e 494 system/1000/u-1 local:784e5d9}}
+        reason: assuming delivered
+      DELIVERED scheduled +4ms terminal 0 (0) #47: BroadcastFilter{d89344 1000/u-1 ReceiverList{53d2c57 494 system/1000/u-1 local:22d01d6}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #48: BroadcastFilter{8bc806e 1000/u-1 ReceiverList{c394be9 494 system/1000/u-1 local:1227c70}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #49: BroadcastFilter{9ffe11e 1000/u-1 ReceiverList{4c00159 494 system/1000/u-1 local:4c5e1a0}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #50: BroadcastFilter{dd6f2c9 1000/u-1 ReceiverList{464f2d0 494 system/1000/u-1 local:b806293}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #51: BroadcastFilter{7862e60 1000/u-1 ReceiverList{45a1263 494 system/1000/u-1 local:66cc892}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #52: BroadcastFilter{765c014 1000/u0 ReceiverList{562ca67 494 system/1000/u0 local:2ad0e26}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #53: BroadcastFilter{a34c20c 1000/u0 ReceiverList{415393f 494 system/1000/u0 local:4eb115e}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #54: BroadcastFilter{d7f2e4a 1000/u-1 ReceiverList{e9cd7b5 494 system/1000/u-1 local:228e7ec}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #55: BroadcastFilter{6cc1252 1000/u0 ReceiverList{90e26dd 494 system/1000/u0 local:86edab4}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #56: BroadcastFilter{c97c3ac 1000/u0 ReceiverList{442bd5f 494 system/1000/u0 local:a4991fe}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #57: BroadcastFilter{30b9f44 1000/u0 ReceiverList{b64e857 494 system/1000/u0 local:56e2dd6}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #58: BroadcastFilter{eacc240 1000/u0 ReceiverList{d3109c3 494 system/1000/u0 local:cb18172}}
+        reason: assuming delivered
+      DELIVERED scheduled +5ms terminal 0 (0) #59: BroadcastFilter{2867d48 1000/u0 ReceiverList{9902beb 494 system/1000/u0 local:17cb33a}}
+        reason: assuming delivered
+      DELIVERED scheduled +501ms terminal 0 (60) #60: BroadcastFilter{86c4c13 10045/u0 ReceiverList{cc21b02 1081 com.android.providers.media.module/10045/u0 remote:449244d}}
+        reason: assuming delivered
+      SKIPPED terminal +13m8s49ms (61) #61: (manifest)
+        priority=1 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.android.packageinstaller.PackageInstalledReceiver
+          packageName=com.android.packageinstaller
+          enabled=true exported=false directBootAware=true
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.android.packageinstaller/.PackageInstalledReceiver
+      DELIVERED scheduled +501ms terminal 0 (62) #62: BroadcastFilter{d246141 10032/u0 ReceiverList{711b028 740 com.android.systemui/10032/u0 remote:ede4b}}
+        reason: assuming delivered
+      DELIVERED scheduled +502ms terminal 0 (62) #63: BroadcastFilter{c0906c4 10022/u0 ReceiverList{e13dd7 1062 com.google.android.apps.play.battlestar.playclientservice/10022/u0 remote:b786956}}
+        reason: assuming delivered
+      DELIVERED scheduled +502ms terminal 0 (62) #64: BroadcastFilter{1a8b154 10030/u0 ReceiverList{c81b8a7 1087 com.android.launcher3/10030/u0 remote:2d5cd66}}
+        reason: assuming delivered
+      DELIVERED scheduled +502ms terminal 0 (62) #65: BroadcastFilter{eb9d161 10023/u0 ReceiverList{e7716ba 1008 com.google.android.gms/10023/u0 remote:bba5be5}}
+        reason: assuming delivered
+      DELIVERED scheduled +501ms terminal 0 (62) #66: BroadcastFilter{660d9be 10024/u0 ReceiverList{6dcf879 1190 com.android.vending/10024/u0 remote:72dc140}}
+        reason: assuming delivered
+      DELIVERED scheduled +501ms terminal 0 (62) #67: BroadcastFilter{7e985c2 10024/u0 ReceiverList{e94820d 1743 com.android.vending:background/10024/u0 remote:1d5e4a4}}
+        reason: assuming delivered
+      DEFERRED (62) #68: BroadcastFilter{cb5e561 10009/u0 ReceiverList{ae430c8 2083 com.android.documentsui/10009/u0 remote:1ce7d6b}}
+        reason: mBroadcastConsumerDeferApply
+      SKIPPED terminal +13m8s49ms (62) #69: (manifest)
+        priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.android.permissioncontroller.safetylabel.SafetyLabelChangedBroadcastReceiver
+          packageName=com.android.permissioncontroller
+          enabled=true exported=true directBootAware=true
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.android.permissioncontroller/.safetylabel.SafetyLabelChangedBroadcastReceiver
+      SKIPPED terminal +13m8s49ms (62) #70: (manifest)
+        priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+          packageName=com.android.vending
+          enabled=true exported=true directBootAware=false
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.impl.PackageMonitorReceiverImpl$RegisteredReceiver
+      SKIPPED terminal +13m8s49ms (62) #71: (manifest)
+        priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+          packageName=com.android.vending
+          processName=com.android.vending:background
+          enabled=true exported=true directBootAware=false
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.android.vending/com.google.android.finsky.packagemonitor.backgroundimpl.BackgroundPackageMonitorReceiverImpl$RegisteredReceiver
+      SKIPPED terminal +13m8s49ms (62) #72: (manifest)
+        priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.google.android.gms.gass.chimera.PackageChangeBroadcastReceiver
+          packageName=com.google.android.gms
+          attributionTags=[com.google.android.gms.gass]
+          enabled=true exported=true directBootAware=false
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.google.android.gms/.gass.chimera.PackageChangeBroadcastReceiver
+      SKIPPED terminal +13m8s49ms (62) #73: (manifest)
+        priority=0 preferredOrder=0 match=0x208000 specificIndex=-1 isDefault=false
+        ActivityInfo:
+          name=com.google.android.gms.chimera.GmsIntentOperationService$PersistentTrustedReceiver
+          packageName=com.google.android.gms
+          attributionTags=[gms_broadcast_receiver]
+          enabled=true exported=true directBootAware=true
+          launchMode=LAUNCH_MULTIPLE flags=0x10000 privateFlags=0x0 theme=0x0
+          resizeMode=RESIZE_MODE_RESIZEABLE
+          knownActivityEmbeddingCerts={}
+        reason: skipped by policy at enqueue: Background execution not allowed: receiving Intent { act=android.intent.action.PACKAGE_ADDED dat=package: flg=0x4000010 (has extras) } to com.google.android.gms/.chimera.GmsIntentOperationService$PersistentTrustedReceiver
     Broadcast #0:
-      BroadcastRecord{1209b8f android.intent.action.PACKAGE_CHANGED/u0} to user 0
-      Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:com.google.android.gms flg=0x45000010 (has extras) }
-        extras: Bundle[{android.intent.extra.changed_component_name=com.google.android.gms.games.ui.settingsv2.GamesSettingsActivity, android.intent.extra.DONT_KILL_APP=true, android.intent.extra.UID=10023, android.intent.extra.changed_component_name_list=[com.google.android.gms.games.ui.settingsv2.GamesSettingsActivity], android.intent.extra.user_handle=0}]
-      caller=null null pid=462 uid=1000
-      enqueueClockTime=2026-11-25 17:13:25.695 dispatchClockTime=2026-11-25 17:13:25.696
-      dispatchTime=-17m27s645ms (+1ms since enq) receiverTime=--
+      BroadcastRecord{c2383d5 android.intent.action.PACKAGE_CHANGED/u0} to user 0
+      Intent { act=android.intent.action.PACKAGE_CHANGED dat=package:android.ext.services flg=0x45000010 (has extras) }
+        extras: Bundle[{android.intent.extra.changed_component_name=androidx.work.impl.background.systemalarm.RescheduleReceiver, android.intent.extra.DONT_KILL_APP=true, android.intent.extra.UID=10048, android.intent.extra.changed_component_name_list=[androidx.work.impl.background.systemalarm.RescheduleReceiver], android.intent.extra.user_handle=0}]
+      caller=null null pid=494 uid=1000
+      enqueueClockTime=2026-11-25 17:46:00.284 dispatchClockTime=2026-11-25 17:46:00.286
+      dispatchTime=-10m34s546ms (+2ms since enq) receiverTime=--
       resultTo=null resultCode=0 resultData=null
       terminalCount=54
-      DELIVERED scheduled +1ms terminal 0 (0) #0: BroadcastFilter{405e60 1000/u-1 ReceiverList{fdf0263 462 system/1000/u-1 local:a2f7892}}
+      DELIVERED scheduled +2ms terminal 0 (0) #0: BroadcastFilter{e923cf6 1000/u-1 ReceiverList{be58591 494 system/1000/u-1 local:36a73b8}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #1: BroadcastFilter{54b16d 1000/u-1 ReceiverList{a85b584 462 system/1000/u-1 local:53c6f97}}
+      DELIVERED scheduled +2ms terminal 0 (0) #1: BroadcastFilter{9cc2a65 1000/u-1 ReceiverList{dec175c 494 system/1000/u-1 local:d8a51cf}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #2: BroadcastFilter{e97f769 1000/u-1 ReceiverList{76aa5f0 462 system/1000/u-1 local:a4e6e33}}
+      DELIVERED scheduled +2ms terminal 0 (0) #2: BroadcastFilter{a5a07e1 1000/u-1 ReceiverList{6d14d48 494 system/1000/u-1 local:8043beb}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #3: BroadcastFilter{870d0ae 1000/u-1 ReceiverList{247b529 462 system/1000/u-1 local:eafc2b0}}
+      DELIVERED scheduled +3ms terminal 0 (0) #3: BroadcastFilter{e68b6b4 1000/u-1 ReceiverList{b92f787 494 system/1000/u-1 local:93b3bc6}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #4: BroadcastFilter{ec11a5b 1000/u-1 ReceiverList{79b956a 462 system/1000/u-1 local:49be755}}
+      DELIVERED scheduled +3ms terminal 0 (0) #4: BroadcastFilter{4385149 1000/u-1 ReceiverList{50ebb50 494 system/1000/u-1 local:e09fd13}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #5: BroadcastFilter{e963e0e 1000/u-1 ReceiverList{4d2fc09 462 system/1000/u-1 local:1925910}}
+      DELIVERED scheduled +3ms terminal 0 (0) #5: BroadcastFilter{58d9f14 1000/u-1 ReceiverList{bd2c567 494 system/1000/u-1 local:b441526}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #6: BroadcastFilter{34b6fc6 1000/u-1 ReceiverList{2eb81a1 462 system/1000/u-1 local:eb99608}}
+      DELIVERED scheduled +3ms terminal 0 (0) #6: BroadcastFilter{f9a21b0 1000/u-1 ReceiverList{96380f3 494 system/1000/u-1 local:1b39762}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #7: BroadcastFilter{6a71511 1000/u-1 ReceiverList{4029138 462 system/1000/u-1 local:e41599b}}
+      DELIVERED scheduled +3ms terminal 0 (0) #7: BroadcastFilter{bb132af 1000/u-1 ReceiverList{55e4a8e 494 system/1000/u-1 local:db96a89}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #8: BroadcastFilter{21264aa 1000/u-1 ReceiverList{afb6b95 462 system/1000/u-1 local:217df4c}}
+      DELIVERED scheduled +3ms terminal 0 (0) #8: BroadcastFilter{b64f2b7 1000/u-1 ReceiverList{e5865b6 494 system/1000/u-1 local:f3bd951}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #9: BroadcastFilter{29c5dc2 1000/u-1 ReceiverList{b6bba0d 462 system/1000/u-1 local:b26fca4}}
+      DELIVERED scheduled +3ms terminal 0 (0) #9: BroadcastFilter{bcd827c 1000/u-1 ReceiverList{eeff56f 494 system/1000/u-1 local:6a7604e}}
         reason: assuming delivered
-      DELIVERED scheduled +1ms terminal 0 (0) #10: BroadcastFilter{5462dc7 1000/u-1 ReceiverList{3fc6306 462 system/1000/u-1 local:14739e1}}
+      DELIVERED scheduled +3ms terminal 0 (0) #10: BroadcastFilter{a5d0b0e 1000/u-1 ReceiverList{d70dd09 494 system/1000/u-1 local:e671e10}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #11: BroadcastFilter{8f44419 1000/u-1 ReceiverList{36a7760 462 system/1000/u-1 local:56ddf63}}
+      DELIVERED scheduled +3ms terminal 0 (0) #11: BroadcastFilter{f689f28 1000/u-1 ReceiverList{ec0294b 494 system/1000/u-1 local:562ca1a}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #12: BroadcastFilter{b55d7db 1000/u-1 ReceiverList{9bed8ea 462 system/1000/u-1 local:2fc08d5}}
+      DELIVERED scheduled +3ms terminal 0 (0) #12: BroadcastFilter{b588272 1000/u-1 ReceiverList{683c37d 494 system/1000/u-1 local:e3c85d4}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #13: BroadcastFilter{62d7d8d 1000/u-1 ReceiverList{f8f9e24 462 system/1000/u-1 local:65016b7}}
+      DELIVERED scheduled +3ms terminal 0 (0) #13: BroadcastFilter{f82bb6c 1000/u-1 ReceiverList{623bc1f 494 system/1000/u-1 local:aa853be}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #14: BroadcastFilter{63525af 1000/u-1 ReceiverList{67e298e 462 system/1000/u-1 local:8016589}}
+      DELIVERED scheduled +3ms terminal 0 (0) #14: BroadcastFilter{ac91c96 1000/u-1 ReceiverList{7739fb1 494 system/1000/u-1 local:5962258}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #15: BroadcastFilter{b033cc1 1000/u-1 ReceiverList{2fcc9a8 462 system/1000/u-1 local:1b86dcb}}
+      DELIVERED scheduled +3ms terminal 0 (0) #15: BroadcastFilter{b5ae470 1000/u-1 ReceiverList{bf696b3 494 system/1000/u-1 local:2726c22}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #16: BroadcastFilter{4766d5e 1000/u-1 ReceiverList{2841699 462 system/1000/u-1 local:de403e0}}
+      DELIVERED scheduled +3ms terminal 0 (0) #16: BroadcastFilter{374be66 1000/u-1 ReceiverList{466c1 494 system/1000/u-1 local:8005ba8}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #17: BroadcastFilter{8ab82a4 1000/u-1 ReceiverList{992bd37 462 system/1000/u-1 local:5ccca36}}
+      DELIVERED scheduled +3ms terminal 0 (0) #17: BroadcastFilter{565cfec 1000/u-1 ReceiverList{d0c529f 494 system/1000/u-1 local:913343e}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #18: BroadcastFilter{15d57ed 1000/u-1 ReceiverList{646e604 462 system/1000/u-1 local:c7a1217}}
+      DELIVERED scheduled +3ms terminal 0 (0) #18: BroadcastFilter{570c395 1000/u-1 ReceiverList{22b974c 494 system/1000/u-1 local:9791b7f}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #19: BroadcastFilter{45b787e 1000/u-1 ReceiverList{337da39 462 system/1000/u-1 local:8041200}}
+      DELIVERED scheduled +3ms terminal 0 (0) #19: BroadcastFilter{e985586 1000/u-1 ReceiverList{6e96661 494 system/1000/u-1 local:1a115c8}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #20: BroadcastFilter{11b2dd7 1000/u-1 ReceiverList{1a41956 462 system/1000/u-1 local:89d9771}}
+      DELIVERED scheduled +3ms terminal 0 (0) #20: BroadcastFilter{8f5df3f 1000/u-1 ReceiverList{fee8f5e 494 system/1000/u-1 local:21f8099}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #21: BroadcastFilter{4f7059f 1000/u-1 ReceiverList{5fcd33e 462 system/1000/u-1 local:aeee7f9}}
+      DELIVERED scheduled +3ms terminal 0 (0) #21: BroadcastFilter{5f1ca1e 1000/u-1 ReceiverList{d13ee59 494 system/1000/u-1 local:d7162a0}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #22: BroadcastFilter{4c699b4 1000/u-1 ReceiverList{8fe8687 462 system/1000/u-1 local:7efa6c6}}
+      DELIVERED scheduled +3ms terminal 0 (0) #22: BroadcastFilter{e8bb1da 1000/u-1 ReceiverList{861ef85 494 system/1000/u-1 local:f173cfc}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #23: BroadcastFilter{ddc2d41 1000/u-1 ReceiverList{3d92c28 462 system/1000/u-1 local:596ca4b}}
+      DELIVERED scheduled +4ms terminal 0 (0) #23: BroadcastFilter{3819054 1000/u-1 ReceiverList{2c6b3a7 494 system/1000/u-1 local:175d466}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #24: BroadcastFilter{b44c9a2 1000/u0 ReceiverList{5c4e96d 462 system/1000/u0 local:b33cd84}}
+      DELIVERED scheduled +4ms terminal 0 (0) #24: BroadcastFilter{21e0d34 1000/u-1 ReceiverList{b059807 494 system/1000/u-1 local:74a0e46}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #25: BroadcastFilter{4feeb4e 1000/u-1 ReceiverList{6691649 462 system/1000/u-1 local:4237450}}
+      DELIVERED scheduled +4ms terminal 0 (0) #25: BroadcastFilter{bd894f6 1000/u-1 ReceiverList{36e3d91 494 system/1000/u-1 local:5430bb8}}
         reason: assuming delivered
-      DELIVERED scheduled +2ms terminal 0 (0) #26: BroadcastFilter{32723b9 1000/u-1 ReceiverList{7649180 462 system/1000/u-1 local:e358e03}}
+      DELIVERED scheduled +4ms terminal 0 (0) #26: BroadcastFilter{f251700 1000/u-1 ReceiverList{136b983 494 system/1000/u-1 local:d051832}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #27: BroadcastFilter{485125b 1000/u-1 ReceiverList{a946d6a 462 system/1000/u-1 local:7111f55}}
+      DELIVERED scheduled +4ms terminal 0 (0) #27: BroadcastFilter{e832143 1000/u0 ReceiverList{92746f2 494 system/1000/u0 local:7f8c9fd}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #28: BroadcastFilter{740035c 1000/u-1 ReceiverList{14a6dcf 462 system/1000/u-1 local:e38fe2e}}
+      DELIVERED scheduled +4ms terminal 0 (0) #28: BroadcastFilter{229ece2 1000/u-1 ReceiverList{ec791ad 494 system/1000/u-1 local:ff2eec4}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #29: BroadcastFilter{490325d 1000/u-1 ReceiverList{2cbe434 462 system/1000/u-1 local:2f86b07}}
+      DELIVERED scheduled +4ms terminal 0 (0) #29: BroadcastFilter{4fd3848 1000/u-1 ReceiverList{310f2eb 494 system/1000/u-1 local:6f8363a}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #30: BroadcastFilter{9af911b 1000/u-1 ReceiverList{f72af2a 462 system/1000/u-1 local:cdc5015}}
+      DELIVERED scheduled +4ms terminal 0 (0) #30: BroadcastFilter{bd190f4 1000/u-1 ReceiverList{e89d2c7 494 system/1000/u-1 local:1237c06}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #31: BroadcastFilter{4ac23f7 1000/u-1 ReceiverList{8e493f6 462 system/1000/u-1 local:33ed891}}
+      DELIVERED scheduled +4ms terminal 0 (0) #31: BroadcastFilter{af93d57 1000/u-1 ReceiverList{1fab6d6 494 system/1000/u-1 local:ede3af1}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #32: BroadcastFilter{1b2bfa2 1000/u-1 ReceiverList{5f8f76d 462 system/1000/u-1 local:6975384}}
+      DELIVERED scheduled +4ms terminal 0 (0) #32: BroadcastFilter{9ac9e09 1000/u-1 ReceiverList{5254310 494 system/1000/u-1 local:f4acbd3}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #33: BroadcastFilter{b005b29 1000/u-1 ReceiverList{5eb40b0 462 system/1000/u-1 local:5d9bbf3}}
+      DELIVERED scheduled +4ms terminal 0 (0) #33: BroadcastFilter{d51c8fc 1000/u-1 ReceiverList{75745ef 494 system/1000/u-1 local:acfa2ce}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #34: BroadcastFilter{8afc64b 1000/u-1 ReceiverList{b0abb1a 462 system/1000/u-1 local:33e55c5}}
+      DELIVERED scheduled +4ms terminal 0 (0) #34: BroadcastFilter{d2071d 1000/u-1 ReceiverList{5d113f4 494 system/1000/u-1 local:89981c7}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #35: BroadcastFilter{148b7fb 1000/u-1 ReceiverList{d6ea58a 462 system/1000/u-1 local:7cea3f5}}
+      DELIVERED scheduled +5ms terminal 0 (0) #35: BroadcastFilter{8c907fa 1000/u0 ReceiverList{dc44a25 494 system/1000/u0 local:5b5de1c}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #36: BroadcastFilter{df82c51 1000/u0 ReceiverList{4987d78 462 system/1000/u0 local:3864edb}}
+      DELIVERED scheduled +5ms terminal 0 (0) #36: BroadcastFilter{8bc806e 1000/u-1 ReceiverList{c394be9 494 system/1000/u-1 local:1227c70}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #37: BroadcastFilter{4dd8835 1000/u-1 ReceiverList{8340a6c 462 system/1000/u-1 local:e9ce71f}}
+      DELIVERED scheduled +5ms terminal 0 (0) #37: BroadcastFilter{9ffe11e 1000/u-1 ReceiverList{4c00159 494 system/1000/u-1 local:4c5e1a0}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #38: BroadcastFilter{381e8a5 1000/u-1 ReceiverList{484e69c 462 system/1000/u-1 local:353d60f}}
+      DELIVERED scheduled +5ms terminal 0 (0) #38: BroadcastFilter{dd6f2c9 1000/u-1 ReceiverList{464f2d0 494 system/1000/u-1 local:b806293}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #39: BroadcastFilter{a9d2ecc 1000/u-1 ReceiverList{fdc60ff 462 system/1000/u-1 local:5bb001e}}
+      DELIVERED scheduled +5ms terminal 0 (0) #39: BroadcastFilter{7862e60 1000/u-1 ReceiverList{45a1263 494 system/1000/u-1 local:66cc892}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #40: BroadcastFilter{88d8bc4 1000/u-1 ReceiverList{440b6d7 462 system/1000/u-1 local:5362656}}
+      DELIVERED scheduled +5ms terminal 0 (0) #40: BroadcastFilter{765c014 1000/u0 ReceiverList{562ca67 494 system/1000/u0 local:2ad0e26}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #41: BroadcastFilter{634b55a 1000/u0 ReceiverList{bc6d105 462 system/1000/u0 local:664b47c}}
+      DELIVERED scheduled +5ms terminal 0 (0) #41: BroadcastFilter{a34c20c 1000/u0 ReceiverList{415393f 494 system/1000/u0 local:4eb115e}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #42: BroadcastFilter{83d22cb 1000/u0 ReceiverList{a39b99a 462 system/1000/u0 local:ee83e45}}
+      DELIVERED scheduled +5ms terminal 0 (0) #42: BroadcastFilter{d7f2e4a 1000/u-1 ReceiverList{e9cd7b5 494 system/1000/u-1 local:228e7ec}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #43: BroadcastFilter{9f1d635 1000/u0 ReceiverList{ad0d06c 462 system/1000/u0 local:639051f}}
+      DELIVERED scheduled +5ms terminal 0 (0) #43: BroadcastFilter{6cc1252 1000/u0 ReceiverList{90e26dd 494 system/1000/u0 local:86edab4}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #44: BroadcastFilter{3801821 1000/u0 ReceiverList{2007688 462 system/1000/u0 local:bbd422b}}
+      DELIVERED scheduled +5ms terminal 0 (0) #44: BroadcastFilter{c97c3ac 1000/u0 ReceiverList{442bd5f 494 system/1000/u0 local:a4991fe}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #45: BroadcastFilter{bc14c6 1000/u0 ReceiverList{4d39aa1 462 system/1000/u0 local:f3e7308}}
+      DELIVERED scheduled +5ms terminal 0 (0) #45: BroadcastFilter{ab94f36 1000/u0 ReceiverList{55078d1 494 system/1000/u0 local:1282bf8}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #46: BroadcastFilter{25533d9 1000/u0 ReceiverList{47e4e20 462 system/1000/u0 local:923d923}}
+      DELIVERED scheduled +5ms terminal 0 (0) #46: BroadcastFilter{eacc240 1000/u0 ReceiverList{d3109c3 494 system/1000/u0 local:cb18172}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (0) #47: BroadcastFilter{378d146 1000/u0 ReceiverList{2d37921 462 system/1000/u0 local:f0bb88}}
+      DELIVERED scheduled +5ms terminal 0 (0) #47: BroadcastFilter{2867d48 1000/u0 ReceiverList{9902beb 494 system/1000/u0 local:17cb33a}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (48) #48: BroadcastFilter{e7469b5 10032/u0 ReceiverList{73b81ec 798 com.android.systemui/10032/u0 remote:2c18c9f}}
+      DELIVERED scheduled +6ms terminal +7ms (48) #48: BroadcastFilter{d246141 10032/u0 ReceiverList{711b028 740 com.android.systemui/10032/u0 remote:ede4b}}
         reason: assuming delivered
-      DELIVERED scheduled +3ms terminal 0 (48) #49: BroadcastFilter{5f683d5 10032/u0 ReceiverList{cab308c 798 com.android.systemui/10032/u0 remote:ebe51bf}}
+      DELIVERED scheduled +13ms terminal 0 (48) #49: BroadcastFilter{7a5d79e 10032/u0 ReceiverList{301c1d9 740 com.android.systemui/10032/u0 remote:cec5420}}
         reason: assuming delivered
-      DEFERRED (48) #50: BroadcastFilter{a14677e 10005/u0 ReceiverList{f932539 1265 android.process.acore/10005/u0 remote:8e1a900}}
+      DELIVERED scheduled +501ms terminal 0 (48) #50: BroadcastFilter{1a8b154 10030/u0 ReceiverList{c81b8a7 1087 com.android.launcher3/10030/u0 remote:2d5cd66}}
+        reason: assuming delivered
+      DEFERRED (48) #51: BroadcastFilter{1051784 10005/u0 ReceiverList{6741997 1172 android.process.acore/10005/u0 remote:be25c16}}
         reason: mBroadcastConsumerDeferApply
-      DELIVERED scheduled +504ms terminal 0 (48) #51: BroadcastFilter{ab9e9ac 10023/u0 ReceiverList{607b7b9 1117 com.google.android.gms/10023/u0 remote:5daf580}}
+      DELIVERED scheduled +501ms terminal 0 (48) #52: BroadcastFilter{eb9d161 10023/u0 ReceiverList{e7716ba 1008 com.google.android.gms/10023/u0 remote:bba5be5}}
         reason: assuming delivered
-      DEFERRED (48) #52: BroadcastFilter{b0ba5c9 10009/u0 ReceiverList{58091d0 1559 com.android.documentsui/10009/u0 remote:d5b1d93}}
+      DELIVERED scheduled +501ms terminal 0 (48) #53: BroadcastFilter{9cfe638 10023/u0 ReceiverList{24ae29b 1008 com.google.android.gms/10023/u0 remote:e0a56aa}}
+        reason: assuming delivered
+      DELIVERED scheduled +501ms terminal 0 (48) #54: BroadcastFilter{723abda 10023/u0 ReceiverList{8d59185 1008 com.google.android.gms/10023/u0 remote:46c26fc}}
+        reason: assuming delivered
+      DEFERRED (48) #55: BroadcastFilter{cb5e561 10009/u0 ReceiverList{ae430c8 2083 com.android.documentsui/10009/u0 remote:1ce7d6b}}
         reason: mBroadcastConsumerDeferApply
-      DELIVERED scheduled +504ms terminal 0 (48) #53: BroadcastFilter{85d7829 10023/u0 ReceiverList{a46b1b0 1117 com.google.android.gms/10023/u0 remote:7a850f3}}
-        reason: assuming delivered
-      DELIVERED scheduled +505ms terminal 0 (48) #54: BroadcastFilter{ebe17f6 10023/u0 ReceiverList{23bec91 1117 com.google.android.gms/10023/u0 remote:30e16b8}}
-        reason: assuming delivered
-      DELIVERED scheduled +505ms terminal 0 (48) #55: BroadcastFilter{b7605a7 10030/u0 ReceiverList{e72e66 2772 com.android.launcher3/10030/u0 remote:afa96c1}}
-        reason: assuming delivered
 
   Queue modern: 0 running
   mHandler:
-    Handler (com.android.server.am.ActivityManagerService$MainHandler) {a9f65c7} @ 3157233
-      Looper (ActivityManager, tid 30) {aa379f4}
-        Message 0: { when=+49s919ms what=5 target=android.os.Handler }
-        Message 1: { when=+2m51s848ms what=27 target=com.android.server.am.ActivityManagerService$MainHandler }
-        Message 2: { when=+8m0s174ms callback=com.android.server.appop.AppOpsService$1 target=com.android.server.am.ActivityManagerService$MainHandler }
-        (Total messages: 3, polling=true, quitting=false)
+    Handler (com.android.server.am.ActivityManagerService$MainHandler) {3ba4372} @ 1147297
+      Looper (ActivityManager, tid 30) {979eaaa}
+        Message 0: { when=+4s629ms what=5 target=android.os.Handler }
+        Message 1: { when=+1m6s310ms what=27 target=com.android.server.am.ActivityManagerService$MainHandler }
+        Message 2: { when=+12m2s279ms callback=com.android.server.appop.AppOpsService$1 target=com.android.server.am.ActivityManagerService$MainHandler }
+        Message 3: { when=+23m50s171ms callback=com.android.server.appop.AppOpsCheckingServiceImpl$1 target=com.android.server.am.ActivityManagerService$MainHandler }
+        (Total messages: 4, polling=true, quitting=false)
 
 -------------------------------------------------------------------------------
 ACTIVITY MANAGER BROADCAST STATS STATE (dumpsys activity broadcast-stats)
-  Current stats (from -52m11s18ms to now, +52m11s18ms uptime):
+  Current stats (from -18m55s460ms to now, +18m55s460ms uptime):
     (nothing)
 
 -------------------------------------------------------------------------------
@@ -1083,29 +1314,7 @@ Display #0 (activities from top to bottom):
 
 -------------------------------------------------------------------------------
 ACTIVITY MANAGER PROCESS EXIT INFO (dumpsys activity exit-info)
-Last Timestamp of Persistence Into Persistent Storage: 2026-11-25 17:08:43.334
-  package: com.gameloft.android.AMAZ.GloftDMAS
-    Historical Process Exit for uid=10053
-        ApplicationExitInfo #0:
-          timestamp=2026-11-25 16:59:28.907 pid=1855 realUid=10053 packageUid=10053 definingUid=10053 user=0
-          process=com.gameloft.android.AMAZ.GloftDMAS reason=10 (USER REQUESTED) subreason=21 (FORCE STOP) status=0
-          importance=400 pss=26MB rss=123MB description=stop com.gameloft.android.AMAZ.GloftDMAS due to from pid 968 state=empty trace=null
-        ApplicationExitInfo #1:
-          timestamp=2026-10-05 16:33:47.311 pid=6627 realUid=99002 packageUid=10053 definingUid=10027 user=0
-          process=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 reason=13 (OTHER KILLS BY SYSTEM) subreason=17 (ISOLATED NOT NEEDED) status=0
-          importance=300 pss=0.00 rss=0.00 description=isolated not needed state=empty trace=null
-        ApplicationExitInfo #2:
-          timestamp=2026-10-05 16:33:47.306 pid=6550 realUid=10053 packageUid=10053 definingUid=10053 user=0
-          process=com.gameloft.android.AMAZ.GloftDMAS reason=10 (USER REQUESTED) subreason=24 (KILL BACKGROUND) status=0
-          importance=400 pss=0.00 rss=0.00 description=kill background state=72 bytes trace=null
-        ApplicationExitInfo #3:
-          timestamp=2026-10-05 16:33:42.902 pid=3105 realUid=10053 packageUid=10053 definingUid=10053 user=0
-          process=com.gameloft.android.AMAZ.GloftDMAS reason=13 (OTHER KILLS BY SYSTEM) subreason=0 (UNKNOWN) status=0
-          importance=100 pss=305MB rss=448MB description=restartActivityProcess state=72 bytes trace=null
-        ApplicationExitInfo #4:
-          timestamp=2026-10-05 16:22:01.091 pid=3178 realUid=99001 packageUid=10053 definingUid=10027 user=0
-          process=com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 reason=13 (OTHER KILLS BY SYSTEM) subreason=17 (ISOLATED NOT NEEDED) status=0
-          importance=300 pss=0.00 rss=0.00 description=isolated not needed state=empty trace=null
+Last Timestamp of Persistence Into Persistent Storage: 2026-11-25 17:38:26.824
 
 -------------------------------------------------------------------------------
 ACTIVITY MANAGER RUNNING PROCESSES (dumpsys activity processes)
@@ -1127,14 +1336,14 @@ ACTIVITY MANAGER RUNNING PROCESSES (dumpsys activity processes)
      900: CACHED_APP_MIN_ADJ (  221,184K)
      999: CACHED_APP_MAX_ADJ (  322,560K)
 
-  Process OOM control (26 total, non-act at 3, non-svc at 3):
+  Process OOM control (28 total, non-act at 3, non-svc at 3):
 
-  mHomeProcess: ProcessRecord{2c87993 2772:com.android.launcher3/u0a30}
+  mHomeProcess: ProcessRecord{7892b22 1087:com.android.launcher3/u0a30}
   mPreviousProcess: null
 
 
-  Process LRU list (sorted by oom_adj, 26 total, non-act at 3, non-svc at 3):
-  mPreviousProcessVisibleTime: +34m49s980ms
+  Process LRU list (sorted by oom_adj, 28 total, non-act at 3, non-svc at 3):
+  mPreviousProcessVisibleTime: 0
   mDeviceIdleAllowlist=[2000, 10002, 10004, 10022, 10023, 10050]
   mDeviceIdleExceptIdleAllowlist=[2000, 10002, 10004, 10005, 10022, 10023, 10024, 10050]
   mDeviceIdleTempAllowlist=[]
@@ -1160,7 +1369,7 @@ ACTIVITY MANAGER USERS (dumpsys activity users)
   mInitialized:true
   mIsBroadcastSentForSystemUserStarted:true
   mIsBroadcastSentForSystemUserStarting:true
-  mLastUserUnlockingUptime: 29898
+  mLastUserUnlockingUptime: 13925
 
 -------------------------------------------------------------------------------
 ACTIVITY MANAGER COMPONENT-ALIAS (dumpsys activity component-alias)
@@ -1170,68 +1379,69 @@ ACTIVITY MANAGER COMPONENT-ALIAS (dumpsys activity component-alias)
 -------------------------------------------------------------------------------
 APP BACKGROUND RESTRICTIONS
   BACKGROUND RESTRICTION LEVEL SETTINGS
-    #0 RestrictionLevel{5cb27f4:com.android.dynsystem/1000} exempted(d)/adaptive_bucket levelChange=-52m9s561ms effectiveExemption=SYSTEM_UID
-    #1 RestrictionLevel{8648b1d:com.android.bluetooth/1002} exempted(d)/adaptive_bucket levelChange=-52m9s559ms effectiveExemption=SYSTEM_UID
-    #2 RestrictionLevel{aa04192:com.android.se/1068} exempted(d)/adaptive_bucket levelChange=-52m9s559ms effectiveExemption=SYSTEM_UID
-    #3 RestrictionLevel{3229763:com.android.networkstack/1073} exempted(d)/adaptive_bucket levelChange=-52m9s559ms effectiveExemption=SYSTEM_UID
-    #4 RestrictionLevel{96ccf60:com.android.shell/2000} exempted(d)/adaptive_bucket levelChange=-52m9s559ms effectiveExemption=SYSTEM_UID
-    #5 RestrictionLevel{ec3bc19:com.google.android.overlay.googlewebview/u0a0} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #6 RestrictionLevel{fce4de:com.android.cts.priv.ctsshim/u0a1} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #7 RestrictionLevel{b1d46bf:com.android.soundpicker/u0a2} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #8 RestrictionLevel{dbf818c:com.android.providers.downloads/u0a2} exempted(d)/adaptive_bucket levelChange=-52m8s212ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #9 RestrictionLevel{24b00d5:com.android.providers.media/u0a2} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #10 RestrictionLevel{dee70ea:com.android.externalstorage/u0a3} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #11 RestrictionLevel{3e98fdb:com.android.providers.calendar/u0a4} exempted(d)/adaptive_bucket levelChange=-52m8s212ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #12 RestrictionLevel{2a92a78:com.android.providers.contacts/u0a5} exempted(d)/adaptive_bucket levelChange=-52m8s210ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #13 RestrictionLevel{dc7d551:com.android.providers.userdictionary/u0a5} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #14 RestrictionLevel{ebab1b6:com.android.backupconfirm/u0a6} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #15 RestrictionLevel{674eb7:com.google.android.apps.play.battlestar.filepicker/u0a7} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #16 RestrictionLevel{e827624:com.android.intentresolver/u0a8} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #17 RestrictionLevel{163758d:com.android.documentsui/u0a9} adaptive_bucket(u-su) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #18 RestrictionLevel{d383342:com.android.packageinstaller/u0a10} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #19 RestrictionLevel{7981f53:com.android.certinstaller/u0a11} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #20 RestrictionLevel{282d090:com.google.android.apps.play.battlestar.intent_sink/u0a12} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #21 RestrictionLevel{c9edd89:com.android.companiondevicemanager/u0a13} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #22 RestrictionLevel{81a418e:com.android.cts.ctsshim/u0a14} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #23 RestrictionLevel{4fb5daf:android.ext.shared/u0a15} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #24 RestrictionLevel{9ec65bc:com.android.providers.partnerbookmarks/u0a16} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #25 RestrictionLevel{c0ec945:com.android.htmlviewer/u0a17} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #26 RestrictionLevel{3fce89a:com.google.android.play.games/u0a18} adaptive_bucket(u-su) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #27 RestrictionLevel{2aa25cb:com.google.android.apps.play.battlestar.security/u0a19} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #28 RestrictionLevel{ff821a8:com.google.android.apps.play.battlestar.forwardingime/u0a20} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #29 RestrictionLevel{6d7b4c1:com.android.settings.intelligence/u0a21} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #30 RestrictionLevel{130f466:com.google.android.apps.play.battlestar.playclientservice/u0a22} exempted(d)/adaptive_bucket levelChange=-52m8s210ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #31 RestrictionLevel{93353a7:com.google.android.gsf/u0a23} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #32 RestrictionLevel{881b054:com.google.android.gms/u0a23} exempted(d)/adaptive_bucket levelChange=-52m8s212ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #33 RestrictionLevel{7e9dbfd:com.android.vending/u0a24} exempted(d)/adaptive_bucket levelChange=-52m8s212ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #34 RestrictionLevel{247f0f2:com.android.modulemetadata/u0a25} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #35 RestrictionLevel{1378343:com.google.android.webview/u0a27} adaptive_bucket(u-si) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #36 RestrictionLevel{7737dc0:com.android.chrome/u0a28} adaptive_bucket(u-su) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #37 RestrictionLevel{efd3af9:com.android.provision/u0a29} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #38 RestrictionLevel{f602a3e:com.android.launcher3/u0a30} adaptive_bucket(u-si) levelChange=-52m11s157ms effectiveExemption=DENIED
-    #39 RestrictionLevel{2c5109f:com.android.storagemanager/u0a31} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=DENIED
-    #40 RestrictionLevel{2f2b5ec:com.android.systemui/u0a32} adaptive_bucket(u-si) levelChange=-52m11s156ms effectiveExemption=PROC_STATE_PERSISTENT
-    #41 RestrictionLevel{54d8db5:com.android.wifi.resources/u0a33} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #42 RestrictionLevel{230ac4a:com.android.hotspot2.osulogin/u0a34} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_MODULE
-    #43 RestrictionLevel{e7417bb:com.android.wifi.dialog/u0a35} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #44 RestrictionLevel{c4b44d8:com.android.virtualmachine.res/u0a36} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #45 RestrictionLevel{2165031:com.android.uwb.resources/u0a37} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #46 RestrictionLevel{6d54316:com.android.connectivity.resources/u0a38} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #47 RestrictionLevel{c427497:com.android.nearby.halfsheet/u0a39} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #48 RestrictionLevel{b9bd684:com.android.rkpdapp/u0a40} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #49 RestrictionLevel{acebe6d:com.android.safetycenter.resources/u0a41} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #50 RestrictionLevel{d5a7aa2:com.android.permissioncontroller/u0a42} adaptive_bucket(u-si) levelChange=-52m11s156ms effectiveExemption=SYSTEM_MODULE
-    #51 RestrictionLevel{c2fc333:com.android.federatedcompute.services/u0a43} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #52 RestrictionLevel{a41d6f0:com.android.ondevicepersonalization.services/u0a44} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_MODULE
-    #53 RestrictionLevel{b25d469:com.android.providers.media.module/u0a45} adaptive_bucket(u-si) levelChange=-52m11s156ms effectiveExemption=PROC_STATE_PERSISTENT
-    #54 RestrictionLevel{8099eee:com.android.healthconnect.controller/u0a46} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #55 RestrictionLevel{4995f8f:com.android.health.connect.backuprestore/u0a47} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #56 RestrictionLevel{805721c:android.ext.services/u0a48} adaptive_bucket(u-si) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #57 RestrictionLevel{be4e25:com.android.ext.adservices.api/u0a49} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_MODULE
-    #58 RestrictionLevel{274bbfa:com.android.devicelockcontroller/u0a50} exempted(d)/adaptive_bucket levelChange=-52m8s210ms effectiveExemption=SYSTEM_ALLOW_LISTED
-    #59 RestrictionLevel{a5665ab:com.android.adservices.api/u0a51} adaptive_bucket(d) levelChange=-52m11s157ms effectiveExemption=SYSTEM_MODULE
-    #60 RestrictionLevel{7059408:com.android.sdksandbox/u0a52} adaptive_bucket(d) levelChange=-52m11s156ms effectiveExemption=SYSTEM_MODULE
-    #61 RestrictionLevel{6aaa7a1:com.gameloft.android.AMAZ.GloftDMAS/u0a53} adaptive_bucket(u-mb) levelChange=-52m11s157ms effectiveExemption=DENIED
+    #0 RestrictionLevel{307a3c3:com.android.dynsystem/1000} exempted(d)/adaptive_bucket levelChange=-18m54s755ms effectiveExemption=SYSTEM_UID
+    #1 RestrictionLevel{9f85440:com.android.bluetooth/1002} exempted(d)/adaptive_bucket levelChange=-18m54s754ms effectiveExemption=SYSTEM_UID
+    #2 RestrictionLevel{1e78f79:com.android.se/1068} exempted(d)/adaptive_bucket levelChange=-18m54s755ms effectiveExemption=SYSTEM_UID
+    #3 RestrictionLevel{de524be:com.android.networkstack/1073} exempted(d)/adaptive_bucket levelChange=-18m54s755ms effectiveExemption=SYSTEM_UID
+    #4 RestrictionLevel{4b6b91f:com.android.shell/2000} exempted(d)/adaptive_bucket levelChange=-18m54s754ms effectiveExemption=SYSTEM_UID
+    #5 RestrictionLevel{b2e746c:com.google.android.overlay.googlewebview/u0a0} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #6 RestrictionLevel{1c8aa35:com.android.cts.priv.ctsshim/u0a1} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #7 RestrictionLevel{4aceca:com.android.soundpicker/u0a2} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #8 RestrictionLevel{517c83b:com.android.providers.downloads/u0a2} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #9 RestrictionLevel{2c46b58:com.android.providers.media/u0a2} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #10 RestrictionLevel{466b4b1:com.android.externalstorage/u0a3} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #11 RestrictionLevel{caf0d96:com.android.providers.calendar/u0a4} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #12 RestrictionLevel{4b0ad17:com.android.providers.contacts/u0a5} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #13 RestrictionLevel{ac0e504:com.android.providers.userdictionary/u0a5} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #14 RestrictionLevel{f00eaed:com.android.backupconfirm/u0a6} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #15 RestrictionLevel{b466d22:com.google.android.apps.play.battlestar.filepicker/u0a7} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #16 RestrictionLevel{c8903b3:com.android.intentresolver/u0a8} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #17 RestrictionLevel{4e94d70:com.android.documentsui/u0a9} adaptive_bucket(u-su) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #18 RestrictionLevel{18e48e9:com.android.packageinstaller/u0a10} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #19 RestrictionLevel{102396e:com.android.certinstaller/u0a11} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #20 RestrictionLevel{486280f:com.google.android.apps.play.battlestar.intent_sink/u0a12} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #21 RestrictionLevel{7edd09c:com.android.companiondevicemanager/u0a13} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #22 RestrictionLevel{a798aa5:com.android.cts.ctsshim/u0a14} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #23 RestrictionLevel{e9c7e7a:android.ext.shared/u0a15} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #24 RestrictionLevel{387362b:com.android.providers.partnerbookmarks/u0a16} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #25 RestrictionLevel{3555a88:com.android.htmlviewer/u0a17} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #26 RestrictionLevel{a1d2c21:com.google.android.play.games/u0a18} adaptive_bucket(u-su) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #27 RestrictionLevel{4640846:com.google.android.apps.play.battlestar.security/u0a19} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #28 RestrictionLevel{5410a07:com.google.android.apps.play.battlestar.forwardingime/u0a20} adaptive_bucket(u-si) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #29 RestrictionLevel{6299734:com.android.settings.intelligence/u0a21} adaptive_bucket(u-mb) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #30 RestrictionLevel{1ff695d:com.google.android.apps.play.battlestar.playclientservice/u0a22} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #31 RestrictionLevel{6c862d2:com.google.android.gsf/u0a23} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #32 RestrictionLevel{1da3fa3:com.google.android.gms/u0a23} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #33 RestrictionLevel{462f2a0:com.android.vending/u0a24} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #34 RestrictionLevel{bce3e59:com.android.modulemetadata/u0a25} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=DENIED
+    #35 RestrictionLevel{fa5da1e:com.google.android.webview/u0a27} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #36 RestrictionLevel{34732ff:com.android.chrome/u0a28} adaptive_bucket(u-su) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #37 RestrictionLevel{71498cc:com.android.provision/u0a29} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #38 RestrictionLevel{41b6715:com.android.launcher3/u0a30} adaptive_bucket(u-mb) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #39 RestrictionLevel{8517a2a:com.android.storagemanager/u0a31} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #40 RestrictionLevel{466001b:com.android.systemui/u0a32} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=PROC_STATE_PERSISTENT
+    #41 RestrictionLevel{35875b8:com.android.wifi.resources/u0a33} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #42 RestrictionLevel{4d85f91:com.android.hotspot2.osulogin/u0a34} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #43 RestrictionLevel{8650ef6:com.android.wifi.dialog/u0a35} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #44 RestrictionLevel{5da82f7:com.android.virtualmachine.res/u0a36} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #45 RestrictionLevel{3fb3564:com.android.uwb.resources/u0a37} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #46 RestrictionLevel{b9263cd:com.android.connectivity.resources/u0a38} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #47 RestrictionLevel{54b2482:com.android.nearby.halfsheet/u0a39} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #48 RestrictionLevel{4aa5793:com.android.rkpdapp/u0a40} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #49 RestrictionLevel{1e843d0:com.android.safetycenter.resources/u0a41} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #50 RestrictionLevel{76e6fc9:com.android.permissioncontroller/u0a42} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #51 RestrictionLevel{e8b06ce:com.android.federatedcompute.services/u0a43} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #52 RestrictionLevel{e98d9ef:com.android.ondevicepersonalization.services/u0a44} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #53 RestrictionLevel{755ccfc:com.android.providers.media.module/u0a45} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=PROC_STATE_PERSISTENT
+    #54 RestrictionLevel{ae53f85:com.android.healthconnect.controller/u0a46} adaptive_bucket(u-si) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #55 RestrictionLevel{2d4c1da:com.android.health.connect.backuprestore/u0a47} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #56 RestrictionLevel{43260b:android.ext.services/u0a48} adaptive_bucket(u-si) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #57 RestrictionLevel{9b0bce8:com.android.ext.adservices.api/u0a49} adaptive_bucket(d) levelChange=-18m55s688ms effectiveExemption=SYSTEM_MODULE
+    #58 RestrictionLevel{d3f4f01:com.android.devicelockcontroller/u0a50} exempted(d)/adaptive_bucket levelChange=-18m53s772ms effectiveExemption=SYSTEM_ALLOW_LISTED
+    #59 RestrictionLevel{9cd21a6:com.android.adservices.api/u0a51} adaptive_bucket(d) levelChange=-18m55s690ms effectiveExemption=SYSTEM_MODULE
+    #60 RestrictionLevel{8fc17e7:com.android.sdksandbox/u0a52} adaptive_bucket(d) levelChange=-18m55s689ms effectiveExemption=SYSTEM_MODULE
+    #61 RestrictionLevel{648bf94:com.google.android.trichromelibrary_782700537/u0a54} background_restricted(d) levelChange=-18m55s689ms effectiveExemption=DENIED
+    #62 RestrictionLevel{7d0da3d:com.gameloft.android.ANMP.GloftDMHM/u0a55} background_restricted(s) levelChange=-5m59s243ms effectiveExemption=DENIED
     BACKGROUND RESTRICTION POLICY SETTINGS:
       bg_auto_restricted_bucket_on_bg_restricted=false
       bg_auto_restrict_abusive_apps=true
@@ -1245,7 +1455,7 @@ APP BACKGROUND RESTRICTIONS
 
   APP BATTERY STATE TRACKER:
       Last battery usage start=2026-10-05 14:18:16.540
-    Battery usage over last +52m37s247ms
+    Battery usage over last +19m7s313ms
       1000: [SYSTEM_UID] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
       1010: [SYSTEM_UID] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
       1041: [SYSTEM_UID] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
@@ -1276,7 +1486,7 @@ APP BACKGROUND RESTRICTIONS
       u0a48: [SYSTEM_MODULE] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
       u0a50: [SYSTEM_ALLOW_LISTED] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
       u0a51: [SYSTEM_MODULE] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
-      u0a53: [DENIED] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
+      u0a55: [DENIED] 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh (0.00% 0.00% 0.00% 0.00% 0.00%) | 0.000 0.000 0.000 0.000 0.000 mAh
     APP BATTERY TRACKER POLICY SETTINGS:
       bg_current_drain_monitor_enabled=true
       bg_current_drain_threshold_to_restricted_bucket=2.0
@@ -1305,8 +1515,8 @@ APP BACKGROUND RESTRICTIONS
   APP FOREGROUND SERVICE TRACKER:
     * com.android.vending/u0a24 exemption=SYSTEM_ALLOW_LISTED
       (bg only)
-        Overall foreground services: +21s368ms
-        systemExempted: +21s366ms
+        Overall foreground services: +10m27s536ms
+        systemExempted: +10m27s528ms
     APPS WITH ACTIVE FOREGROUND SERVICES:
       (none)
     APP FOREGROUND SERVICE TRACKER POLICY SETTINGS:
@@ -1333,6 +1543,8 @@ APP BACKGROUND RESTRICTIONS
       bg_permission_in_monitor=[android.permission.ACCESS_FINE_LOCATION,android:fine_location,android.permission.CAMERA,android:camera,android.permission.RECORD_AUDIO,android:record_audio]
 
   APP BROADCAST EVENT TRACKER:
+    * com.android.packageinstaller/u0a10 exemption=DENIED
+      total=1, latest=1(slot=0 (1147315 ms ago))
     APP BROADCAST EVENT TRACKER POLICY SETTINGS:
       bg_broadcast_monitor_enabled=true
       bg_broadcast_window=86400000
@@ -1340,10 +1552,8 @@ APP BACKGROUND RESTRICTIONS
       event_time_slot_size=900000
 
   APP BIND SERVICE EVENT TRACKER:
-    * com.gameloft.android.AMAZ.GloftDMAS/u0a53 exemption=DENIED
-      total=4, latest=4(slot=0 (3157250 ms ago))
     * com.android.launcher3/u0a30 exemption=DENIED
-      total=1, latest=1(slot=900000 (2257250 ms ago))
+      total=1, latest=1(slot=0 (1147315 ms ago))
     APP BIND SERVICE EVENT TRACKER POLICY SETTINGS:
       bg_bind_svc_monitor_enabled=true
       bg_bind_svc_window=86400000
@@ -1351,699 +1561,189 @@ APP BACKGROUND RESTRICTIONS
       event_time_slot_size=900000
 
 DUMP OF SERVICE meminfo:
-No process found for: com.gameloft.android.AMAZ.GloftDMAS
+No process found for: com.gameloft.android.ANMP.GloftDMHM
 
 DUMP OF SERVICE procstats:
 CURRENT STATS:
-          Start time: 2026-11-25 16:38:28
-        Total uptime: +52m24s521ms
-  Total elapsed time: +52m24s521ms (partial) libart.so
+          Start time: 2026-11-25 17:37:37
+        Total uptime: +18m57s770ms
+  Total elapsed time: +18m57s770ms (partial) libart.so
      Aggregated over: 1
 
 System memory usage:
    SOn/Norm: 1 samples:
-    Cached: 723MB min, 723MB avg, 723MB max
-    Free: 443MB min, 443MB avg, 443MB max
+    Cached: 421MB min, 421MB avg, 421MB max
+    Free: 0.96GB min, 0.96GB avg, 0.96GB max
     ZRam: 12KB min, 12KB avg, 12KB max
-    Kernel: 326MB min, 326MB avg, 326MB max
-    Native: 381MB min, 381MB avg, 381MB max
-
-Per-Package Stats:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-      * Prc com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-      * Svc com.google.firebase.sessions.SessionLifecycleService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-            Running count 1 / time 39%
-            Bound count 1 / time 39%
-            Executing count 1 / time 0.00%
-  * com.android.providers.settings / 1000 / v34:
-      * Asc com.android.providers.settings.SettingsProvider:
-        Process: system
-        Total count 1: time 100%
-        <- com.android.permissioncontroller/u0a42 (com.android.permissioncontroller)
-        <- com.android.systemui/u0a32 (com.android.systemui)
-        <- com.android.networkstack.process/1073 (com.android.networkstack)
-        <- android.ext.services/u0a48 (android.ext.services)
-        <- com.android.settings/1000 (com.android.settings)
-        <- com.android.providers.media.module/u0a45 (com.android.providers.media.module)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- android.process.acore/u0a5 (com.android.providers.contacts)
-        <- com.google.process.gservices/u0a23 (com.google.android.gsf)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.android.localtransport/1000 (com.android.localtransport)
-        <- com.google.android.gms/u0a23 (com.google.android.gms)
-        <- com.google.process.gapps/u0a23 (com.google.android.gsf)
-        <- com.android.documentsui/u0a9 (com.android.documentsui)
-        <- com.android.externalstorage/u0a3 (com.android.externalstorage)
-        <- android.process.media/u0a2 (com.android.providers.downloads)
-        <- com.android.providers.calendar/u0a4 (com.android.providers.calendar)
-        <- com.android.devicelockcontroller/u0a50 (com.android.devicelockcontroller)
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.rkpdapp/u0a40 (com.android.rkpdapp)
-        <- com.android.vending:background/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 99% (running)
-        <- com.android.vending:quick_launch/u0a24 (com.android.vending)
-        <- com.android.launcher3/u0a30 (com.android.launcher3)
-        <- com.google.android.apps.play.battlestar.forwardingime/u0a20 (com.google.android.apps.play.battlestar.forwardingime)
-        <- com.android.settings.intelligence/u0a21 (com.android.settings.intelligence)
-  * com.google.android.gms / u0a23 / v264330133:
-      * Asc com.google.android.gms.ads.identifier.service.AdvertisingIdService:
-        Process: com.google.android.gms
-        Active count 42: time 0.56%
-        Total count 1: time 1.6%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 2: time 0.00%
-      * Asc com.google.android.gms.chimera.container.GmsModuleProvider:
-        Process: com.google.android.gms
-        Active count 1: time 0.00%
-        Total count 4: time 0.93%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.32%
-      * Asc com.google.android.gms.phenotype.provider.ConfigurationProvider:
-        Process: com.google.android.gms
-        Total count 6: time 1.4%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.27%
-        <- com.google.android.gms.ui/u0a23 (com.google.android.gms)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.measurement.service.MeasurementBrokerService:
-        Process: com.google.android.gms
-        Total count 1: time 0.33%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.33%
-  Total procs: 0 shown of 38 total
-
-Per-UID Stats:
-  * u0a53 (2 entries):
-         SOn/Norm/   Service: +8ms
-                    (Cached): +20m35s310ms
-                       TOTAL: +20m35s318ms
-  Total UIDs: 1 shown of 25 total
+    Kernel: 327MB min, 327MB avg, 327MB max
+    Native: 374MB min, 374MB avg, 374MB max
+  Total procs: 0 shown of 34 total
+  Total UIDs: 0 shown of 23 total
 
 Process summary:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
 
 Run time Stats:
-   SOn/Norm: +52m24s446ms (running)
-      TOTAL: +52m24s446ms
+   SOn/Norm: +18m57s719ms (running)
+      TOTAL: +18m57s719ms
 
 Memory usage:
-  Kernel : 326MB (8 samples)
-  Native : 381MB (8 samples)
-  Persist: 161MB (16 samples)
-  Top: 36MB (8 samples)
-  BTop: 620KB (8 samples)
-  Fgs: 107MB (13 samples)
-  BFgs: 13MB (16 samples)
-  ImpFg: 1.1MB (13 samples)
-  ImpBg: 6.5MB (12 samples)
-  Service: 10.0KB (15 samples)
-  Receivr: 4.6KB (4 samples)
-  Home: 14MB (3 samples)
-  LastAct: 35MB (15 samples)
-  Cached: 278MB (73 samples)
-  Frozen: 26MB (30 samples)
-  Cached : 723MB (8 samples)
-  Free   : 443MB (8 samples)
+  Kernel : 327MB (8 samples)
+  Native : 374MB (8 samples)
+  Top: 98KB (6 samples)
+  BTop: 41MB (3 samples)
+  BFgs: 364KB (6 samples)
+  ImpFg: 4.3MB (17 samples)
+  ImpBg: 1.5MB (10 samples)
+  Service: 151 (9 samples)
+  Receivr: 1.1MB (6 samples)
+  LastAct: 23MB (7 samples)
+  Cached: 140MB (40 samples)
+  Frozen: 66MB (19 samples)
+  Cached : 421MB (8 samples)
+  Free   : 0.96GB (8 samples)
   Z-Ram  : 12KB (8 samples)
-  TOTAL  : 2.5GB
-  ServRst: 123 (3 samples)
+  TOTAL  : 2.3GB
+  ServRst: 242 (3 samples)
 
 PSS collection stats:
-  Internal Single: 84x over +262ms
+  Internal Single: 77x over +225ms
   Internal All Procs (Memory Change): 0x over 0
-  Internal All Procs (Polling): 29x over +95ms
+  Internal All Procs (Polling): 13x over +32ms
   External: 0x over 0
   External Slow: 0x over 0
 
 AGGREGATED OVER LAST 24 HOURS:
           Start time: 2026-10-05 16:18:16
-        Total uptime: +1h25m14s383ms
-  Total elapsed time: +1h25m14s383ms (partial) libart.so
-     Aggregated over: 2
+        Total uptime: +1h50m16s657ms
+  Total elapsed time: +1h50m16s657ms (partial) libart.so
+     Aggregated over: 3
 
 System memory usage:
-   SOn/Norm: 2 samples:
-    Cached: 723MB min, 826MB avg, 0.91GB max
-    Free: 443MB min, 450MB avg, 457MB max
+   SOn/Norm: 3 samples:
+    Cached: 421MB min, 691MB avg, 0.91GB max
+    Free: 443MB min, 627MB avg, 0.96GB max
     ZRam: 12KB min, 12KB avg, 12KB max
-    Kernel: 316MB min, 321MB avg, 326MB max
-    Native: 381MB min, 382MB avg, 383MB max
-
-Per-Package Stats:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-      * Prc com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-             TOTAL: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-               Top: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-            Imp Bg: 0.06%
-      * Svc com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-            Running count 2 / time 0.11%
-            Bound count 2 / time 0.11%
-            Executing count 4 / time 0.00%
-      * Svc com.google.firebase.sessions.SessionLifecycleService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-            Running count 4 / time 54%
-            Bound count 4 / time 54%
-            Executing count 4 / time 0.02%
-      * Asc com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-        Active count 1: time 0.06%
-        Total count 2: time 0.11%
-        <- system/1000 (android):
-             Active count 1: time 0.06%
-             Total count 2: time 0.11%
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v733920737:
-      * Prc com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 / u0a53 / v733920737:
-             TOTAL: 0.25%
-           Bnd Top: 0.25%
-      * Asc org.chromium.content.app.SandboxedProcessService0:0:
-        Process: com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
-        Active count 9: time 0.01%
-        Total count 2: time 0.25%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 9: time 0.01%
-             Total count 2: time 0.25%
-  * com.android.vending / u0a24 / v85302720:
-      * Asc com.google.android.finsky.externalreferrer.GetInstallReferrerService:
-        Process: com.android.vending
-        Active count 10: time 4.7%
-        Total count 2: time 13%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 10: time 4.7%
-             Total count 1: time 13%
-        <- com.google.android.gms/u0a23 (com.google.android.gms)
-  * com.android.providers.settings / 1000 / v34:
-      * Asc com.android.providers.settings.SettingsProvider:
-        Process: system
-        Total count 2: time 100%
-        <- com.android.permissioncontroller/u0a42 (com.android.permissioncontroller)
-        <- com.android.systemui/u0a32 (com.android.systemui)
-        <- com.android.networkstack.process/1073 (com.android.networkstack)
-        <- com.android.settings/1000 (com.android.settings)
-        <- android.ext.services/u0a48 (android.ext.services)
-        <- com.android.providers.media.module/u0a45 (com.android.providers.media.module)
-        <- com.google.process.gservices/u0a23 (com.google.android.gsf)
-        <- android.process.acore/u0a5 (com.android.providers.contacts)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- com.google.android.gms/u0a23 (com.google.android.gms)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.process.gapps/u0a23 (com.google.android.gsf)
-        <- com.android.localtransport/1000 (com.android.localtransport)
-        <- com.android.documentsui/u0a9 (com.android.documentsui)
-        <- com.android.externalstorage/u0a3 (com.android.externalstorage)
-        <- com.android.providers.calendar/u0a4 (com.android.providers.calendar)
-        <- com.android.devicelockcontroller/u0a50 (com.android.devicelockcontroller)
-        <- com.android.rkpdapp/u0a40 (com.android.rkpdapp)
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.vending:background/u0a24 (com.android.vending)
-        <- com.android.vending:quick_launch/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 2: time 95%
-        <- com.android.launcher3/u0a30 (com.android.launcher3)
-        <- com.google.android.apps.play.battlestar.forwardingime/u0a20 (com.google.android.apps.play.battlestar.forwardingime)
-        <- android.process.media/u0a2 (com.android.providers.downloads)
-        <- com.android.provision/u0a29 (com.android.provision)
-        <- android.process.media/u0a2 (com.android.providers.media)
-        <- com.android.vending:instant_app_installer/u0a24 (com.android.vending)
-        <- com.google.android.apps.play.battlestar.intent_sink/u0a12 (com.google.android.apps.play.battlestar.intent_sink)
-        <- com.android.adservices.api/u0a51 (com.android.adservices.api)
-        <- com.android.packageinstaller/u0a10 (com.android.packageinstaller)
-        <- com.android.settings.intelligence/u0a21 (com.android.settings.intelligence)
-  * com.google.android.webview / u0a27 / v733920737:
-      * Asc org.chromium.android_webview.services.MetricsBridgeService:
-        Process: com.google.android.webview:webview_service
-        Active count 5: time 0.00%
-        Total count 2: time 37%
-        <- com.google.android.webview:webview_apk/u0a27 (com.google.android.webview)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 1: time 0.00%
-        <- com.android.vending/u0a24 (com.android.vending)
-      * Asc org.chromium.android_webview.services.ComponentsProviderService:
-        Process: com.google.android.webview:webview_service
-        Active count 3: time 0.00%
-        Total count 3: time 0.02%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 2: time 0.02%
-        <- com.android.vending/u0a24 (com.android.vending)
-      * Asc org.chromium.android_webview.services.VariationsSeedServer:
-        Process: com.google.android.webview:webview_service
-        Active count 2: time 0.00%
-        Total count 2: time 0.01%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 1: time 0.00%
-        <- com.android.vending/u0a24 (com.android.vending)
-  * com.google.android.gms / u0a23 / v263332133:
-      * Asc com.google.android.gms.measurement.service.MeasurementBrokerService:
-        Process: com.google.android.gms
-        Active count 35: time 6.5%
-        Total count 19: time 7.6%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 35: time 6.5%
-             Total count 19: time 7.6%
-      * Asc com.google.android.gms.chimera.PersistentDirectBootAwareApiService:
-        Process: com.google.android.gms
-        Active count 45: time 6.5%
-        Total count 1: time 38%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.26%
-             Total count 2: time 0.37%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.chimera.GmsBoundBrokerService:
-        Process: com.google.android.gms
-        Active count 43: time 4.0%
-        Total count 3: time 6.7%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 13: time 0.27%
-             Total count 2: time 0.37%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-      * Asc com.google.android.gms.chimera.container.GmsModuleProvider:
-        Process: com.google.android.gms
-        Active count 56: time 0.54%
-        Total count 10: time 1.3%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.15%
-             Total count 3: time 0.38%
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.fonts.provider.FontsProvider:
-        Process: com.google.android.gms
-        Active count 10: time 0.24%
-        Total count 4: time 0.49%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 4: time 0.12%
-             Total count 2: time 0.24%
-      * Asc com.google.android.gms.phenotype.provider.ConfigurationProvider:
-        Process: com.google.android.gms
-        Active count 18: time 0.18%
-        Total count 7: time 0.92%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.13%
-             Total count 3: time 0.36%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-      * Asc com.google.android.gms.ads.identifier.service.AdvertisingIdService:
-        Process: com.google.android.gms
-        Active count 11: time 0.02%
-        Total count 11: time 0.95%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 9: time 0.02%
-             Total count 10: time 0.03%
-        <- com.android.vending/u0a24 (com.android.vending)
-  * com.google.android.gms / u0a23 / v264330133:
-      * Asc com.google.android.gms.ads.identifier.service.AdvertisingIdService:
-        Process: com.google.android.gms
-        Active count 42: time 0.34%
-        Total count 1: time 1.0%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 2: time 0.00%
-      * Asc com.google.android.gms.chimera.container.GmsModuleProvider:
-        Process: com.google.android.gms
-        Active count 1: time 0.00%
-        Total count 4: time 0.57%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.20%
-      * Asc com.google.android.gms.phenotype.provider.ConfigurationProvider:
-        Process: com.google.android.gms
-        Total count 6: time 0.85%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.17%
-        <- com.google.android.gms.ui/u0a23 (com.google.android.gms)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.measurement.service.MeasurementBrokerService:
-        Process: com.google.android.gms
-        Total count 1: time 0.20%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.20%
+    Kernel: 316MB min, 323MB avg, 327MB max
+    Native: 374MB min, 379MB avg, 383MB max
   Total procs: 0 shown of 49 total
-
-Per-UID Stats:
-  * u0a53 (5 entries):
-         SOn/Norm/       Top: +11m56s243ms
-                      Imp Bg: +3s318ms
-                     Service: +8ms
-                    (Cached): +20m35s461ms
-                     Bnd Top: +19ms
-                       TOTAL: +32m35s49ms
-  Total UIDs: 1 shown of 29 total
+  Total UIDs: 0 shown of 29 total
 
 Process summary:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-         TOTAL: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-           Top: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-        Imp Bg: 0.06%
-  * com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 / u0a53 / v733920737:
-         TOTAL: 0.25%
-       Bnd Top: 0.25%
 
 Run time Stats:
-   SOn/Norm: +1h25m14s277ms
-      TOTAL: +1h25m14s277ms
+   SOn/Norm: +1h50m16s500ms
+      TOTAL: +1h50m16s500ms
 
 Memory usage:
-  Kernel : 321MB (16 samples)
-  Native : 382MB (16 samples)
-  Persist: 177MB (32 samples)
-  Top: 85MB (35 samples)
-  BTop: 158MB (50 samples)
-  Fgs: 66MB (13 samples)
-  BFgs: 28MB (29 samples)
-  ImpFg: 5.5MB (30 samples)
-  ImpBg: 9.2MB (41 samples)
-  Service: 6.2KB (16 samples)
-  Receivr: 2.9KB (4 samples)
-  Home: 20MB (13 samples)
-  LastAct: 29MB (26 samples)
-  Cached: 252MB (138 samples)
-  Frozen: 34MB (115 samples)
-  Cached : 826MB (16 samples)
-  Free   : 450MB (16 samples)
-  Z-Ram  : 12KB (16 samples)
+  Kernel : 323MB (24 samples)
+  Native : 379MB (24 samples)
+  Persist: 171MB (52 samples)
+  Top: 114MB (64 samples)
+  BTop: 132MB (59 samples)
+  Fgs: 53MB (14 samples)
+  BFgs: 26MB (43 samples)
+  ImpFg: 19MB (50 samples)
+  ImpBg: 9.9MB (46 samples)
+  Service: 4.8KB (32 samples)
+  Receivr: 189KB (10 samples)
+  Home: 17MB (5 samples)
+  LastAct: 27MB (36 samples)
+  Cached: 226MB (199 samples)
+  Frozen: 50MB (127 samples)
+  Cached : 691MB (24 samples)
+  Free   : 627MB (24 samples)
+  Z-Ram  : 12KB (24 samples)
   TOTAL  : 2.8GB
-  ServRst: 195 (5 samples)
+  ServRst: 195 (9 samples)
 
 PSS collection stats:
-  Internal Single: 194x over +567ms
+  Internal Single: 300x over +881ms
   Internal All Procs (Memory Change): 0x over 0
-  Internal All Procs (Polling): 40x over +123ms
+  Internal All Procs (Polling): 53x over +155ms
   External: 0x over 0
   External Slow: 0x over 0
 
 AGGREGATED OVER LAST 3 HOURS:
           Start time: 2026-10-05 16:18:16
-        Total uptime: +1h25m14s410ms
-  Total elapsed time: +1h25m14s410ms (partial) libart.so
-     Aggregated over: 2
+        Total uptime: +1h50m16s685ms
+  Total elapsed time: +1h50m16s685ms (partial) libart.so
+     Aggregated over: 3
 
 System memory usage:
-   SOn/Norm: 2 samples:
-    Cached: 723MB min, 826MB avg, 0.91GB max
-    Free: 443MB min, 450MB avg, 457MB max
+   SOn/Norm: 3 samples:
+    Cached: 421MB min, 691MB avg, 0.91GB max
+    Free: 443MB min, 627MB avg, 0.96GB max
     ZRam: 12KB min, 12KB avg, 12KB max
-    Kernel: 316MB min, 321MB avg, 326MB max
-    Native: 381MB min, 382MB avg, 383MB max
-
-Per-Package Stats:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-      * Prc com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-             TOTAL: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-               Top: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-            Imp Bg: 0.06%
-      * Svc com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-            Running count 2 / time 0.11%
-            Bound count 2 / time 0.11%
-            Executing count 4 / time 0.00%
-      * Svc com.google.firebase.sessions.SessionLifecycleService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-            Running count 4 / time 54%
-            Bound count 4 / time 54%
-            Executing count 4 / time 0.02%
-      * Asc com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService:
-        Process: com.gameloft.android.AMAZ.GloftDMAS
-        Active count 1: time 0.06%
-        Total count 2: time 0.11%
-        <- system/1000 (android):
-             Active count 1: time 0.06%
-             Total count 2: time 0.11%
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v733920737:
-      * Prc com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 / u0a53 / v733920737:
-             TOTAL: 0.25%
-           Bnd Top: 0.25%
-      * Asc org.chromium.content.app.SandboxedProcessService0:0:
-        Process: com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0
-        Active count 9: time 0.01%
-        Total count 2: time 0.25%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 9: time 0.01%
-             Total count 2: time 0.25%
-  * com.android.vending / u0a24 / v85302720:
-      * Asc com.google.android.finsky.externalreferrer.GetInstallReferrerService:
-        Process: com.android.vending
-        Active count 10: time 4.7%
-        Total count 2: time 13%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 10: time 4.7%
-             Total count 1: time 13%
-        <- com.google.android.gms/u0a23 (com.google.android.gms)
-  * com.android.providers.settings / 1000 / v34:
-      * Asc com.android.providers.settings.SettingsProvider:
-        Process: system
-        Total count 2: time 100%
-        <- com.android.permissioncontroller/u0a42 (com.android.permissioncontroller)
-        <- com.android.systemui/u0a32 (com.android.systemui)
-        <- com.android.networkstack.process/1073 (com.android.networkstack)
-        <- com.android.settings/1000 (com.android.settings)
-        <- android.ext.services/u0a48 (android.ext.services)
-        <- com.android.providers.media.module/u0a45 (com.android.providers.media.module)
-        <- com.google.process.gservices/u0a23 (com.google.android.gsf)
-        <- android.process.acore/u0a5 (com.android.providers.contacts)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- com.google.android.gms/u0a23 (com.google.android.gms)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.process.gapps/u0a23 (com.google.android.gsf)
-        <- com.android.localtransport/1000 (com.android.localtransport)
-        <- com.android.documentsui/u0a9 (com.android.documentsui)
-        <- com.android.externalstorage/u0a3 (com.android.externalstorage)
-        <- com.android.providers.calendar/u0a4 (com.android.providers.calendar)
-        <- com.android.devicelockcontroller/u0a50 (com.android.devicelockcontroller)
-        <- com.android.rkpdapp/u0a40 (com.android.rkpdapp)
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.vending:background/u0a24 (com.android.vending)
-        <- com.android.vending:quick_launch/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 2: time 95%
-        <- com.android.launcher3/u0a30 (com.android.launcher3)
-        <- com.google.android.apps.play.battlestar.forwardingime/u0a20 (com.google.android.apps.play.battlestar.forwardingime)
-        <- android.process.media/u0a2 (com.android.providers.downloads)
-        <- com.android.provision/u0a29 (com.android.provision)
-        <- android.process.media/u0a2 (com.android.providers.media)
-        <- com.android.vending:instant_app_installer/u0a24 (com.android.vending)
-        <- com.google.android.apps.play.battlestar.intent_sink/u0a12 (com.google.android.apps.play.battlestar.intent_sink)
-        <- com.android.adservices.api/u0a51 (com.android.adservices.api)
-        <- com.android.packageinstaller/u0a10 (com.android.packageinstaller)
-        <- com.android.settings.intelligence/u0a21 (com.android.settings.intelligence)
-  * com.google.android.webview / u0a27 / v733920737:
-      * Asc org.chromium.android_webview.services.MetricsBridgeService:
-        Process: com.google.android.webview:webview_service
-        Active count 5: time 0.00%
-        Total count 2: time 37%
-        <- com.google.android.webview:webview_apk/u0a27 (com.google.android.webview)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 1: time 0.00%
-        <- com.android.vending/u0a24 (com.android.vending)
-      * Asc org.chromium.android_webview.services.ComponentsProviderService:
-        Process: com.google.android.webview:webview_service
-        Active count 3: time 0.00%
-        Total count 3: time 0.02%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 2: time 0.02%
-        <- com.android.vending/u0a24 (com.android.vending)
-      * Asc org.chromium.android_webview.services.VariationsSeedServer:
-        Process: com.google.android.webview:webview_service
-        Active count 2: time 0.00%
-        Total count 2: time 0.01%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 1: time 0.00%
-             Total count 1: time 0.00%
-        <- com.android.vending/u0a24 (com.android.vending)
-  * com.google.android.gms / u0a23 / v263332133:
-      * Asc com.google.android.gms.measurement.service.MeasurementBrokerService:
-        Process: com.google.android.gms
-        Active count 35: time 6.5%
-        Total count 19: time 7.6%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 35: time 6.5%
-             Total count 19: time 7.6%
-      * Asc com.google.android.gms.chimera.PersistentDirectBootAwareApiService:
-        Process: com.google.android.gms
-        Active count 45: time 6.5%
-        Total count 1: time 38%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.26%
-             Total count 2: time 0.37%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.chimera.GmsBoundBrokerService:
-        Process: com.google.android.gms
-        Active count 43: time 4.0%
-        Total count 3: time 6.7%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 13: time 0.27%
-             Total count 2: time 0.37%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-      * Asc com.google.android.gms.chimera.container.GmsModuleProvider:
-        Process: com.google.android.gms
-        Active count 56: time 0.54%
-        Total count 10: time 1.3%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.15%
-             Total count 3: time 0.38%
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.fonts.provider.FontsProvider:
-        Process: com.google.android.gms
-        Active count 10: time 0.24%
-        Total count 4: time 0.49%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 4: time 0.12%
-             Total count 2: time 0.24%
-      * Asc com.google.android.gms.phenotype.provider.ConfigurationProvider:
-        Process: com.google.android.gms
-        Active count 18: time 0.18%
-        Total count 7: time 0.92%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 12: time 0.13%
-             Total count 3: time 0.36%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-      * Asc com.google.android.gms.ads.identifier.service.AdvertisingIdService:
-        Process: com.google.android.gms
-        Active count 11: time 0.02%
-        Total count 11: time 0.95%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Active count 9: time 0.02%
-             Total count 10: time 0.03%
-        <- com.android.vending/u0a24 (com.android.vending)
-  * com.google.android.gms / u0a23 / v264330133:
-      * Asc com.google.android.gms.ads.identifier.service.AdvertisingIdService:
-        Process: com.google.android.gms
-        Active count 42: time 0.34%
-        Total count 1: time 1.0%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 2: time 0.00%
-      * Asc com.google.android.gms.chimera.container.GmsModuleProvider:
-        Process: com.google.android.gms
-        Active count 1: time 0.00%
-        Total count 4: time 0.57%
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.20%
-      * Asc com.google.android.gms.phenotype.provider.ConfigurationProvider:
-        Process: com.google.android.gms
-        Total count 6: time 0.85%
-        <- com.google.android.gms.unstable/u0a23 (com.google.android.gms)
-        <- com.android.vending/u0a24 (com.android.vending)
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.17%
-        <- com.google.android.gms.ui/u0a23 (com.google.android.gms)
-        <- com.google.android.apps.play.battlestar.playclientservice/u0a22 (com.google.android.apps.play.battlestar.playclientservice)
-      * Asc com.google.android.gms.measurement.service.MeasurementBrokerService:
-        Process: com.google.android.gms
-        Total count 1: time 0.20%
-        <- com.gameloft.android.AMAZ.GloftDMAS/u0a53 (com.gameloft.android.AMAZ.GloftDMAS):
-             Total count 1: time 0.20%
+    Kernel: 316MB min, 323MB avg, 327MB max
+    Native: 374MB min, 379MB avg, 383MB max
   Total procs: 0 shown of 49 total
-
-Per-UID Stats:
-  * u0a53 (5 entries):
-         SOn/Norm/       Top: +11m56s243ms
-                      Imp Bg: +3s318ms
-                     Service: +8ms
-                    (Cached): +20m35s461ms
-                     Bnd Top: +19ms
-                       TOTAL: +32m35s49ms
-  Total UIDs: 1 shown of 29 total
+  Total UIDs: 0 shown of 29 total
 
 Process summary:
-  * com.gameloft.android.AMAZ.GloftDMAS / u0a53 / v105110:
-         TOTAL: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-           Top: 14% (127MB-248MB-305MB/92MB-216MB-267MB/293MB-393MB-448MB over 6)
-        Imp Bg: 0.06%
-  * com.google.android.webview:sandboxed_process0:org.chromium.content.app.SandboxedProcessService0:0 / u0a53 / v733920737:
-         TOTAL: 0.25%
-       Bnd Top: 0.25%
 
 Run time Stats:
-   SOn/Norm: +1h25m14s304ms
-      TOTAL: +1h25m14s304ms
+   SOn/Norm: +1h50m16s528ms
+      TOTAL: +1h50m16s528ms
 
 Memory usage:
-  Kernel : 321MB (16 samples)
-  Native : 382MB (16 samples)
-  Persist: 174MB (33 samples)
-  Top: 85MB (36 samples)
-  BTop: 158MB (50 samples)
-  Fgs: 64MB (14 samples)
-  BFgs: 28MB (29 samples)
-  ImpFg: 5.5MB (30 samples)
-  ImpBg: 9.2MB (41 samples)
-  Service: 6.2KB (16 samples)
-  Receivr: 2.9KB (4 samples)
-  Home: 20MB (13 samples)
-  LastAct: 29MB (26 samples)
-  Cached: 252MB (140 samples)
-  Frozen: 34MB (115 samples)
-  Cached : 826MB (16 samples)
-  Free   : 450MB (16 samples)
-  Z-Ram  : 12KB (16 samples)
+  Kernel : 323MB (24 samples)
+  Native : 379MB (24 samples)
+  Persist: 171MB (52 samples)
+  Top: 114MB (64 samples)
+  BTop: 132MB (59 samples)
+  Fgs: 53MB (14 samples)
+  BFgs: 26MB (43 samples)
+  ImpFg: 19MB (50 samples)
+  ImpBg: 9.9MB (46 samples)
+  Service: 4.8KB (32 samples)
+  Receivr: 189KB (10 samples)
+  Home: 17MB (5 samples)
+  LastAct: 27MB (36 samples)
+  Cached: 226MB (199 samples)
+  Frozen: 50MB (127 samples)
+  Cached : 691MB (24 samples)
+  Free   : 627MB (24 samples)
+  Z-Ram  : 12KB (24 samples)
   TOTAL  : 2.8GB
-  ServRst: 195 (5 samples)
+  ServRst: 195 (9 samples)
 
 PSS collection stats:
-  Internal Single: 196x over +573ms
+  Internal Single: 300x over +881ms
   Internal All Procs (Memory Change): 0x over 0
-  Internal All Procs (Polling): 40x over +123ms
+  Internal All Procs (Polling): 53x over +155ms
   External: 0x over 0
   External Slow: 0x over 0
 
 DUMP OF SERVICE usagestats:
 user=0 
-  Last 24 hour events (timeRange="11/24/2026, 5:30 PM – 11/25/2026, 5:30 PM" )
+  Last 24 hour events (timeRange="11/24/2026, 5:56 PM – 11/25/2026, 5:56 PM" )
   In-memory daily stats
-  timeRange="11/25/2026, 4:38 – 5:29 PM" 
+  timeRange="11/25/2026, 4:38 – 5:50 PM" 
     packages
     
     ChooserCounts
   In-memory weekly stats
-  timeRange="11/25/2026, 4:38 – 5:29 PM" 
+  timeRange="11/25/2026, 4:38 – 5:50 PM" 
     packages
     
     ChooserCounts
   In-memory monthly stats
-  timeRange="11/25/2026, 4:38 – 5:29 PM" 
+  timeRange="11/25/2026, 4:38 – 5:50 PM" 
     packages
     
     ChooserCounts
   In-memory yearly stats
-  timeRange="10/5/2026, 4:18 PM – 11/25/2026, 5:29 PM" 
+  timeRange="10/5/2026, 4:18 PM – 11/25/2026, 5:50 PM" 
     packages
-      package=com.gameloft.android.AMAZ.GloftDMAS totalTimeUsed="11:51" lastTimeUsed="2026-10-05 16:33:43" totalTimeVisible="11:52" lastTimeVisible="2026-10-05 16:33:44" lastTimeComponentUsed="2026-10-05 16:33:43" totalTimeFS="00:00" lastTimeFS="1970-01-01 01:00:00" appLaunchCount=4 
     
     ChooserCounts
-      package=com.gameloft.android.AMAZ.GloftDMAS 
   
 
 Usage Source=TASK_ROOT_ACTIVITY 
 
   App Time Limits
    User  userId=0
- Currently Active:com.android.launcher3, 
+ Currently Active:com.android.vending, 
  Observed Entities:
 
 
@@ -2057,27 +1757,65 @@ Broadcast response stats:
   Broadcast events (most recent first):
   
   Notification events (most recent first):
-    notification:+54s239ms; event=<cancelled>, pkg=com.android.vending, usr=0
-    notification:+42s875ms; event=<posted>, pkg=com.android.vending, usr=0
-    notification:+36s729ms; event=<posted>, pkg=android, usr=0
-    notification:+35s607ms; event=<cancelled>, pkg=android, usr=0
-    notification:+35s598ms; event=<updated>, pkg=android, usr=0
-    notification:+35s590ms; event=<updated>, pkg=android, usr=0
-    notification:+35s573ms; event=<updated>, pkg=android, usr=0
-    notification:+34s784ms; event=<updated>, pkg=android, usr=0
-    notification:+30s959ms; event=<updated>, pkg=android, usr=-1
-    notification:+29s946ms; event=<posted>, pkg=android, usr=0
-    notification:+26s998ms; event=<posted>, pkg=android, usr=-1
+    notification:+12m43s655ms; event=<cancelled>, pkg=com.android.vending, usr=0
+    notification:+12m41s651ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m41s156ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m39s152ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m37s150ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m35s151ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m33s142ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m31s141ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m29s141ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m27s143ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m25s132ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m23s132ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m21s135ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m19s133ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m17s133ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m15s112ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m13s106ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m11s101ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m9s96ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m7s96ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m5s97ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m3s89ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+12m1s93ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m59s85ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m57s65ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m55s72ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m53s62ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m51s63ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m49s61ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m47s57ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m45s52ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m43s54ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m41s50ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m39s45ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m37s31ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m35s36ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m33s9ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m30s999ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m29s4ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m27s3ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m24s998ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m23s0ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m20s992ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m18s992ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m16s931ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m14s930ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m12s927ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m10s921ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m8s176ms; event=<updated>, pkg=com.android.vending, usr=0
+    notification:+11m6s175ms; event=<updated>, pkg=com.android.vending, usr=0
 
 User 0 App Standby States:
-  package=com.gameloft.android.AMAZ.GloftDMAS u=0 bucket=10 reason=u-mb used=+1h9m42s714ms usedByUser=+1h9m43s321ms usedScr=+1h9m48s553ms lastPred=<uninitialized> expiryTimes=(10:+9m42s714ms) lastJob=+1h6m16s974ms lastInformedBucket=-1 nextEstimatedLaunchTime=-50d2h9m1s827ms idle=n
   
-  totalElapsedTime=+1h25m8s647ms
-  totalScreenOnTime=+52m11s731ms
+  totalElapsedTime=+1h50m10s201ms
+  totalScreenOnTime=+18m56s79ms
 
 DUMP OF SERVICE batterystats:
 Statistics since last charge:
-  System starts: 2, currently on battery: false
+  System starts: 3, currently on battery: false
   Estimated battery capacity: 1000 mAh
   Last learned battery capacity: 4000 mAh
   Min learned battery capacity: 4000 mAh
@@ -2085,7 +1823,7 @@ Statistics since last charge:
   Time on battery: 0ms (0.0%) realtime, 0ms (--%) uptime
   Time on battery screen off: 0ms (--%) realtime, 0ms (--%) uptime
   Time on battery screen doze: 0ms (--%)
-  Total run time: 1h 25m 14s 459ms realtime, 1h 25m 14s 459ms uptime
+  Total run time: 1h 50m 16s 754ms realtime, 1h 50m 16s 754ms uptime
   Discharge: 0 mAh
   Screen off discharge: 0 mAh
   Screen doze discharge: 0 mAh
@@ -2095,7 +1833,7 @@ Statistics since last charge:
   Start clock time: 2026-10-05-16-18-16
   Screen on: 0ms (--%) 0x, Interactive: 0ms (--%)
   Screen brightnesses: (no activity)
-  Connectivity changes: 4
+  Connectivity changes: 6
 
   CONNECTIVITY POWER SUMMARY START
   Logging duration for connectivity statistics: 0ms 
@@ -2182,24 +1920,14 @@ Statistics since last charge:
       (nothing executed)
     Apk com.android.dynsystem:
       (nothing executed)
-  u0a53:
-    Wake lock *alarm* realtime
-    Wake lock AudioMix realtime
-    Wake lock *launch* realtime
+  u0a55:
     Wake lock Icing realtime
-    Wake lock WindowManager/displayId:0 realtime
-    Wake lock *job*/com.gameloft.android.AMAZ.GloftDMAS/com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService#-530303677 realtime
-    Job com.gameloft.android.AMAZ.GloftDMAS/com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService: (not used)
-    Apk com.gameloft.android.AMAZ.GloftDMAS:
-      Service com.google.firebase.sessions.SessionLifecycleService:
-        Created for: 0ms uptime
-        Starts: 0, launches: 1
 
 Per process state tracking available: true
-Total cpu time reads: 275
-Batching Duration (min): 52
-All UID cpu time reads since the later of device start or stats reset: 48
-UIDs removed since the later of device start or stats reset: 0
+Total cpu time reads: 131
+Batching Duration (min): 18
+All UID cpu time reads since the later of device start or stats reset: 32
+UIDs removed since the later of device start or stats reset: 1
 Currently mapped isolated uids:
   1037->1000 (ref count = 1)
 
@@ -2235,10 +1963,11 @@ CPU wakeup stats:
   
   Recent waking activity:
     Subsystem Alarm:
-      -41m10s411ms: 1000 [PER ], 
+      -1m25s754ms: 1000 [PER ], 
+      -5m14s328ms: u0a23 [IMPF], 
   
-  Current proc-state map (26):
-    1000:PER , 1037:NONE, 1068:PER , 1073:PER , 2000:NONE, u0a2:NONE, u0a3:NONE, u0a4:CEM , u0a5:CEM , u0a7:NONE, u0a9:CEM , u0a10:CEM , u0a20:IMPB, u0a21:CEM , u0a22:PER , u0a23:IMPF, u0a24:CEM , u0a30:TOP , u0a32:PER , u0a40:CEM , u0a42:CEM , u0a45:PER , u0a46:CEM , u0a48:BFGS, u0a50:NONE, u0a53:NONE
+  Current proc-state map (23):
+    1000:PER , 1037:NONE, 1068:PER , 1073:PER , 2000:CEM , u0a2:CEM , u0a3:CEM , u0a4:CEM , u0a5:CEM , u0a7:NONE, u0a9:CEM , u0a10:CEM , u0a20:IMPB, u0a22:PER , u0a23:IMPF, u0a24:TOP , u0a30:HOME, u0a32:PER , u0a40:CEM , u0a42:CEM , u0a45:PER , u0a48:BFGS, u0a50:CEM 
   
   Wakeup events:
   Attribution stats:

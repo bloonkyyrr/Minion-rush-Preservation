@@ -24,7 +24,6 @@ package:com.android.networkstack
 package:com.google.android.play.games
 package:com.android.systemui
 package:android.ext.shared
-package:com.gameloft.android.AMAZ.GloftDMAS
 package:com.android.networkstack.tethering
 package:com.android.keychain
 package:com.android.devicelockcontroller
@@ -33,6 +32,7 @@ package:com.android.providers.userdictionary
 package:com.android.launcher3
 package:com.android.documentsui
 package:com.android.cts.ctsshim
+package:com.gameloft.android.ANMP.GloftDMHM
 package:com.android.bluetooth
 package:com.android.settings.intelligence
 package:com.android.adservices.api

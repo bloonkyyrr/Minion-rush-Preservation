@@ -5,5 +5,5 @@ tmpfs           2.8G    0  2.8G   0% /mnt
 /dev/block/dm-4 253M 252M     0 100% /vendor
 /dev/block/dm-5 751M 748M     0 100% /product
 tmpfs           2.8G  12K  2.8G   1% /apex
-/dev/block/dm-6 512G 2.5G  509G   1% /data
-/dev/fuse       512G 2.5G  509G   1% /storage/emulated
+/dev/block/dm-6 512G 3.1G  509G   1% /data
+/dev/fuse       512G 3.1G  509G   1% /storage/emulated
