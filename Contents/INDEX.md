@@ -1,11 +1,13 @@
 # Contents index
 
-Generated 2026-11-25 17:31:36.
+Generated 2026-11-25 21:04:16.
 
 | Session | Exchanges | WebSocket events | Manifest | HAR |
 | --- | --- | --- | --- | --- |
+| 20261125-183957 | 676 | 0 | `Contents/20261125-183957/manifest.jsonl` | `Contents/20261125-183957/har/20261125-183957.har` |
+| 20261125-201534 | 93 | 0 | `Contents/20261125-201534/manifest.jsonl` | `Contents/20261125-201534/har/20261125-201534.har` |
 
-Blobs: 0 files, 0 B (0 over GitHub's 100 MB per-file limit).
+Blobs: 91 files, 112.9 MB (0 over GitHub's 100 MB per-file limit).
 `Contents/blobs.sha256` lists every blob with its hash and size.
 
 ## Reading an exchange
