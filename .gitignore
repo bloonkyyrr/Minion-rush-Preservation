@@ -1,0 +1,13 @@
+# Catcher scratch space (self-tests, downloaded tools)
+Catcher/.selftest/
+Catcher/.selftest-run.log
+Catcher/tools/
+__pycache__/
+*.pyc
+
+# --- managed by catcher export ---
+# Capture blobs are kept locally; GitHub rejects files over 100 MB.
+# To publish them use Git LFS:  git lfs track "Contents/blobs/**" "Other/apk/*.apk"
+Contents/blobs/
+Other/apk/*.apk
+*.tmp

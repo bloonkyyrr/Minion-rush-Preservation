@@ -1,0 +1,4 @@
+total 6
+drwxrws--x 2 media_rw ext_obb_rw 3452 2026-10-05 16:18 .
+drwxrws--x 5 media_rw media_rw   3452 2026-10-05 16:18 ..
+-rw-rw---- 1 u0_a45   ext_obb_rw    0 2026-10-05 16:18 .nomedia

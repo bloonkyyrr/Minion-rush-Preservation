@@ -1,0 +1,22 @@
+# Catcher configuration.
+# Values here are defaults for this machine; command line flags override them.
+
+# Where API calls/, Contents/ and Other/ live. Defaults to the folder containing Catcher/.
+# out_root = "D:/Minion Rush Preservation/Minion rush Preservation"
+
+# Proxy listener.
+listen_host = "127.0.0.1"
+listen_port = 8080
+
+# Bodies up to this size are written inline into the .req/.res files.
+# Larger bodies are stored once in Contents/blobs/<sha256> and referenced by the manifest.
+max_inline_body = 65536
+
+# Android package to snapshot.
+package = "com.gameloft.android.AMAZ.GloftDMAS"
+
+# adb.exe. Leave unset to auto-detect (Play Games on PC, BlueStacks, LDPlayer, PATH).
+# adb = "C:/Program Files/Google/Play Games/current/emulator/adb.exe"
+
+# Fixed session folder name. Leave unset for a timestamp.
+# session_name = "guest-first-run"

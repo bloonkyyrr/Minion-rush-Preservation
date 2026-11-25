@@ -1,0 +1,287 @@
+Activity Resolver Table:
+  Schemes:
+      https:
+        7673326 com.gameloft.android.AMAZ.GloftDMAS/.AppLinksActivity filter dea8b67
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "despicable-me-minion-rush.extads.gameloft.com": -1
+          AutoVerify=true
+        7673326 com.gameloft.android.AMAZ.GloftDMAS/.AppLinksActivity filter c00ed14
+          Action: "android.intent.action.MAIN"
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.LAUNCHER"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "https"
+          Authority: "minionrush.page.link": -1
+          AutoVerify=true
+      fbconnect:
+        48a7703 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.CustomTabActivity filter e89c680
+          Action: "android.intent.action.VIEW"
+          Category: "android.intent.category.DEFAULT"
+          Category: "android.intent.category.BROWSABLE"
+          Scheme: "fbconnect"
+          Authority: "cct.com.gameloft.android.AMAZ.GloftDMAS": -1
+
+  Non-Data Actions:
+      android.intent.action.MAIN:
+        f791268 com.gameloft.android.AMAZ.GloftDMAS/.MainActivity filter e98b681
+          Action: "android.intent.action.MAIN"
+          Category: "android.intent.category.LAUNCHER"
+        61939bd com.gameloft.android.AMAZ.GloftDMAS/.MyVideoView filter d835bb2
+          Action: "android.intent.action.MAIN"
+
+Receiver Resolver Table:
+  Non-Data Actions:
+      android.intent.action.BATTERY_OKAY:
+        c171c57 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2c3c344
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.ACTION_POWER_DISCONNECTED:
+        7fb41f1 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 578b1d6
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+      android.intent.action.DEVICE_STORAGE_LOW:
+        d710c2d com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 2a61562
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      android.net.conn.CONNECTIVITY_CHANGE:
+        70726f3 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy filter edbcfb0
+          Action: "android.net.conn.CONNECTIVITY_CHANGE"
+      com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED:
+        b39c37b com.gameloft.android.AMAZ.GloftDMAS/com.facebook.CurrentAccessTokenExpirationBroadcastReceiver filter d49e598
+          Action: "com.facebook.sdk.ACTION_CURRENT_ACCESS_TOKEN_CHANGED"
+      com.amazon.device.messaging.intent.REGISTRATION:
+        8b3805f com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.ADMMessageReceiverHandler filter e04caac
+          Action: "com.amazon.device.messaging.intent.REGISTRATION"
+          Action: "com.amazon.device.messaging.intent.RECEIVE"
+          Category: "com.gameloft.android.AMAZ.GloftDMAS"
+      android.intent.action.DEVICE_STORAGE_OK:
+        d710c2d com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy filter 2a61562
+          Action: "android.intent.action.DEVICE_STORAGE_LOW"
+          Action: "android.intent.action.DEVICE_STORAGE_OK"
+      com.amazon.inapp.purchasing.NOTIFY:
+        224b4b9 com.gameloft.android.AMAZ.GloftDMAS/com.amazon.device.iap.ResponseReceiver filter 8c780fe
+          Action: "com.amazon.inapp.purchasing.NOTIFY"
+      android.intent.action.BATTERY_LOW:
+        c171c57 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy filter 2c3c344
+          Action: "android.intent.action.BATTERY_OKAY"
+          Action: "android.intent.action.BATTERY_LOW"
+      android.intent.action.TIMEZONE_CHANGED:
+        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      android.intent.action.TIME_SET:
+        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      android.intent.action.BOOT_COMPLETED:
+        ad2e375 com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.LocalPushReceiver filter e96af0a
+          Action: "android.intent.action.BOOT_COMPLETED"
+        eff3e29 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.RescheduleReceiver filter 45425ae
+          Action: "android.intent.action.TIMEZONE_CHANGED"
+          Action: "android.intent.action.TIME_SET"
+          Action: "android.intent.action.BOOT_COMPLETED"
+      android.intent.action.ACTION_POWER_CONNECTED:
+        7fb41f1 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy filter 578b1d6
+          Action: "android.intent.action.ACTION_POWER_DISCONNECTED"
+          Action: "android.intent.action.ACTION_POWER_CONNECTED"
+      com.amazon.device.messaging.intent.RECEIVE:
+        8b3805f com.gameloft.android.AMAZ.GloftDMAS/.PushNotification.ADMMessageReceiverHandler filter e04caac
+          Action: "com.amazon.device.messaging.intent.REGISTRATION"
+          Action: "com.amazon.device.messaging.intent.RECEIVE"
+          Category: "com.gameloft.android.AMAZ.GloftDMAS"
+      androidx.work.diagnostics.REQUEST_DIAGNOSTICS:
+        82493e5 com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.diagnostics.DiagnosticsReceiver filter 4c0eeba
+          Action: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS"
+      androidx.work.impl.background.systemalarm.UpdateProxies:
+        de33f4f com.gameloft.android.AMAZ.GloftDMAS/androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver filter d2636dc
+          Action: "androidx.work.impl.background.systemalarm.UpdateProxies"
+
+Domain verification status:
+  com.gameloft.android.AMAZ.GloftDMAS:
+    ID: fbef0db0-ad4a-4393-a087-251af20c266a
+    Signatures: [21:73:A2:48:E2:B1:1F:97:60:B9:16:7F:39:8B:18:3C:92:81:6C:F8:FC:74:AF:D3:C6:4B:22:ED:DF:50:48:1C]
+    Domain verification state:
+      minionrush.page.link: none
+      despicable-me-minion-rush.extads.gameloft.com: none
+    User all:
+      Verification link handling allowed: true
+      Selection state:
+        Disabled:
+          minionrush.page.link
+          despicable-me-minion-rush.extads.gameloft.com
+
+Permissions:
+  Permission [com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE] (e312c27):
+    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
+    uid=10053 gids=[] type=0 prot=signature
+    perm=PermissionInfo{47e8ea2 com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE}
+    flags=0x0
+
+Permissions:
+  Permission [com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION] (38dded4):
+    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
+    uid=10053 gids=[] type=0 prot=signature
+    perm=PermissionInfo{4160af0 com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION}
+    flags=0x0
+
+Permissions:
+  Permission [glshare.permission.ACCESS_SHARED_DATA] (944a87d):
+    sourcePackage=com.gameloft.android.AMAZ.GloftDMAS
+    uid=10053 gids=[] type=0 prot=signature
+    perm=PermissionInfo{f5af2ee glshare.permission.ACCESS_SHARED_DATA}
+    flags=0x0
+
+Registered ContentProviders:
+  com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider:
+    Provider{1d2238f com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider}
+  com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider:
+    Provider{ce8e61c com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider}
+  com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider:
+    Provider{aeeb225 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider}
+  com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider:
+    Provider{f874ffa com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider}
+
+ContentProvider Authorities:
+  [com.gameloft.android.AMAZ.GloftDMAS.KeyProvider]:
+    Provider{1d2238f com.gameloft.android.AMAZ.GloftDMAS/.KeyProvider}
+      applicationInfo=ApplicationInfo{b400372 com.gameloft.android.AMAZ.GloftDMAS}
+  [com.gameloft.android.AMAZ.GloftDMAS.firebaseinitprovider]:
+    Provider{ce8e61c com.gameloft.android.AMAZ.GloftDMAS/com.google.firebase.provider.FirebaseInitProvider}
+      applicationInfo=ApplicationInfo{77a63c3 com.gameloft.android.AMAZ.GloftDMAS}
+  [com.gameloft.android.AMAZ.GloftDMAS.FacebookInitProvider]:
+    Provider{aeeb225 com.gameloft.android.AMAZ.GloftDMAS/com.facebook.internal.FacebookInitProvider}
+      applicationInfo=ApplicationInfo{5541440 com.gameloft.android.AMAZ.GloftDMAS}
+  [com.gameloft.android.AMAZ.GloftDMAS.androidx-startup]:
+    Provider{f874ffa com.gameloft.android.AMAZ.GloftDMAS/androidx.startup.InitializationProvider}
+      applicationInfo=ApplicationInfo{c784f79 com.gameloft.android.AMAZ.GloftDMAS}
+
+Key Set Manager:
+  [com.gameloft.android.AMAZ.GloftDMAS]
+      Signing KeySets: 27
+
+Packages:
+  Package [com.gameloft.android.AMAZ.GloftDMAS] (9a0f587):
+    appId=10053
+    pkg=Package{1c1dcb4 com.gameloft.android.AMAZ.GloftDMAS}
+    codePath=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==
+    resourcePath=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==
+    legacyNativeLibraryDir=/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/lib
+    extractNativeLibs=true
+    primaryCpuAbi=x86_64
+    secondaryCpuAbi=null
+    cpuAbiOverride=null
+    versionCode=105110 minSdk=21 targetSdk=33
+    minExtensionVersions=[]
+    versionName=10.5.1
+    usesNonSdkApi=false
+    splits=[base]
+    apkSigningVersion=3
+    flags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privateFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    forceQueryable=false
+    queriesIntents=[Intent { act=android.intent.action.MAIN }]
+    dataDir=/data/user/0/com.gameloft.android.AMAZ.GloftDMAS
+    supportsScreens=[medium, large, xlarge, resizeable, anyDensity]
+    usesOptionalLibraries:
+      org.apache.http.legacy
+      androidx.window.extensions
+      androidx.window.sidecar
+    usesLibraryFiles:
+      /system/framework/org.apache.http.legacy.jar
+    timeStamp=2026-10-05 16:21:29
+    lastUpdateTime=2026-10-05 16:21:39
+    installerPackageName=null
+    installerPackageUid=-1
+    initiatingPackageName=com.android.shell
+    originatingPackageName=null
+    packageSource=1
+    appMetadataFilePath=null
+    signatures=PackageSignatures{80200dd version:3, signatures:[18185fad], past signatures:[]}
+    installPermissionsFixed=true
+    pkgFlags=[ HAS_CODE ALLOW_CLEAR_USER_DATA ALLOW_BACKUP ]
+    privatePkgFlags=[ PRIVATE_FLAG_ACTIVITIES_RESIZE_MODE_RESIZEABLE_VIA_SDK_VERSION HAS_DOMAIN_URLS PARTIALLY_DIRECT_BOOT_AWARE PRIVATE_FLAG_ALLOW_NATIVE_HEAP_POINTER_TAGGING ]
+    apexModuleName=null
+    declared permissions:
+      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE: prot=signature
+      glshare.permission.ACCESS_SHARED_DATA: prot=signature
+      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: prot=signature
+    requested permissions:
+      android.permission.FOREGROUND_SERVICE
+      android.permission.POST_NOTIFICATIONS
+      android.permission.SCHEDULE_EXACT_ALARM
+      android.permission.READ_EXTERNAL_STORAGE
+      android.permission.WRITE_EXTERNAL_STORAGE
+      android.permission.INTERNET
+      android.permission.ACCESS_WIFI_STATE
+      android.permission.WAKE_LOCK
+      android.permission.ACCESS_NETWORK_STATE
+      android.permission.VIBRATE
+      android.permission.RECEIVE_BOOT_COMPLETED
+      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE
+      com.amazon.device.messaging.permission.RECEIVE
+      com.amazon.permission.SET_FLAG_NOSOFTKEYS
+      glshare.permission.ACCESS_SHARED_DATA
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+    install permissions:
+      com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE: granted=true
+      com.gameloft.android.AMAZ.GloftDMAS.permission.RECEIVE_ADM_MESSAGE: granted=true
+      com.gameloft.android.AMAZ.GloftDMAS.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION: granted=true
+      android.permission.FOREGROUND_SERVICE: granted=true
+      android.permission.RECEIVE_BOOT_COMPLETED: granted=true
+      android.permission.INTERNET: granted=true
+      android.permission.ACCESS_NETWORK_STATE: granted=true
+      android.permission.SCHEDULE_EXACT_ALARM: granted=false
+      glshare.permission.ACCESS_SHARED_DATA: granted=true
+      android.permission.VIBRATE: granted=true
+      android.permission.ACCESS_WIFI_STATE: granted=true
+      android.permission.WAKE_LOCK: granted=true
+    User 0: ceDataInode=2442 installed=true hidden=false suspended=false distractionFlags=0 stopped=true notLaunched=false enabled=0 instant=false virtual=false
+      installReason=0
+      firstInstallTime=2026-10-05 16:21:39
+      uninstallReason=0
+      gids=[3003]
+      runtime permissions:
+        android.permission.POST_NOTIFICATIONS: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED]
+        android.permission.READ_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+        android.permission.WRITE_EXTERNAL_STORAGE: granted=false, flags=[ USER_SENSITIVE_WHEN_GRANTED|USER_SENSITIVE_WHEN_DENIED|RESTRICTION_INSTALLER_EXEMPT]
+      enabledComponents:
+        androidx.work.impl.background.systemjob.SystemJobService
+
+Queries:
+  system apps queryable: false
+  queries via forceQueryable:
+  queries via package name:
+  queries via component:
+    com.google.android.play.games:
+      com.gameloft.android.AMAZ.GloftDMAS
+    com.android.settings.intelligence:
+      com.gameloft.android.AMAZ.GloftDMAS
+    com.gameloft.android.AMAZ.GloftDMAS:
+      com.google.android.play.games
+      com.android.chrome
+      com.android.launcher3
+      com.android.healthconnect.controller
+  queryable via interaction:
+    User 0:
+      [com.android.inputdevices,com.android.settings,com.android.localtransport,com.android.location.fused,com.android.wallpaperbackup,com.android.dynsystem,com.android.providers.settings,android,com.android.keychain]:
+        com.gameloft.android.AMAZ.GloftDMAS
+      [com.google.android.gms,com.google.android.gsf]:
+        com.gameloft.android.AMAZ.GloftDMAS
+  queryable via uses-library:
+
+Dexopt state:
+  [com.gameloft.android.AMAZ.GloftDMAS]
+    path: /data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/base.apk
+      x86_64: [status=verify] [reason=vdex] [primary-abi]
+        [location is /data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/oat/x86_64/base.vdex]
+
+Compiler stats:
+  [com.gameloft.android.AMAZ.GloftDMAS]
+    (No recorded stats)

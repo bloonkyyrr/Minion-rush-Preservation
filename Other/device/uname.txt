@@ -1,0 +1,1 @@
+Linux localhost 6.1.177-android14-11-g900d46d1c904-ab16834843 #1 SMP PREEMPT Wed Nov  4 22:05:49 UTC 2026 x86_64 Toybox

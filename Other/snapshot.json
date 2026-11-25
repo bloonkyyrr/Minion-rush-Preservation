@@ -1,0 +1,87 @@
+{
+  "created": "2026-11-25T17:30:51+0100",
+  "device": "localhost:6520",
+  "package": "com.gameloft.android.AMAZ.GloftDMAS",
+  "steps": [],
+  "model": "HPE device",
+  "android": "14",
+  "sdk": "34",
+  "build_type": "user",
+  "root": false,
+  "app_version": "10.5.1",
+  "apks": [
+    {
+      "remote": "/data/app/~~TZxMNLO9vGtb8RZ5LHYPog==/com.gameloft.android.AMAZ.GloftDMAS-qP-skWQbUOASUj_QVX2MpA==/base.apk",
+      "local": "Other\\apk\\base.apk",
+      "skipped": true
+    }
+  ],
+  "device_dumps": [
+    {
+      "file": "Other\\device\\getprop.txt",
+      "bytes": 22423
+    },
+    {
+      "file": "Other\\device\\dumpsys-package.txt",
+      "bytes": 16300
+    },
+    {
+      "file": "Other\\device\\pm-dump.txt",
+      "bytes": 126029
+    },
+    {
+      "file": "Other\\device\\dumpsys-display.txt",
+      "bytes": 20489
+    },
+    {
+      "file": "Other\\device\\dumpsys-connectivity.txt",
+      "bytes": 33672
+    },
+    {
+      "file": "Other\\device\\dumpsys-wifi.txt",
+      "bytes": 85775
+    },
+    {
+      "file": "Other\\device\\dumpsys-activity.txt",
+      "bytes": 16503
+    },
+    {
+      "file": "Other\\device\\df.txt",
+      "bytes": 412
+    },
+    {
+      "file": "Other\\device\\uname.txt",
+      "bytes": 121
+    },
+    {
+      "file": "Other\\device\\uptime.txt",
+      "bytes": 64
+    },
+    {
+      "file": "Other\\device\\packages.txt",
+      "bytes": 2733
+    },
+    {
+      "file": "Other\\device\\netstat.txt",
+      "bytes": 18528
+    }
+  ],
+  "logcat": {
+    "file": "Other\\logs\\logcat-20261125-173052.txt",
+    "bytes": 2412865
+  },
+  "external_data": [
+    {
+      "path": "/sdcard/Android/data/com.gameloft.android.AMAZ.GloftDMAS",
+      "listing": "total 6\ndrwxrws--- 2 u0_a53   ext_data_rw 3452 2026-11-25 16:59 .\ndrwxrws--x 3 media_rw ext_data_rw 3452 2026-10-05 16:21 .."
+    },
+    {
+      "path": "/sdcard/Android/obb/com.gameloft.android.AMAZ.GloftDMAS",
+      "listing": "ls: /sdcard/Android/obb/com.gameloft.android.AMAZ.GloftDMAS: No such file or directory"
+    }
+  ],
+  "appdata": {
+    "skipped": "device is not rooted; /data/data is unreadable. Run the snapshot again on a rooted device (AVD with -writable-system) to archive saves, preferences and downloaded assets."
+  },
+  "report_file": "Other\\snapshot.json"
+}
