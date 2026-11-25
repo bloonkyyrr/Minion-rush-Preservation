@@ -1,0 +1,7 @@
+GET /mru/minion_110_bob_none_assets_all_android_asset_11_1789481087.4388878 HTTP/1.1
+Host: iris16-gold.gameloft.com
+User-Agent: UnityPlayer/6000.0.78f1 (UnityWebRequest/1.0, libcurl/8.10.1-DEV)
+Accept: */*
+Accept-Encoding: deflate, gzip
+X-Unity-Version: 6000.0.78f1
+

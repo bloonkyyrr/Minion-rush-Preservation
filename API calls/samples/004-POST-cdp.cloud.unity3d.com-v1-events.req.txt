@@ -1,0 +1,20 @@
+POST /v1/events HTTP/1.1
+Host: cdp.cloud.unity3d.com
+User-Agent: UnityPlayer/6000.0.78f1 (UnityWebRequest/1.0, libcurl/8.10.1-DEV)
+Accept-Encoding: deflate, gzip
+Accept: */*
+Content-Type: application/json
+X-Event-Count: 1
+X-Data-Size-Info: 549,442,107
+X-Highest-Priority-Events: 0
+X-Data-Block-Id: 60e01600f0d33bf990a644f25542eca9
+X-Expired-Session-Dropped: 0
+X-Data-Retry-Count: 6
+X-Request-Ts: 1795640109315
+X-Dispacher-States: 1,2,2,2
+X-Continuous-Request: 1
+X-Unity-Version: 6000.0.78f1
+Content-Length: 549
+
+{"common":{"appid":"bc47f211-05cd-4423-a166-0a02aed064ca","userid":"07778f2b10d644da3aec2cf3465f287c","sessionid":3833180452401831766,"platform":"AndroidPlayer","platformid":11,"sdk_ver":"u6000.0.78f1","runMode":"human-hub","sdk_rev":"ec8a99a872be","session_count":1,"localprojectid":"53460d8b0a3d17a489e2cddb48af5f08","build_guid":"d0c2a0876ab841fb996141f0150419fe","deviceid":"unknown","identity_token":"07778f2b10d644da3aec2cf3465f287c"}}
+{"type":"analytics.appStart.v1","msg":{"previous_sessionid":0,"ts":1795639896936,"t_since_start":8639730}}

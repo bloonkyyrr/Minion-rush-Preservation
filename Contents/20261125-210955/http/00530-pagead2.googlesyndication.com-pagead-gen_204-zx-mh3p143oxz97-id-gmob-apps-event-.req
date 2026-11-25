@@ -1,0 +1,16 @@
+GET /pagead/gen_204?zx=mh3p143oxz97&id=gmob-apps&event=get_signals&p=a&rtype=requester_type_2&lat_ms=16&e_lat_ms=5&e_l=4392&osv=262180000.262180000.0&req_id=1067219528&pn=com.gameloft.android.ANMP.GloftDMHM&js=afma-sdk-a-v262180000.262180000.0 HTTP/2.0
+sec-ch-ua-platform: "Android"
+user-agent: Mozilla/5.0 (Linux; Android 14; HPE device Build/UKW1.261105.001; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/149.0.7827.5 Safari/537.36 (Mobile; afma-sdk-a-v262180000.262180000.0)
+sec-ch-ua: "Android WebView";v="149", "Chromium";v="149", "Not)A;Brand";v="24"
+sec-ch-ua-mobile: ?0
+accept: image/avif,image/webp,image/apng,image/svg+xml,image/*,*/*;q=0.8
+x-requested-with: com.gameloft.android.ANMP.GloftDMHM
+sec-fetch-site: cross-site
+sec-fetch-mode: no-cors
+sec-fetch-dest: image
+sec-fetch-storage-access: active
+referer: https://googleads.g.doubleclick.net/
+accept-encoding: gzip, deflate, br, zstd
+accept-language: en-US,en;q=0.9
+priority: i
+

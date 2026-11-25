@@ -1,0 +1,7 @@
+GET /mru/minion_132_meldespicable_assets_all_android_asset_120_1784844426.3041382 HTTP/1.1
+Host: iris16-gold.gameloft.com
+User-Agent: UnityPlayer/6000.0.78f1 (UnityWebRequest/1.0, libcurl/8.10.1-DEV)
+Accept: */*
+Accept-Encoding: deflate, gzip
+X-Unity-Version: 6000.0.78f1
+

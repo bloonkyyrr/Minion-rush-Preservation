@@ -1,0 +1,20 @@
+HTTP/1.1 200 OK
+Server: nginx
+Date: Wed, 25 Nov 2026 21:00:39 GMT
+Content-Type: binary/octet-stream
+Content-Length: 1481583
+Connection: keep-alive
+x-amz-id-2: WOU6Shzs/NksgskTKPhKFMg5VfvYmU1EoeeU9KDphk4IjUiNeghfwDFWocH+rBCoj/thBVwUyf/NRzkOEkzImNwMe+APP3KZ
+x-amz-request-id: TZPR0XX4B53TGPEP
+Last-Modified: Mon, 20 Jul 2026 15:51:20 GMT
+ETag: "b66eadc49a60190d58facb4bb4621852"
+x-amz-server-side-encryption: AES256
+x-amz-version-id: 6ygrhe18e_c9wmluGrQRirMO6iCheh5Y
+X-ID: bruf08-hw-edge-or0001
+traceparent: 00-a7a1aa9191c6e71e1df36addba01a70b-da1c4284e2f56321-01
+Age: 50596
+Access-Control-Allow-Origin: *
+Cache: HIT
+X-Cached-Since: 2026-11-25T06:57:23+00:00
+Accept-Ranges: bytes
+

@@ -1,0 +1,7 @@
+GET /v1/assets/mru:7094:85784:13.4.0f:android:googleplay/minion_101_mime_assets_all_android_asset_99 HTTP/1.1
+Host: fed.gold0029.gameloft.com
+User-Agent: UnityPlayer/6000.0.78f1 (UnityWebRequest/1.0, libcurl/8.10.1-DEV)
+Accept: */*
+Accept-Encoding: deflate, gzip
+X-Unity-Version: 6000.0.78f1
+

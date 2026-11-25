@@ -38,11 +38,18 @@ straight into this repository:
 Catcher\run.bat
 ```
 
-Then the game is played on a device whose traffic is routed through the proxy. Full plaintext
-requires a CA in the *system* trust store, because Android ignores user-installed CAs for apps
-built against targetSdk 24+ (Minion Rush is targetSdk 33), so capture runs on a rootable Android
-image (Android Studio AVD with `-writable-system`, or BlueStacks/LDPlayer with root) rather than
-the read-only Play Games on PC emulator. See `Catcher/README.md` for the exact commands.
+Then the game is played on a device whose traffic is routed through the proxy. Full plaintext requires the proxy's CA to be trusted by the client. The Play Games on PC
+emulator is a read-only `user` build with no `adb root`, so the CA cannot be added to the
+system store there - but the client's own `network_security_config.xml` already trusts bundled
+raw roots, so the archive was captured by repacking the shipped APK (`Other/apk/`) with the
+proxy CA appended as `res/raw/mitm_ca.pem` and a matching `<certificates src="@raw/mitm_ca"/>`
+entry, re-signing all splits with one key, and installing them with `pm install-multiple`.
+Traffic is then routed through mitmproxy with `adb reverse tcp:8080 tcp:8080` plus
+`settings put global http_proxy 127.0.0.1:8080`. The game's Gameloft endpoints
+(`fed.gold0029.gameloft.com`, `iris16-gold.gameloft.com`) and several Unity endpoints are
+decrypted; a few Unity endpoints still pin and are recorded as TLS failures. See
+`Catcher/README.md` for the exact commands. A rooted image is still an option if you want
+system-store trust without repacking.
 
 Every exchange is recorded as: method, URL, HTTP version, headers in wire order and case,
 request/response bodies (raw bytes and decoded form), sha256, TLS details (SNI, ALPN, cipher,

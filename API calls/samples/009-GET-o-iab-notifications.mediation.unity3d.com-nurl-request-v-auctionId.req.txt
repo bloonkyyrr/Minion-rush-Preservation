@@ -1,0 +1,6 @@
+GET /nurl?request=mvK0sM4yzZRdteAkuYcgPJCr%2B6gb17ndGi3alR2OZBfmyu/5LOh15DUdHf4eb/XGiGnNPyo7FL3OiuDIUSg3jV%2BwAuMy5K/VCuLzLCKlpjsQhIa/dhf6aJStVEtxNhQ/mgphqn6ECD2iO4wCEVb8F7v4EvK3lcVUjjYRFCz8Qz8C%2BSaBi0viGAYUWmQBAzJys8QH9uTnoZ8eEORckw/wOvBtrhzUIAJZnM%2BQqjhj92qKjFxL9AydaOSEUorVeMdEZ/JiZ1UtINCGABDJOtnVwUrD7F75b%2B85ap3amMbY5pSPcu5WsdBKweh1%2BexFyj%2BqYbanUBvlXUBf2OfzuW8ceINFrfgPbOcAGmk3hoVk6lM%3D&auctionId=3aeed5d0-e912-11f1-92ab-937b6b62b0a1_476120683&ats=1795639993263&appKey=6922bca5 HTTP/1.1
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 14; HPE device Build/UKW1.261105.001)
+Host: o-iab-notifications.mediation.unity3d.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
