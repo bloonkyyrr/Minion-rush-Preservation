@@ -266,6 +266,7 @@ class Catcher:
             },
             "server": {
                 "address": _addr(getattr(flow, "server_conn", None)),
+                "peer": _peer(getattr(flow, "server_conn", None)),
                 "id": str(getattr(getattr(flow, "server_conn", None), "id", "")),
                 "tls": _tls_summary(getattr(flow, "server_conn", None)),
             },
@@ -377,6 +378,17 @@ def _addr(conn) -> str | None:
         return f"{address[0]}:{address[1]}"
     except Exception:
         return str(address)
+
+
+def _peer(conn) -> str | None:
+    """The resolved peer address, which for a server connection is the real IP."""
+    peer = getattr(conn, "peername", None) if conn is not None else None
+    if not peer:
+        return None
+    try:
+        return f"{peer[0]}:{peer[1]}"
+    except Exception:
+        return str(peer)
 
 
 def _json(obj) -> str:

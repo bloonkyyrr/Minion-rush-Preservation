@@ -1,0 +1,11 @@
+POST /events/v1/gameloft/websdk/ HTTP/1.1
+Authorization: <redacted: 78 chars>
+Accept: application/vnd+hsapi-v2+json
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 14; HPE device Build/UKW1.261105.001)
+Host: api.helpshift.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+Content-Length: 353
+
+ln=en-US&os=14&rv=6000.0.78f1&e=%5B%7B%22ts%22%3A1795649008416%2C%22t%22%3A%22a%22%7D%5D&pv=10.5.0&dm=HPE+device&platform-id=gameloft_platform_20240816135605767-8a205fe504ef374&uid=hsft_anon_1795649008404-0bb23283bbd44f7&s=unityx&av=13.4.0&v=10.5.0&id=6ab74b12-ad5f-4476-b912-c04848abe999&did=6ab74b12-ad5f-4476-b912-c04848abe999&timestamp=1795649008443

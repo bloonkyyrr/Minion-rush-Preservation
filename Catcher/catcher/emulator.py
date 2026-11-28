@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import hashlib
 import os
+import shlex
 import shutil
 import subprocess
 from pathlib import Path
@@ -13,12 +14,24 @@ from .config import Settings
 PROGRAM_FILES = (Path("C:/Program Files"), Path("C:/Program Files (x86)"))
 
 ADB_GLOBS = (
+    "BlueStacks_nxt/HD-Adb.exe",
+    "BlueStacks_msi5/HD-Adb.exe",
+    "BlueStacks/HD-Adb.exe",
     "Google/Play Games*/current/emulator/adb.exe",
     "Google/Play Games Developer Emulator*/current/emulator/adb.exe",
-    "BlueStacks_nxt/HD-Adb.exe",
     "Nox/bin/adb.exe",
     "LDPlayer/LDPlayer*/adb.exe",
     "Microvirt/MEmu/adb.exe",
+)
+
+SU_BINARY = "su"
+
+NO_ROOT_REASON = (
+    "no root: adb shell is uid 2000 and `su` does not grant uid 0. BlueStacks 5 keeps adbd "
+    "non-root and only answers `su` on builds where root is enabled for the instance "
+    "(`catcher bluestacks root --instance <name>`, then restart it); since 5.22 the stock build "
+    "ignores the flag and needs a patched instance. Run `catcher bluestacks status` for the "
+    "guest-side detail."
 )
 
 
@@ -123,8 +136,57 @@ def device_props(serial: str, adb_path: Path | None = None, settings: Settings |
     return props
 
 
+# su dialects differ per image: AOSP/toolbox uses `su 0 <cmd>`, BlueStacks' su uses `su -c <cmd>`.
+SU_FORMS = ("-c", "0")
+
+
+def su_command(form: str, command: str) -> str:
+    """Wrap a guest command for the given su dialect."""
+    quoted = shlex.quote(command)
+    if form == "-c":
+        return f"{SU_BINARY} -c {quoted}"
+    return f"{SU_BINARY} {form} sh -c {quoted}"
+
+
+def root_mode(serial: str, adb_path: Path | None = None, settings: Settings | None = None) -> str | None:
+    """How root is reachable: ``"adbd"`` when the shell is uid 0, else ``"su -c"``/``"su 0"``."""
+    if "uid=0" in shell(serial, "id", adb_path, settings, timeout=60):
+        return "adbd"
+    # BlueStacks keeps adbd as the shell user and exposes root through a setuid su binary instead.
+    for form in SU_FORMS:
+        if "uid=0" in shell(serial, su_command(form, "id"), adb_path, settings, timeout=60):
+            return f"su {form}"
+    return None
+
+
 def is_root(serial: str, adb_path: Path | None = None, settings: Settings | None = None) -> bool:
-    return "uid=0" in shell(serial, "id", adb_path, settings)
+    return root_mode(serial, adb_path, settings) is not None
+
+
+def root_command(mode: str, command: str) -> str:
+    """Guest command line that runs ``command`` as root for the given :func:`root_mode`."""
+    if mode == "adbd":
+        return command
+    return su_command(mode.split(" ", 1)[1], command)
+
+
+def root_shell(
+    serial: str,
+    command: str,
+    adb_path: Path | None = None,
+    settings: Settings | None = None,
+    timeout: int = 120,
+) -> str:
+    """Run a guest command as root; raises ``PermissionError`` when the device is not rooted."""
+    mode = root_mode(serial, adb_path, settings)
+    if mode is None:
+        raise PermissionError(NO_ROOT_REASON)
+    return shell(serial, root_command(mode, command), adb_path, settings, timeout)
+
+
+def root_exec_args(serial: str, command: str, mode: str) -> list[str]:
+    """adb arguments that stream a root command's binary stdout (``adb exec-out``)."""
+    return ["-s", serial, "exec-out", root_command(mode, command)]
 
 
 def proxy_setting(serial: str, adb_path: Path | None = None, settings: Settings | None = None) -> str | None:
@@ -183,29 +245,41 @@ def ca_subject_hash(cert_path: Path) -> str:
 
 
 def system_ca_present(serial: str, cert_hash: str, adb_path: Path | None = None, settings: Settings | None = None) -> bool:
-    listing = shell(serial, f"ls /system/etc/security/cacerts/{cert_hash}.0", adb_path, settings, timeout=60)
+    try:
+        listing = root_shell(serial, f"ls /system/etc/security/cacerts/{cert_hash}.0", adb_path, settings, timeout=60)
+    except PermissionError:
+        listing = shell(serial, f"ls /system/etc/security/cacerts/{cert_hash}.0", adb_path, settings, timeout=60)
     return cert_hash in listing and "No such file" not in listing and "Permission denied" not in listing
 
 
 def install_system_ca(serial: str, cert_path: Path, adb_path: Path | None = None, settings: Settings | None = None, reboot: bool = False) -> dict:
-    """Install the mitmproxy CA into the system trust store of a rooted device."""
+    """Install the mitmproxy CA into the system trust store of a rooted device.
+
+    Handles both root flavours: a writable ``/system`` with root adbd (AVD) and BlueStacks,
+    where adbd stays non-root and every command goes through ``su``.
+    """
     report: dict = {"serial": serial, "cert": str(cert_path), "steps": [], "ok": False}
-    if not is_root(serial, adb_path, settings):
-        report["reason"] = (
-            "device is not rooted (uid != 0). Android 7+ apps ignore user-installed CAs, so HTTPS "
-            "content cannot be decrypted on this device. Use a rootable image (AVD google_apis with "
-            "-writable-system, or BlueStacks/LDPlayer with root enabled)."
-        )
+    mode = root_mode(serial, adb_path, settings)
+    if mode is None:
+        report["reason"] = NO_ROOT_REASON
         return report
+    report["root"] = mode
 
     cert_hash = ca_subject_hash(cert_path)
     target = f"/system/etc/security/cacerts/{cert_hash}.0"
+    staged = "/data/local/tmp/catcher-ca.pem"
+    report["hash"] = cert_hash
+    report["target"] = target
+
     steps = [
-        ["-s", serial, "remount"],
-        ["-s", serial, "push", str(cert_path), target],
-        ["-s", serial, "shell", "chmod", "644", target],
-        ["-s", serial, "shell", "chcon", "u:object_r:system_file:s0", target],
-        ["-s", serial, "shell", "ls", "-l", target],
+        ["-s", serial, "push", str(cert_path), staged],
+        # /system is read-only on BlueStacks until it is remounted; an AVD's adbd is already root.
+        ["-s", serial, "shell", root_command(mode, "mount -o rw,remount /system 2>/dev/null || mount -o rw,remount /")],
+        ["-s", serial, "shell", root_command(mode, f"cp {staged} {target}")],
+        ["-s", serial, "shell", root_command(mode, f"chmod 644 {target}")],
+        ["-s", serial, "shell", root_command(mode, f"chown root:root {target}")],
+        ["-s", serial, "shell", root_command(mode, f"chcon u:object_r:system_file:s0 {target}")],
+        ["-s", serial, "shell", root_command(mode, f"ls -l {target}")],
     ]
     for step in steps:
         try:
@@ -215,12 +289,15 @@ def install_system_ca(serial: str, cert_path: Path, adb_path: Path | None = None
             break
         output = (result.stdout or "") + (result.stderr or "")
         report["steps"].append({"cmd": " ".join(step), "returncode": result.returncode, "output": output.strip()})
-        if result.returncode != 0 and "chcon" not in " ".join(step):
+        if "push" in step and result.returncode != 0:
             break
 
-    report["hash"] = cert_hash
-    report["target"] = target
     report["ok"] = system_ca_present(serial, cert_hash, adb_path, settings)
+    if not report["ok"] and "reason" not in report:
+        report["reason"] = (
+            f"{target} is missing after the install, so /system was still read-only. Enable root for "
+            "the instance and restart it before retrying."
+        )
     if reboot:
         adb(["-s", serial, "reboot"], adb_path=adb_path, settings=settings, timeout=60)
         report["rebooted"] = True
@@ -233,3 +310,13 @@ def free_space_gb(path: Path) -> float:
         return round(usage.free / (1024**3), 1)
     except OSError:
         return 0.0
+
+
+def connect(serial: str, adb_path: Path | None = None, settings: Settings | None = None) -> bool:
+    """``adb connect`` a TCP serial (BlueStacks forwards ``127.0.0.1:<port>``)."""
+    try:
+        result = adb(["connect", serial], adb_path=adb_path, settings=settings, timeout=30)
+    except (FileNotFoundError, subprocess.SubprocessError):
+        return False
+    output = ((result.stdout or "") + (result.stderr or "")).lower()
+    return "connected" in output and "unable" not in output

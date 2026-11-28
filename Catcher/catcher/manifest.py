@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import ipaddress
 import json
 import time
 from collections import Counter, defaultdict
@@ -318,6 +319,120 @@ def _write_blob_index(settings: Settings) -> dict:
     return {"count": len(blobs), "bytes": total, "over_github_limit": len(large)}
 
 
+def _ip_from(value: str | None) -> str | None:
+    """Return the IP part of ``host:port`` only if it really is an IP literal."""
+    if not value:
+        return None
+    candidate = value
+    if candidate.startswith("[") and "]" in candidate:  # [ipv6]:port
+        candidate = candidate[1 : candidate.index("]")]
+    elif candidate.count(":") == 1:
+        candidate = candidate.rsplit(":", 1)[0]
+    try:
+        return str(ipaddress.ip_address(candidate))
+    except ValueError:
+        return None
+
+
+def _write_other_notes(settings: Settings, all_records: dict[str, list[dict]]) -> dict:
+    """Derived notes that belong in ``Other/``: DNS observations, WebSocket index, capture log."""
+    other = settings.other_dir
+    other.mkdir(parents=True, exist_ok=True)
+
+    hosts: dict[str, dict] = {}
+    websockets: dict[str, list[dict]] = defaultdict(list)
+    for session_name, records in all_records.items():
+        for record in records:
+            record_type = record.get("type")
+            if record_type == "http":
+                request = record.get("request") or {}
+                host = request.get("host") or ""
+                server = record.get("server") or {}
+                ip = _ip_from(server.get("peer")) or _ip_from(server.get("address")) or ""
+                entry = hosts.setdefault(
+                    host, {"ips": Counter(), "count": 0, "first": None, "last": None, "sessions": set()}
+                )
+                entry["count"] += 1
+                entry["sessions"].add(session_name)
+                if ip:
+                    entry["ips"][ip] += 1
+                started = record.get("time_start") or 0
+                if started:
+                    if not entry["first"] or started < entry["first"]:
+                        entry["first"] = started
+                    if not entry["last"] or started > entry["last"]:
+                        entry["last"] = started
+            elif record_type == "websocket_start":
+                websockets[session_name].append(
+                    {
+                        "url": record.get("url"),
+                        "file": record.get("file"),
+                        "frames": next(
+                            (
+                                later.get("frames")
+                                for later in records
+                                if later.get("type") == "websocket_end"
+                                and later.get("seq") == record.get("seq")
+                            ),
+                            0,
+                        ),
+                    }
+                )
+
+    lines = [
+        "# DNS notes",
+        "",
+        "Derived from proxied connections: the name the client asked for (TLS SNI / HTTP `Host`)",
+        "and the peer address the proxy connected to. This is an observation of captured traffic,",
+        "not a resolver log - for real DNS queries run `catcher pcap start` on a rooted device.",
+        "",
+        "| Host | Recorded peer IPs | Exchanges | Sessions | First seen | Last seen |",
+        "| --- | --- | --- | --- | --- | --- |",
+    ]
+    for host, entry in sorted(hosts.items(), key=lambda item: (-item[1]["count"], item[0])):
+        addresses = ", ".join(address for address, _ in entry["ips"].most_common(4)) or "-"
+        lines.append(
+            f"| {host or '-'} | {addresses} | {entry['count']} | {', '.join(sorted(entry['sessions']))} "
+            f"| {_iso(entry['first']) or '-'} | {_iso(entry['last']) or '-'} |"
+        )
+    if not hosts:
+        lines.append("| - | - | 0 | - | - | - |")
+    lines.append("")
+    lines.append(
+        "`Recorded peer IPs` comes from the proxy's resolved server connection. Sessions captured before "
+        "that field existed show `-`; `catcher pcap start` records real DNS at the wire level."
+    )
+    lines.append("")
+    (other / "dns-notes.md").write_text("\n".join(lines), encoding="utf-8")
+
+    ws_lines = ["# WebSocket dumps", "", "One JSONL file per WebSocket connection (frames, both directions).", ""]
+    if any(websockets.values()):
+        ws_lines += ["| Session | URL | Frames | File |", "| --- | --- | --- | --- |"]
+        for session_name, entries in sorted(websockets.items()):
+            for entry in entries:
+                ws_lines.append(f"| {session_name} | {entry.get('url') or '-'} | {entry.get('frames') or 0} | `{entry.get('file')}` |")
+    else:
+        ws_lines.append("No WebSocket connections were captured.")
+    ws_lines.append("")
+    (other / "websockets.md").write_text("\n".join(ws_lines), encoding="utf-8")
+
+    log_lines = ["# Capture log", "", "Concatenated `session.log` from every capture session.", ""]
+    for session_name, _ in all_records.items():
+        source = settings.contents_dir / session_name / "session.log"
+        log_lines.append(f"## {session_name}")
+        log_lines.append("")
+        if source.is_file():
+            log_lines.append("```")
+            log_lines.append(source.read_text(encoding="utf-8", errors="replace").rstrip("\n"))
+            log_lines.append("```")
+        else:
+            log_lines.append("(no session.log)")
+        log_lines.append("")
+    (other / "capture-log.md").write_text("\n".join(log_lines), encoding="utf-8")
+
+    return {"hosts": len(hosts), "websockets": sum(len(entries) for entries in websockets.values())}
+
+
 def write_exports(settings: Settings) -> dict:
     settings.ensure_dirs()
     sessions = session_dirs(settings)
@@ -341,6 +456,7 @@ def write_exports(settings: Settings) -> dict:
 
     blob_stats = _write_blob_index(settings)
     _write_gitignore(settings)
+    other_notes = _write_other_notes(settings, all_records)
 
     index_lines = ["# Contents index", "", f"Generated {generated}.", "", "| Session | Exchanges | WebSocket events | Manifest | HAR |", "| --- | --- | --- | --- | --- |"]
     for name, records in all_records.items():
@@ -376,6 +492,7 @@ def write_exports(settings: Settings) -> dict:
         "blobs": blob_stats,
         "har_dir": str(settings.contents_dir),
         "api_md": str(settings.api_dir / "endpoints.md"),
+        "other_notes": other_notes,
     }
 
 

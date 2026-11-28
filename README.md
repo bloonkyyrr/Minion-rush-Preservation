@@ -11,6 +11,7 @@ after the sunset real request/response shapes instead of guesses.
 | --- | --- |
 | 2026-10-30 | Delisted from app stores, in-app purchases disabled. The APK can no longer be downloaded. |
 | 2026-11-25 | This archive started; the Unity client 13.4.0 (base + asset/lib/density splits) and the pre-2025 build 10.5.1 were pulled from the Google Play Games on PC emulator. |
+| 2026-11-27 | Capture setup re-pointed from the Play Games on PC emulator to BlueStacks 5 (Pie 64-bit, `127.0.0.1:5555`); `Catcher/` now drives BlueStacks instances, their root flags and their `su` directly. |
 | 2027-01-29 | Online services end: live events, leaderboards, cloud saves, accounts, social features. |
 
 The APK in `Other/apk/` is therefore the only remaining copy of the last shipped client.
@@ -46,10 +47,26 @@ proxy CA appended as `res/raw/mitm_ca.pem` and a matching `<certificates src="@r
 entry, re-signing all splits with one key, and installing them with `pm install-multiple`.
 Traffic is then routed through mitmproxy with `adb reverse tcp:8080 tcp:8080` plus
 `settings put global http_proxy 127.0.0.1:8080`. The game's Gameloft endpoints
-(`fed.gold0029.gameloft.com`, `iris16-gold.gameloft.com`) and several Unity endpoints are
-decrypted; a few Unity endpoints still pin and are recorded as TLS failures. See
-`Catcher/README.md` for the exact commands. A rooted image is still an option if you want
+(`fed.gold0029.gameloft.com`, `iris16-gold.gameloft.com`) and the Unity endpoints are
+decrypted, including the pinned ones (`config.uca.cloud.unity3d.com`,
+`cdp.cloud.unity3d.com`) via Frida gadget unpinning injected into the repacked APK.
+See `Catcher/README.md` for the exact commands. A rooted image is still an option if you want
 system-store trust without repacking.
+
+### Current capture target
+
+Since 2026-11-27 the capture runs on **BlueStacks 5** (Pie 64-bit, Android 9) instead of the Play
+Games on PC emulator. ADB is `C:\Program Files\BlueStacks_nxt\HD-Adb.exe` and the instance
+listens on `127.0.0.1:5555` (adb may also list it as `emulator-5554`). `Catcher/` drives it
+directly: `catcher bluestacks status|root|start|stop` reports the instance, writes the
+`bst.feature.rooting` / `bst.instance.<name>.enable_root_access` flags and shows what the guest's
+`su` actually returns.
+
+BlueStacks 5.22.296 ships a setuid `/system/xbin/su` that stays silent even with both flags set,
+so the no-root repacked-APK route above is what the archive uses there. On an instance where
+`catcher doctor` reports `root: yes (su -c)` (an older or patched build, or an AVD),
+`catcher install-ca` writes `/system/etc/security/cacerts` and `catcher snapshot` reads
+`/data/data` through `su` automatically. See `Catcher/README.md` for the BlueStacks workflow.
 
 Every exchange is recorded as: method, URL, HTTP version, headers in wire order and case,
 request/response bodies (raw bytes and decoded form), sha256, TLS details (SNI, ALPN, cipher,

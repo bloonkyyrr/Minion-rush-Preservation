@@ -1,0 +1,11 @@
+POST /websdk/gameloft/sdk-data HTTP/1.1
+Authorization: <redacted: 78 chars>
+Accept: application/vnd+hsapi-v2+json
+Content-Type: application/x-www-form-urlencoded
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 14; HPE device Build/UKW1.261105.001)
+Host: api.helpshift.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+Content-Length: 125
+
+uid=hsft_anon_1795649008404-0bb23283bbd44f7&plugin_version=10.5.0&sdk_version=10.5.0&did=6ab74b12-ad5f-4476-b912-c04848abe999

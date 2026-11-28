@@ -1,12 +1,13 @@
 # Contents index
 
-Generated 2026-11-25 21:59:00.
+Generated 2026-11-26 18:37:43.
 
 | Session | Exchanges | WebSocket events | Manifest | HAR |
 | --- | --- | --- | --- | --- |
-| 20261125-210955 | 222 | 0 | `Contents/20261125-210955/manifest.jsonl` | `Contents/20261125-210955/har/20261125-210955.har` |
+| 20261125-210955 | 537 | 0 | `Contents/20261125-210955/manifest.jsonl` | `Contents/20261125-210955/har/20261125-210955.har` |
+| frida-unpin | 212 | 0 | `Contents/frida-unpin/manifest.jsonl` | `Contents/frida-unpin/har/frida-unpin.har` |
 
-Blobs: 74 files, 477.8 MB (0 over GitHub's 100 MB per-file limit).
+Blobs: 209 files, 845.3 MB (0 over GitHub's 100 MB per-file limit).
 `Contents/blobs.sha256` lists every blob with its hash and size.
 
 ## Reading an exchange

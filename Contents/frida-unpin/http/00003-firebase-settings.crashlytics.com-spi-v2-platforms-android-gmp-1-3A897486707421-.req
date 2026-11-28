@@ -1,0 +1,12 @@
+GET /spi/v2/platforms/android/gmp/1%3A897486707421%3Aandroid%3A4041000649f7af0d7f1934/settings?build_version=2037529&display_version=13.4.0 HTTP/1.1
+Accept: application/json
+X-Crashlytics-Installation-ID: eXp8hRcHSiudXzlVzv9Cgc
+X-Crashlytics-Device-Model: GoogleHPE device
+X-Crashlytics-OS-Build-Version: 16851378
+X-Crashlytics-OS-Display-Version: 14
+X-Crashlytics-API-Client-Version: 2.1.0
+User-Agent: Dalvik/2.1.0 (Linux; U; Android 14; HPE device Build/UKW1.261105.001)
+Host: firebase-settings.crashlytics.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+

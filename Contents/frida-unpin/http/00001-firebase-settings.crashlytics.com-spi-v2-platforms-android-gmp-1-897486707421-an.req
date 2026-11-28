@@ -1,0 +1,15 @@
+GET /spi/v2/platforms/android/gmp/1:897486707421:android:4041000649f7af0d7f1934/settings?instance=eb92ba6114a3bd5db5bb74ced01bb9034af56344&build_version=2037529&display_version=13.4.0&source=1 HTTP/1.1
+X-CRASHLYTICS-DEVELOPER-TOKEN: 470fa2b4ae81cd56ecbcda9735803434cec591fa
+X-CRASHLYTICS-DEVICE-MODEL: Google/HPE device
+X-CRASHLYTICS-INSTALLATION-ID: 54620e6f65d84b9a87e0440d6f2ef325
+X-CRASHLYTICS-OS-DISPLAY-VERSION: 14
+Accept: application/json
+X-CRASHLYTICS-API-CLIENT-VERSION: 19.4.2
+User-Agent: Crashlytics Android SDK/19.4.2
+X-CRASHLYTICS-API-CLIENT-TYPE: android
+X-CRASHLYTICS-GOOGLE-APP-ID: 1:897486707421:android:4041000649f7af0d7f1934
+X-CRASHLYTICS-OS-BUILD-VERSION: 16851378
+Host: firebase-settings.crashlytics.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+

@@ -1,0 +1,16 @@
+HTTP/1.1 200 OK
+Date: Wed, 25 Nov 2026 23:23:29 GMT
+Content-Type: application/json
+Content-Length: 10
+Connection: keep-alive
+Server: cloudflare
+access-control-allow-headers: Accept,Authorization,Content-Type,Keep-Alive,Origin,User-Agent,X-Requested-With,X-Hs-Access-Token
+access-control-allow-headers: Accept,Authorization,Content-Type,Keep-Alive,Origin,User-Agent,X-Requested-With,X-Hs-Access-Token,X-Hs-Signature
+vary: Origin
+access-control-allow-credentials: true
+access-control-allow-methods: GET, POST, PUT, OPTIONS
+cf-cache-status: DYNAMIC
+set-cookie: <redacted: 321 chars>
+CF-RAY: a60466c708ef0254-WAW
+
+{"ok":"1"}

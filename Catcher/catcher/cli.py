@@ -13,10 +13,10 @@ from pathlib import Path
 
 if __package__ in (None, ""):  # direct execution: python catcher/cli.py
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
-    from catcher import emulator, manifest, snapshot  # noqa: E402
+    from catcher import bluestacks, emulator, manifest, snapshot  # noqa: E402
     from catcher.config import catcher_dir, load_settings  # noqa: E402
 else:
-    from . import emulator, manifest, snapshot  # noqa: E402
+    from . import bluestacks, emulator, manifest, snapshot  # noqa: E402
     from .config import catcher_dir, load_settings  # noqa: E402
 
 
@@ -60,6 +60,12 @@ def _first_device(settings, wanted: str | None = None) -> str | None:
     if adb_path is None:
         return None
     devices = [device for device in emulator.list_devices(adb_path, settings) if device.get("state") == "device"]
+    if not devices:
+        # BlueStacks forwards ADB through its own daemon, so a booted instance may need `adb connect`.
+        bluestacks.connect_running(adb_path, settings)
+        devices = [device for device in emulator.list_devices(adb_path, settings) if device.get("state") == "device"]
+    # Prefer the BlueStacks instance when several emulators are connected at once.
+    devices.sort(key=lambda device: 0 if device["serial"].startswith("127.0.0.1:") else 1)
     if wanted:
         return wanted if any(device["serial"] == wanted for device in devices) else None
     return devices[0]["serial"] if devices else None
@@ -112,9 +118,11 @@ def cmd_run(settings, args) -> int:
     print(f"  CA bundle   : {ca or '(generated on first run in ' + str(Path.home() / '.mitmproxy') + ')'}", flush=True)
     print("", flush=True)
     print("Route traffic here:", flush=True)
+    print("  BlueStacks : catcher bluestacks status                       (instances, root, ADB port)", flush=True)
+    print("               catcher proxy on --device 127.0.0.1:5555 --address 10.0.2.2:%d" % port, flush=True)
+    print("               catcher install-ca --device 127.0.0.1:5555    (rooted instance: system trust store)", flush=True)
     print("  rooted AVD : emulator -avd <name> -writable-system -http-proxy 127.0.0.1:%d" % port, flush=True)
     print("               catcher install-ca --device <serial> --reboot", flush=True)
-    print("  Play Games : catcher proxy on --device <serial>   (partial: SDKs that honour Android's proxy)", flush=True)
     print("  standalone : curl --proxy http://%s:%d --cacert %s <url>" % (host, port, ca or "<ca.pem>"), flush=True)
     print("", flush=True)
 
@@ -161,7 +169,19 @@ def cmd_doctor(settings, args) -> int:
     if adb_path is None:
         return 1
 
+    info = bluestacks.summary()
+    print(f"  BlueStacks   : {info['install'] or 'not installed'}")
+    if info["conf"]:
+        print(f"  config       : {info['conf']}  (running: {'yes' if info['running'] else 'no'})")
+        for instance in info["instances"]:
+            print(
+                f"    {instance.name:<12} android {instance.android or '?':<16}"
+                f" adb {instance.serial or '-':<16} root {'on' if instance.root_enabled else 'off'}"
+            )
+
     devices = emulator.list_devices(adb_path, settings)
+    if not devices and bluestacks.connect_running(adb_path, settings):
+        devices = emulator.list_devices(adb_path, settings)
     if not devices:
         print("  devices      : none connected")
         return 1
@@ -175,8 +195,9 @@ def cmd_doctor(settings, args) -> int:
         props = emulator.device_props(serial, adb_path, settings)
         print(f"    model      : {props.get('ro.product.model')} ({props.get('ro.product.cpu.abi')})")
         print(f"    android    : {props.get('ro.build.version.release')} / SDK {props.get('ro.build.version.sdk')} / {props.get('ro.build.type')}")
-        root = emulator.is_root(serial, adb_path, settings)
-        print(f"    root       : {'yes' if root else 'no'}")
+        mode = emulator.root_mode(serial, adb_path, settings)
+        root = mode is not None
+        print(f"    root       : {('yes (' + mode + ')') if mode else 'no'}")
         if ca:
             try:
                 present = emulator.system_ca_present(serial, emulator.ca_subject_hash(ca), adb_path, settings)
@@ -188,8 +209,14 @@ def cmd_doctor(settings, args) -> int:
         version = emulator.package_version(serial, settings.package, adb_path, settings)
         print(f"    game       : {settings.package} {version or '(not installed)'}")
         if not root:
-            print("    note       : user-installed CAs are ignored by targetSdk>=24 apps, so HTTPS bodies")
-            print("                 cannot be decrypted here. Use a rooted image for full capture.")
+            print("    note       : no root, so the system CA store cannot be written and")
+            print("                 `catcher snapshot` cannot read /data/data. For BlueStacks 5:")
+            print("                 catcher bluestacks stop && catcher bluestacks root --instance <name>")
+            print("                 && catcher bluestacks start --instance <name>")
+            print("                 (a stock 5.22 build keeps su silent, see `catcher bluestacks status`)")
+            print("                 Without root, HTTPS is still decryptable by repacking the APK")
+            print("                 with the proxy CA as a bundled raw root (README 'Repacked APK capture'),")
+            print("                 and pinned endpoints need Frida (Catcher/tools/ssl_unpin.js).")
 
     sessions = manifest.summary(settings)
     print("")
@@ -197,6 +224,91 @@ def cmd_doctor(settings, args) -> int:
     for name, stats in sessions.items():
         print(f"    {name}: {stats['exchanges']} exchanges")
     return 0
+
+
+def cmd_bluestacks(settings, args) -> int:
+    info = bluestacks.summary()
+    if args.action == "status":
+        print(f"install     : {info['install'] or 'not found'}")
+        print(f"config      : {info['conf'] or 'not found'}")
+        print(f"running     : {'yes' if info['running'] else 'no'}")
+        if not info["instances"]:
+            print("instances   : none (create one in the BlueStacks Multi-Instance Manager)")
+            return 1
+        for instance in info["instances"]:
+            print(f"\n  {instance.name}")
+            print(f"    android  : {instance.android or 'unknown'}")
+            print(f"    adb      : {instance.serial or '(no port recorded)'}")
+            print(f"    root     : {'enabled' if instance.root_enabled else 'disabled'}  (bst.instance.{instance.name}.enable_root_access)")
+            image = bluestacks.root_image(instance)
+            if image["present"]:
+                print(f"    root.vhd : {image['path']} ({image['bytes'] / (1024**3):.1f} GB)")
+            print(f"    display  : {instance.display_name or '-'}")
+        print("")
+        print("  bst.feature.rooting is the master switch; some builds rewrite it to 0 at boot,")
+        print("  which `catcher bluestacks root --lock` prevents by making the conf read-only.")
+
+        target = bluestacks.pick(args.instance)
+        adb_path = emulator.find_adb(settings)
+        if target is not None and adb_path is not None and bluestacks.connect(target, adb_path, settings):
+            serial = target.serial or target.name
+            diagnostics = bluestacks.guest_root_diagnostics(serial, adb_path, settings)
+            print("")
+            print(f"  guest {serial}")
+            print(f"    id       : {diagnostics['id']}")
+            for probe in diagnostics["su_probes"]:
+                print(f"    {probe['command']:<16}: {probe['output'] or '(no output)'}")
+            print(f"    su paths : {', '.join(diagnostics['su_paths']) or 'none found'}")
+            print(f"    root     : {diagnostics['mode'] or 'unavailable'}")
+        return 0
+
+    if args.action == "root":
+        target = bluestacks.pick(args.instance)
+        if target is None:
+            print("No BlueStacks instance found (see `catcher bluestacks status`).")
+            return 2
+        report = bluestacks.set_root(target.name, enabled=not args.off, lock=args.lock)
+        if not report["ok"]:
+            print(report.get("reason") or "could not change root access")
+            return 1
+        state = "disabled" if args.off else "enabled"
+        changed = ", ".join(report["changed"]) or "already set"
+        print(f"root {state} for {target.name}  ({changed})")
+        print(f"  config : {report['conf']}")
+        if report.get("locked"):
+            print("  locked : bluestacks.conf is read-only so BlueStacks cannot reset the flag at boot")
+            print("           (`catcher bluestacks root --off` unlocks it again)")
+        print(f"  next   : catcher bluestacks start --instance {target.name}")
+        print("           then `catcher doctor` - root should read 'yes (su)'")
+        return 0
+
+    if args.action == "start":
+        target = bluestacks.pick(args.instance)
+        if target is None:
+            print("No BlueStacks instance found (see `catcher bluestacks status`).")
+            return 2
+        if bluestacks.running():
+            print("BlueStacks is already running; close it first (`catcher bluestacks stop`).")
+            return 1
+        report = bluestacks.start(target.name)
+        if not report["ok"]:
+            print(report.get("reason") or "could not start the instance")
+            return 1
+        print(f"started {target.name} (pid {report['pid']})")
+        if target.serial:
+            print(f"  adb    : {target.serial}  (wait for boot, then `catcher doctor`)")
+        return 0
+
+    if args.action == "stop":
+        report = bluestacks.stop()
+        if report["stopped"]:
+            verb = "closed and killed" if report.get("forced") else "closed"
+            print(f"{verb} pid(s): " + ", ".join(str(pid) for pid in report["stopped"]))
+        print("BlueStacks is not running" if report["ok"] else (report.get("reason") or "still running"))
+        return 0 if report["ok"] else 1
+
+    print(f"unknown action {args.action}")
+    return 2
 
 
 def cmd_install_ca(settings, args) -> int:
@@ -292,6 +404,8 @@ def cmd_export(settings, args) -> int:
     print(f"endpoints: {result['endpoints']}  -> {result['api_md']}")
     blobs = result["blobs"]
     print(f"blobs    : {blobs['count']} files, {blobs['bytes']} bytes, {blobs['over_github_limit']} over 100 MB")
+    notes = result.get("other_notes") or {}
+    print(f"Other/   : dns-notes.md ({notes.get('hosts', 0)} hosts), websockets.md ({notes.get('websockets', 0)}), capture-log.md")
     print(f"HARs     : {result['har_dir']}")
     return 0
 
@@ -348,6 +462,12 @@ def build_parser() -> argparse.ArgumentParser:
     pcap.add_argument("action", choices=["start", "stop"])
     pcap.add_argument("--device", default=None)
 
+    bs = add("bluestacks", "BlueStacks 5 instances: ADB port, root access, start/stop")
+    bs.add_argument("action", choices=["status", "root", "start", "stop"])
+    bs.add_argument("--instance", default=None, help="instance name, e.g. Pie64 (default: first with an ADB port)")
+    bs.add_argument("--off", action="store_true", help="disable root instead of enabling it")
+    bs.add_argument("--lock", action="store_true", help="make bluestacks.conf read-only so BlueStacks cannot reset the flag at boot")
+
     add("export", "rebuild HARs, the API calls index and the archive index")
     add("summary", "print capture statistics")
     return parser
@@ -367,6 +487,7 @@ def main(argv=None) -> int:
         "snapshot": cmd_snapshot,
         "proxy": cmd_proxy,
         "pcap": cmd_pcap,
+        "bluestacks": cmd_bluestacks,
         "export": cmd_export,
         "summary": cmd_summary,
     }

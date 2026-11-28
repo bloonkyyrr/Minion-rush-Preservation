@@ -1,7 +1,8 @@
 {
-  "generated": "2026-11-25 21:59:00",
+  "generated": "2026-11-26 18:37:43",
   "sessions": [
-    "20261125-210955"
+    "20261125-210955",
+    "frida-unpin"
   ],
   "endpoints": [
     {
@@ -11,19 +12,20 @@
       "template": "/v1/assets/mru:7094:85784:13.4.0f:android:googleplay/{id}",
       "kind": "api",
       "host_group": "gameloft",
-      "count": 106,
+      "count": 356,
       "sessions": [
-        "20261125-210955"
+        "20261125-210955",
+        "frida-unpin"
       ],
       "first_seen": "2026-11-25T20:10:23.403567Z",
-      "last_seen": "2026-11-25T20:58:35.926261Z",
+      "last_seen": "2026-11-25T23:33:45.066717Z",
       "statuses": {
-        "302": 106
+        "302": 356
       },
       "content_types": {
-        "text/html": 106
+        "text/html": 356
       },
-      "bytes_down": 16319,
+      "bytes_down": 54749,
       "bytes_up": 0,
       "sample": {
         "session": "20261125-210955",
@@ -42,20 +44,21 @@
       "template": "/mru/{id}",
       "kind": "api",
       "host_group": "gameloft",
-      "count": 103,
+      "count": 356,
       "sessions": [
-        "20261125-210955"
+        "20261125-210955",
+        "frida-unpin"
       ],
       "first_seen": "2026-11-25T20:10:24.008214Z",
-      "last_seen": "2026-11-25T20:58:34.005641Z",
+      "last_seen": "2026-11-25T23:33:45.467641Z",
       "statuses": {
-        "200": 103
+        "200": 356
       },
       "content_types": {
-        "binary/octet-stream": 85,
-        "application/json": 18
+        "binary/octet-stream": 324,
+        "application/json": 32
       },
-      "bytes_down": 646503653,
+      "bytes_down": 1231644922,
       "bytes_up": 0,
       "sample": {
         "session": "20261125-210955",
@@ -65,6 +68,67 @@
         "url": "https://iris16-gold.gameloft.com/mru/puzzletopic_2_5_assets_all_android_asset_59_1760523528.3280559",
         "req_sample": "API calls\\samples\\002-GET-iris16-gold.gameloft.com-mru-id.req.txt",
         "res_sample": "API calls\\samples\\002-GET-iris16-gold.gameloft.com-mru-id.res.txt"
+      }
+    },
+    {
+      "key": "GET pagead2.googlesyndication.com/pagead/gen_204?zx={v}&id={v}&event={v}&p={v}&rtype={v}&lat_ms={v}&e_lat_ms={v}&e_l={v}&osv={v}&req_id={v}&pn={v}&js={v}",
+      "method": "GET",
+      "host": "pagead2.googlesyndication.com",
+      "template": "/pagead/gen_204?zx={v}&id={v}&event={v}&p={v}&rtype={v}&lat_ms={v}&e_lat_ms={v}&e_l={v}&osv={v}&req_id={v}&pn={v}&js={v}",
+      "kind": "asset",
+      "host_group": "third-party",
+      "count": 2,
+      "sessions": [
+        "20261125-210955"
+      ],
+      "first_seen": "2026-11-25T21:55:10.718782Z",
+      "last_seen": "2026-11-25T22:32:40.242343Z",
+      "statuses": {
+        "204": 2
+      },
+      "content_types": {
+        "image/gif": 2
+      },
+      "bytes_down": 0,
+      "bytes_up": 0,
+      "sample": {
+        "session": "20261125-210955",
+        "seq": 530,
+        "request_file": "Contents/20261125-210955/http/00530-pagead2.googlesyndication.com-pagead-gen_204-zx-mh3p143oxz97-id-gmob-apps-event-.req",
+        "response_file": "Contents/20261125-210955/http/00530-pagead2.googlesyndication.com-pagead-gen_204-zx-mh3p143oxz97-id-gmob-apps-event-.res",
+        "url": "https://pagead2.googlesyndication.com/pagead/gen_204?zx=mh3p143oxz97&id=gmob-apps&event=get_signals&p=a&rtype=requester_type_2&lat_ms=16&e_lat_ms=5&e_l=4392&osv=262180000.262180000.0&req_id=1067219528&pn=com.gameloft.android.ANMP.GloftDMHM&js=afma-sdk-a-v262180000.262180000.0",
+        "req_sample": "API calls\\samples\\003-GET-pagead2.googlesyndication.com-pagead-gen_204-zx-v-id-v-event-v-p-v.req.txt",
+        "res_sample": "API calls\\samples\\003-GET-pagead2.googlesyndication.com-pagead-gen_204-zx-v-id-v-event-v-p-v.res.txt"
+      }
+    },
+    {
+      "key": "POST cdp.cloud.unity3d.com/v1/events",
+      "method": "POST",
+      "host": "cdp.cloud.unity3d.com",
+      "template": "/v1/events",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 18,
+      "sessions": [
+        "20261125-210955",
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T20:55:09.810082Z",
+      "last_seen": "2026-11-25T23:34:46.273885Z",
+      "statuses": {
+        "200": 18
+      },
+      "content_types": {},
+      "bytes_down": 0,
+      "bytes_up": 29672,
+      "sample": {
+        "session": "20261125-210955",
+        "seq": 60,
+        "request_file": "Contents/20261125-210955/http/00060-cdp.cloud.unity3d.com-v1-events.req",
+        "response_file": "Contents/20261125-210955/http/00060-cdp.cloud.unity3d.com-v1-events.res",
+        "url": "https://cdp.cloud.unity3d.com/v1/events",
+        "req_sample": "API calls\\samples\\004-POST-cdp.cloud.unity3d.com-v1-events.req.txt",
+        "res_sample": "API calls\\samples\\004-POST-cdp.cloud.unity3d.com-v1-events.res.txt"
       }
     },
     {
@@ -96,37 +160,8 @@
         "request_file": "Contents/20261125-210955/http/00033-googleads.g.doubleclick.net-mads-static-mad-sdk-native-sdk-core-v40-loader.html.req",
         "response_file": "Contents/20261125-210955/http/00033-googleads.g.doubleclick.net-mads-static-mad-sdk-native-sdk-core-v40-loader.html.res",
         "url": "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/sdk-core-v40-loader.html",
-        "req_sample": "API calls\\samples\\003-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-id.req.txt",
-        "res_sample": "API calls\\samples\\003-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-id.res.txt"
-      }
-    },
-    {
-      "key": "POST cdp.cloud.unity3d.com/v1/events",
-      "method": "POST",
-      "host": "cdp.cloud.unity3d.com",
-      "template": "/v1/events",
-      "kind": "analytics",
-      "host_group": "analytics",
-      "count": 3,
-      "sessions": [
-        "20261125-210955"
-      ],
-      "first_seen": "2026-11-25T20:55:09.810082Z",
-      "last_seen": "2026-11-25T20:56:36.736899Z",
-      "statuses": {
-        "200": 3
-      },
-      "content_types": {},
-      "bytes_down": 0,
-      "bytes_up": 11408,
-      "sample": {
-        "session": "20261125-210955",
-        "seq": 60,
-        "request_file": "Contents/20261125-210955/http/00060-cdp.cloud.unity3d.com-v1-events.req",
-        "response_file": "Contents/20261125-210955/http/00060-cdp.cloud.unity3d.com-v1-events.res",
-        "url": "https://cdp.cloud.unity3d.com/v1/events",
-        "req_sample": "API calls\\samples\\004-POST-cdp.cloud.unity3d.com-v1-events.req.txt",
-        "res_sample": "API calls\\samples\\004-POST-cdp.cloud.unity3d.com-v1-events.res.txt"
+        "req_sample": "API calls\\samples\\005-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-id.req.txt",
+        "res_sample": "API calls\\samples\\005-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-id.res.txt"
       }
     },
     {
@@ -154,8 +189,70 @@
         "request_file": "Contents/20261125-210955/http/00042-ae.iads.unity3d.com-logs-data-eyJkYXRhIjp7InNka3ZlcnNpb24iOiI5LjQuMyIsImNvbnRyb2.req",
         "response_file": "Contents/20261125-210955/http/00042-ae.iads.unity3d.com-logs-data-eyJkYXRhIjp7InNka3ZlcnNpb24iOiI5LjQuMyIsImNvbnRyb2.res",
         "url": "https://ae.iads.unity3d.com/logs?data=eyJkYXRhIjp7InNka3ZlcnNpb24iOiI5LjQuMyIsImNvbnRyb2xsZXJibiI6IjMxODkiLCJkZXZpY2VvcyI6ImFuZHJvaWQiLCJwcm9kdWN0dHlwZSI6ImNvbnRyb2xsZXIiLCJvcmlnaW4iOiJhbmFseXRpY3NMaXRlIiwiYXBwbGljYXRpb25rZXkiOiI2OTIyYmNhNSIsImdlbmVyYWxtZXNzYWdlIjoiZ2V0Q29udHJvbGxlckNvbmZpZyIsImN1c3RvbV9iIjowLCJjdXN0b21fYyI6MSwiZXZlbnRuYW1lIjoiYW5kcm9pZEJyaWRnZU1pc3NpbmciLCJldmVudGlkIjoyMjEsImFidGVzdCI6MCwicGxhdGZvcm1BQkdyb3VwIjpudWxsLCJ1c2VydHlwZSI6M30sInRhYmxlIjoic3VwZXJzb25pYy5hZHVuaXRhbmFseXRpY3MuYWRfdW5pdF9ldmVudHMifQ==",
-        "req_sample": "API calls\\samples\\005-GET-ae.iads.unity3d.com-logs-data-v.req.txt",
-        "res_sample": "API calls\\samples\\005-GET-ae.iads.unity3d.com-logs-data-v.res.txt"
+        "req_sample": "API calls\\samples\\006-GET-ae.iads.unity3d.com-logs-data-v.req.txt",
+        "res_sample": "API calls\\samples\\006-GET-ae.iads.unity3d.com-logs-data-v.res.txt"
+      }
+    },
+    {
+      "key": "GET firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1%3A897486707421%3Aandroid%3A4041000649f7af0d7f1934/settings?build_version={v}&display_version={v}",
+      "method": "GET",
+      "host": "firebase-settings.crashlytics.com",
+      "template": "/spi/v2/platforms/android/gmp/1%3A897486707421%3Aandroid%3A4041000649f7af0d7f1934/settings?build_version={v}&display_version={v}",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:22:42.629493Z",
+      "last_seen": "2026-11-25T23:22:42.629493Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 399,
+      "bytes_up": 0,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 3,
+        "request_file": "Contents/frida-unpin/http/00003-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-3A897486707421-.req",
+        "response_file": "Contents/frida-unpin/http/00003-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-3A897486707421-.res",
+        "url": "https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1%3A897486707421%3Aandroid%3A4041000649f7af0d7f1934/settings?build_version=2037529&display_version=13.4.0",
+        "req_sample": "API calls\\samples\\007-GET-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-3.req.txt",
+        "res_sample": "API calls\\samples\\007-GET-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-3.res.txt"
+      }
+    },
+    {
+      "key": "GET firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1:897486707421:android:4041000649f7af0d7f1934/settings?instance={v}&build_version={v}&display_version={v}&source={v}",
+      "method": "GET",
+      "host": "firebase-settings.crashlytics.com",
+      "template": "/spi/v2/platforms/android/gmp/1:897486707421:android:4041000649f7af0d7f1934/settings?instance={v}&build_version={v}&display_version={v}&source={v}",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:22:42.160542Z",
+      "last_seen": "2026-11-25T23:22:42.160542Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 399,
+      "bytes_up": 0,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 1,
+        "request_file": "Contents/frida-unpin/http/00001-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-897486707421-an.req",
+        "response_file": "Contents/frida-unpin/http/00001-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-897486707421-an.res",
+        "url": "https://firebase-settings.crashlytics.com/spi/v2/platforms/android/gmp/1:897486707421:android:4041000649f7af0d7f1934/settings?instance=eb92ba6114a3bd5db5bb74ced01bb9034af56344&build_version=2037529&display_version=13.4.0&source=1",
+        "req_sample": "API calls\\samples\\008-GET-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-8.req.txt",
+        "res_sample": "API calls\\samples\\008-GET-firebase-settings.crashlytics.com-spi-v2-platforms-android-gmp-1-8.res.txt"
       }
     },
     {
@@ -185,8 +282,8 @@
         "request_file": "Contents/20261125-210955/http/00037-googleads.g.doubleclick.net-favicon.ico.req",
         "response_file": "Contents/20261125-210955/http/00037-googleads.g.doubleclick.net-favicon.ico.res",
         "url": "https://googleads.g.doubleclick.net/favicon.ico",
-        "req_sample": "API calls\\samples\\006-GET-googleads.g.doubleclick.net-favicon.ico.req.txt",
-        "res_sample": "API calls\\samples\\006-GET-googleads.g.doubleclick.net-favicon.ico.res.txt"
+        "req_sample": "API calls\\samples\\009-GET-googleads.g.doubleclick.net-favicon.ico.req.txt",
+        "res_sample": "API calls\\samples\\009-GET-googleads.g.doubleclick.net-favicon.ico.res.txt"
       }
     },
     {
@@ -216,8 +313,8 @@
         "request_file": "Contents/20261125-210955/http/00036-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-sdk-core-v40-i.req",
         "response_file": "Contents/20261125-210955/http/00036-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-sdk-core-v40-i.res",
         "url": "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.js?n=true&lv=sdk_20190107_RC02",
-        "req_sample": "API calls\\samples\\007-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-.req.txt",
-        "res_sample": "API calls\\samples\\007-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-.res.txt"
+        "req_sample": "API calls\\samples\\010-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-.req.txt",
+        "res_sample": "API calls\\samples\\010-GET-googleads.g.doubleclick.net-mads-static-mad-sdk-native-production-.res.txt"
       }
     },
     {
@@ -247,8 +344,8 @@
         "request_file": "Contents/20261125-210955/http/00044-googleads.g.doubleclick.net-mads-static-sdk-native-sdk-core-v40.html.req",
         "response_file": "Contents/20261125-210955/http/00044-googleads.g.doubleclick.net-mads-static-sdk-native-sdk-core-v40.html.res",
         "url": "https://googleads.g.doubleclick.net/mads/static/sdk/native/sdk-core-v40.html",
-        "req_sample": "API calls\\samples\\008-GET-googleads.g.doubleclick.net-mads-static-sdk-native-id.req.txt",
-        "res_sample": "API calls\\samples\\008-GET-googleads.g.doubleclick.net-mads-static-sdk-native-id.res.txt"
+        "req_sample": "API calls\\samples\\011-GET-googleads.g.doubleclick.net-mads-static-sdk-native-id.req.txt",
+        "res_sample": "API calls\\samples\\011-GET-googleads.g.doubleclick.net-mads-static-sdk-native-id.res.txt"
       }
     },
     {
@@ -276,8 +373,101 @@
         "request_file": "Contents/20261125-210955/http/00049-o-iab-notifications.mediation.unity3d.com-nurl-request-mvK0sM4yzZRdteAkuYcgPJCr-.req",
         "response_file": "Contents/20261125-210955/http/00049-o-iab-notifications.mediation.unity3d.com-nurl-request-mvK0sM4yzZRdteAkuYcgPJCr-.res",
         "url": "https://o-iab-notifications.mediation.unity3d.com/nurl?request=mvK0sM4yzZRdteAkuYcgPJCr%2B6gb17ndGi3alR2OZBfmyu/5LOh15DUdHf4eb/XGiGnNPyo7FL3OiuDIUSg3jV%2BwAuMy5K/VCuLzLCKlpjsQhIa/dhf6aJStVEtxNhQ/mgphqn6ECD2iO4wCEVb8F7v4EvK3lcVUjjYRFCz8Qz8C%2BSaBi0viGAYUWmQBAzJys8QH9uTnoZ8eEORckw/wOvBtrhzUIAJZnM%2BQqjhj92qKjFxL9AydaOSEUorVeMdEZ/JiZ1UtINCGABDJOtnVwUrD7F75b%2B85ap3amMbY5pSPcu5WsdBKweh1%2BexFyj%2BqYbanUBvlXUBf2OfzuW8ceINFrfgPbOcAGmk3hoVk6lM%3D&auctionId=3aeed5d0-e912-11f1-92ab-937b6b62b0a1_476120683&ats=1795639993263&appKey=6922bca5",
-        "req_sample": "API calls\\samples\\009-GET-o-iab-notifications.mediation.unity3d.com-nurl-request-v-auctionId.req.txt",
-        "res_sample": "API calls\\samples\\009-GET-o-iab-notifications.mediation.unity3d.com-nurl-request-v-auctionId.res.txt"
+        "req_sample": "API calls\\samples\\012-GET-o-iab-notifications.mediation.unity3d.com-nurl-request-v-auctionId.req.txt",
+        "res_sample": "API calls\\samples\\012-GET-o-iab-notifications.mediation.unity3d.com-nurl-request-v-auctionId.res.txt"
+      }
+    },
+    {
+      "key": "POST config.uca.cloud.unity3d.com/",
+      "method": "POST",
+      "host": "config.uca.cloud.unity3d.com",
+      "template": "/",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:22:48.029085Z",
+      "last_seen": "2026-11-25T23:22:48.029085Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 293,
+      "bytes_up": 466,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 4,
+        "request_file": "Contents/frida-unpin/http/00004-config.uca.cloud.unity3d.com.req",
+        "response_file": "Contents/frida-unpin/http/00004-config.uca.cloud.unity3d.com.res",
+        "url": "https://config.uca.cloud.unity3d.com/",
+        "req_sample": "API calls\\samples\\013-POST-config.uca.cloud.unity3d.com.req.txt",
+        "res_sample": "API calls\\samples\\013-POST-config.uca.cloud.unity3d.com.res.txt"
+      }
+    },
+    {
+      "key": "POST firebaseinstallations.googleapis.com/v1/projects/dm2-unity/installations",
+      "method": "POST",
+      "host": "firebaseinstallations.googleapis.com",
+      "template": "/v1/projects/dm2-unity/installations",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:22:42.159885Z",
+      "last_seen": "2026-11-25T23:22:42.159885Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 501,
+      "bytes_up": 138,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 2,
+        "request_file": "Contents/frida-unpin/http/00002-firebaseinstallations.googleapis.com-v1-projects-dm2-unity-installations.req",
+        "response_file": "Contents/frida-unpin/http/00002-firebaseinstallations.googleapis.com-v1-projects-dm2-unity-installations.res",
+        "url": "https://firebaseinstallations.googleapis.com/v1/projects/dm2-unity/installations",
+        "req_sample": "API calls\\samples\\014-POST-firebaseinstallations.googleapis.com-v1-projects-dm2-unity-instal.req.txt",
+        "res_sample": "API calls\\samples\\014-POST-firebaseinstallations.googleapis.com-v1-projects-dm2-unity-instal.res.txt"
+      }
+    },
+    {
+      "key": "POST firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog",
+      "method": "POST",
+      "host": "firebaselogging-pa.googleapis.com",
+      "template": "/v1/firelog/legacy/batchlog",
+      "kind": "analytics",
+      "host_group": "analytics",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:23:37.354226Z",
+      "last_seen": "2026-11-25T23:23:37.354226Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 140,
+      "bytes_up": 1259,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 51,
+        "request_file": "Contents/frida-unpin/http/00051-firebaselogging-pa.googleapis.com-v1-firelog-legacy-batchlog.req",
+        "response_file": "Contents/frida-unpin/http/00051-firebaselogging-pa.googleapis.com-v1-firelog-legacy-batchlog.res",
+        "url": "https://firebaselogging-pa.googleapis.com/v1/firelog/legacy/batchlog",
+        "req_sample": "API calls\\samples\\015-POST-firebaselogging-pa.googleapis.com-v1-firelog-legacy-batchlog.req.txt",
+        "res_sample": "API calls\\samples\\015-POST-firebaselogging-pa.googleapis.com-v1-firelog-legacy-batchlog.res.txt"
       }
     },
     {
@@ -307,8 +497,70 @@
         "request_file": "Contents/20261125-210955/http/00041-firebaselogging.googleapis.com-v0cc-log-batch-format-json_proto3.req",
         "response_file": "Contents/20261125-210955/http/00041-firebaselogging.googleapis.com-v0cc-log-batch-format-json_proto3.res",
         "url": "https://firebaselogging.googleapis.com/v0cc/log/batch?format=json_proto3",
-        "req_sample": "API calls\\samples\\010-POST-firebaselogging.googleapis.com-v0cc-log-batch-format-v.req.txt",
-        "res_sample": "API calls\\samples\\010-POST-firebaselogging.googleapis.com-v0cc-log-batch-format-v.res.txt"
+        "req_sample": "API calls\\samples\\016-POST-firebaselogging.googleapis.com-v0cc-log-batch-format-v.req.txt",
+        "res_sample": "API calls\\samples\\016-POST-firebaselogging.googleapis.com-v0cc-log-batch-format-v.res.txt"
+      }
+    },
+    {
+      "key": "POST api.helpshift.com/events/v1/gameloft/websdk/",
+      "method": "POST",
+      "host": "api.helpshift.com",
+      "template": "/events/v1/gameloft/websdk/",
+      "kind": "other",
+      "host_group": "third-party",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:23:29.408086Z",
+      "last_seen": "2026-11-25T23:23:29.408086Z",
+      "statuses": {
+        "200": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 10,
+      "bytes_up": 353,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 11,
+        "request_file": "Contents/frida-unpin/http/00011-api.helpshift.com-events-v1-gameloft-websdk.req",
+        "response_file": "Contents/frida-unpin/http/00011-api.helpshift.com-events-v1-gameloft-websdk.res",
+        "url": "https://api.helpshift.com/events/v1/gameloft/websdk/",
+        "req_sample": "API calls\\samples\\017-POST-api.helpshift.com-events-v1-gameloft-websdk.req.txt",
+        "res_sample": "API calls\\samples\\017-POST-api.helpshift.com-events-v1-gameloft-websdk.res.txt"
+      }
+    },
+    {
+      "key": "POST api.helpshift.com/websdk/gameloft/sdk-data",
+      "method": "POST",
+      "host": "api.helpshift.com",
+      "template": "/websdk/gameloft/sdk-data",
+      "kind": "other",
+      "host_group": "third-party",
+      "count": 1,
+      "sessions": [
+        "frida-unpin"
+      ],
+      "first_seen": "2026-11-25T23:23:29.299832Z",
+      "last_seen": "2026-11-25T23:23:29.299832Z",
+      "statuses": {
+        "404": 1
+      },
+      "content_types": {
+        "application/json": 1
+      },
+      "bytes_down": 165,
+      "bytes_up": 125,
+      "sample": {
+        "session": "frida-unpin",
+        "seq": 10,
+        "request_file": "Contents/frida-unpin/http/00010-api.helpshift.com-websdk-gameloft-sdk-data.req",
+        "response_file": "Contents/frida-unpin/http/00010-api.helpshift.com-websdk-gameloft-sdk-data.res",
+        "url": "https://api.helpshift.com/websdk/gameloft/sdk-data",
+        "req_sample": "API calls\\samples\\018-POST-api.helpshift.com-websdk-gameloft-sdk-data.req.txt",
+        "res_sample": "API calls\\samples\\018-POST-api.helpshift.com-websdk-gameloft-sdk-data.res.txt"
       }
     }
   ]

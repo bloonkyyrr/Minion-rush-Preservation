@@ -73,7 +73,7 @@ def run_snapshot(
     report["android"] = props.get("ro.build.version.release")
     report["sdk"] = props.get("ro.build.version.sdk")
     report["build_type"] = props.get("ro.build.type")
-    report["root"] = "uid=0" in emulator.shell(serial, "id", adb_path, settings)
+    report["root"] = emulator.is_root(serial, adb_path, settings)
     report["app_version"] = emulator.package_version(serial, settings.package, adb_path, settings)
 
     # -- apk(s) ----------------------------------------------------------
@@ -126,11 +126,16 @@ def run_snapshot(
     report["external_data"] = external_report
 
     if appdata:
-        if report["root"]:
+        mode = emulator.root_mode(serial, adb_path, settings)
+        if mode:
             archive = appdata_dir / f"appdata-{slugify(settings.package, 40)}.tar.gz"
             try:
                 emulator.run_binary(
-                    ["-s", serial, "exec-out", f"tar -czf - /data/data/{settings.package} 2>/dev/null"],
+                    emulator.root_exec_args(
+                        serial,
+                        f"tar -czf - /data/data/{settings.package} 2>/dev/null",
+                        mode,
+                    ),
                     archive,
                     adb_path,
                     settings,
@@ -147,7 +152,8 @@ def run_snapshot(
             report["appdata"] = {
                 "skipped": (
                     "device is not rooted; /data/data is unreadable. Run the snapshot again on a rooted "
-                    "device (AVD with -writable-system) to archive saves, preferences and downloaded assets."
+                    "device (BlueStacks 5 with root access enabled, or an AVD with -writable-system) to "
+                    "archive saves, preferences and downloaded assets."
                 )
             }
 
@@ -164,12 +170,18 @@ def pcap_start(settings: Settings, serial: str, remote_name: str | None = None) 
     adb_path = emulator.find_adb(settings)
     if adb_path is None:
         raise FileNotFoundError("adb.exe not found")
-    if not emulator.is_root(serial, adb_path, settings):
-        raise RuntimeError("pcap capture needs root (adb shell tcpdump requires uid 0)")
+    mode = emulator.root_mode(serial, adb_path, settings)
+    if mode is None:
+        raise RuntimeError("pcap capture needs root (on-device tcpdump runs as uid 0)")
     name = remote_name or f"catcher-{time.strftime('%Y%m%d-%H%M%S')}.pcap"
     remote = f"/sdcard/{name}"
     emulator.shell(serial, f"rm -f {remote}", adb_path, settings)
-    emulator.shell(serial, f"(tcpdump -i any -s 0 -w {remote} >/dev/null 2>&1 &)", adb_path, settings)
+    emulator.shell(
+        serial,
+        emulator.root_command(mode, f"tcpdump -i any -s 0 -w {remote} >/dev/null 2>&1 &"),
+        adb_path,
+        settings,
+    )
     state_dir = settings.other_dir / PCAP_DIR
     state_dir.mkdir(parents=True, exist_ok=True)
     state = {"serial": serial, "remote": remote, "started": time.strftime("%Y-%m-%dT%H:%M:%S%z")}
@@ -187,7 +199,9 @@ def pcap_stop(settings: Settings) -> dict:
         raise RuntimeError("no active pcap capture (run `catcher pcap start` first)")
     state = json.loads(state_file.read_text(encoding="utf-8"))
     serial = state["serial"]
-    emulator.shell(serial, "pkill -INT tcpdump", adb_path, settings)
+    mode = emulator.root_mode(serial, adb_path, settings)
+    stop = "pkill -INT tcpdump" if mode is None else emulator.root_command(mode, "pkill -INT tcpdump")
+    emulator.shell(serial, stop, adb_path, settings)
     time.sleep(2)
     local = state_dir / Path(state["remote"]).name
     result = emulator.adb(["-s", serial, "pull", state["remote"], str(local)], adb_path=adb_path, settings=settings, timeout=1800)
