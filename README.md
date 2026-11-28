@@ -1,9 +1,10 @@
-# Minion Rush Preservation
+# Minion Rush Preservation.UNFINISHED, any file that ia commited that has any kind of minion rush data, will always be useful
 
 An archive of everything **Despicable Me: Minion Rush** (`com.gameloft.android.AMAZ.GloftDMAS`)
 sends and receives over the network, captured from a running install before Gameloft's online
 services close on **29 January 2027**. The goal is to give anyone building a revival server
 after the sunset real request/response shapes instead of guesses.
+
 
 ## Timeline
 
